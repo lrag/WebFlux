@@ -1,0 +1,22 @@
+package com.curso.modelo.negocio;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.curso.modelo.entidad.Pelicula;
+import com.curso.modelo.persistencia.PeliculaRepositorio;
+
+import reactor.core.publisher.Mono;
+
+@Service
+public class GestorPeliculas {
+
+	@Autowired
+	private PeliculaRepositorio peliculaRepositorio;
+	
+	public Mono<Pelicula> insertar(Pelicula pelicula) {
+		System.out.println("GestorPeliculas.insertar:"+Thread.currentThread().getName());
+		return peliculaRepositorio.save(pelicula);
+	}
+	
+}

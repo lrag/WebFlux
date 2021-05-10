@@ -1,0 +1,12 @@
+package com.curso;
+
+import java.util.function.Consumer;
+
+public class Consumidor implements Consumer<String>{
+
+	@Override
+	public void accept(String texto) {
+		System.out.println("Consumidor bean: "+texto);
+	}
+
+}

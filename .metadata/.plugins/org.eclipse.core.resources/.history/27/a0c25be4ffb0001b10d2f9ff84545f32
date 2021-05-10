@@ -1,0 +1,38 @@
+package com.curso.modelo.negocio;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.curso.modelo.entidad.Pelicula;
+import com.curso.modelo.entidad.PeliculaHistorico;
+import com.curso.modelo.persistencia.PeliculaHistoricoRepositorio;
+import com.curso.modelo.persistencia.PeliculaRepositorio;
+
+import reactor.core.publisher.Mono;
+
+@Service
+public class GestorPeliculas {
+
+	@Autowired private PeliculaRepositorio peliculaRepo;
+	@Autowired private PeliculaHistoricoRepositorio peliculaHistoricoRepo;
+	
+	public Mono<Pelicula> insertar(Pelicula pelicula) {
+		System.out.println("GestorPeliculas.insertar:"+Thread.currentThread().getName());
+		return peliculaRepo.save(pelicula);
+	}
+	
+	public Mono<Object> borrar(Pelicula pelicula){
+		
+		return peliculaRepo
+			.findById(pelicula.getId())
+			.map( p -> {
+				PeliculaHistorico ph = new PeliculaHistorico(p);
+				ph.setId(null);
+				return peliculaHistoricoRepo.save(ph);
+			}).map( rs -> {
+				return Mono.empty();
+			});
+		
+	}
+	
+}

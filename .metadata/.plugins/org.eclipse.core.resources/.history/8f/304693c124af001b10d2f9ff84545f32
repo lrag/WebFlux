@@ -1,0 +1,38 @@
+import com.curso.flux.EjemploFlux;
+
+public class Pruebas {
+
+	public static void main(String[] args) {
+		
+		System.out.println("==================================");
+		System.out.println(Thread.currentThread().getName());
+		
+		EjemploFlux ejF = new EjemploFlux();
+
+		System.out.println("==================================");
+		ejF.getEventos().subscribe();
+
+		System.out.println("==================================");
+		ejF.getEventos().subscribe( evento -> {
+				System.out.println(evento);
+				System.out.println(Thread.currentThread().getName());
+			});
+
+		System.out.println("==================================");
+		ejF.getEventos().subscribe( evento -> {
+				System.out.println(evento);
+				System.out.println(Thread.currentThread().getName());
+			},
+			(error) -> System.out.println("ERROR"),
+			() -> {
+				System.out.println("YA");
+				System.out.println(Thread.currentThread().getName());				
+			});
+		
+		System.out.println("==================================");
+		System.out.println("FIN");
+		
+		
+	}
+	
+}

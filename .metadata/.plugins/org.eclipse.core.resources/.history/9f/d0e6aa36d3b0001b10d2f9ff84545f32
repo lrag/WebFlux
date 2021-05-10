@@ -1,0 +1,5 @@
+package com.curso.modelo.negocio;
+
+public class GestorPeliculas {
+
+}

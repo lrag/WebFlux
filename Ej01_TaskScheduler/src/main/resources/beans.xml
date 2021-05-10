@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="servicioTareas" 
+		  class="com.curso.modelo.negocio.ServicioTareas"/>
+
+	<task:scheduler id="taskScheduler" pool-size="2"/>
+		
+	<task:scheduled-tasks scheduler="taskScheduler">
+		<task:scheduled ref="servicioTareas" method="metodo1" fixed-rate="5000"/>	
+		<task:scheduled ref="servicioTareas" method="metodo2" fixed-delay="5000"/>	
+		<task:scheduled ref="servicioTareas" method="metodo3" initial-delay="5000" fixed-rate="1000"/>	
+	</task:scheduled-tasks>
+	
+</beans>

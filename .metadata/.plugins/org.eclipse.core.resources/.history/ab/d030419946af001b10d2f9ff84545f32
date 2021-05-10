@@ -1,0 +1,11 @@
+package com.curso.flux;
+
+import reactor.core.publisher.Flux;
+
+public class EjemploFlux {
+
+	public Flux<String> getEventos(){
+		return Flux.just("Evento1", "Evento2", "Evento3", "Evento4", "Evento5");
+	}
+	
+}

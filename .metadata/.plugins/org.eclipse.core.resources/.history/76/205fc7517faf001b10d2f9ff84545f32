@@ -1,0 +1,3 @@
+
+#No queremos el servidor, solo las librerías
+spring.main.web-application-type=none

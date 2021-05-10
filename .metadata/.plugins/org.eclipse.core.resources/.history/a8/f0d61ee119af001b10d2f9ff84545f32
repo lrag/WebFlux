@@ -1,0 +1,16 @@
+import com.curso.flux.EjemploFlux;
+
+public class Pruebas {
+
+	public static void main(String[] args) {
+		
+		System.out.println("==================================");
+		
+		EjemploFlux ejF = new EjemploFlux();
+		
+		ejF.getEventos().subscribe();
+		
+		
+	}
+	
+}
