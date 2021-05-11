@@ -1,4 +1,4 @@
-package com.curso.flux;
+package com.curso.flux_3;
 
 import java.io.IOException;
 import java.nio.file.FileSystems;

@@ -1,4 +1,4 @@
-package com.curso.flux;
+package com.curso.flux_1;
 
 import java.util.function.Consumer;
 

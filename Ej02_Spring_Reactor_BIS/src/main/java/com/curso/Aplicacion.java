@@ -1,6 +1,6 @@
-package com.curso.flux;
+package com.curso;
 
-import java.util.Scanner;
+import java.util.List;
 import java.util.function.Consumer;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +18,8 @@ public class Aplicacion implements CommandLineRunner{
 	@Autowired
 	private Flujos flujos;
 	
-	@Autowired
-	private Consumidor consumidorString;
+	//@Autowired
+	//private Consumidor consumidorString;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(Aplicacion.class, args);
@@ -27,10 +27,13 @@ public class Aplicacion implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
+
+		//En un stream del api de colecciones los elementos ya existen antes de que salga el primero
+		List<String> textos = flujos.listarPalabras();		
+		textos.stream().forEach( texto -> System.out.println("Texto:"+texto ));
 		
 		System.out.println("=====================================");
-		Flux<String> flujoString = flujos.flux1();
-		/*
+		Flux<String> flujoString = flujos.listarPalabrasFlux();
 		
 		//Un flujo no se 'recorre' como si fuera una colección
 		//Se proporciona un consumidor, que recibirá los elementos que componen el flujo
@@ -41,6 +44,7 @@ public class Aplicacion implements CommandLineRunner{
 		//Proporcionando un consumidor definido en el momento de la subscripción:
 		//En este caso el mismo hilo que se subscribe ejecuta el código del consumidor
 		//
+		
 		System.out.println("Antes de subscribirse");
 		flujoString
 			.subscribe(new Consumer<String>() {
@@ -50,17 +54,27 @@ public class Aplicacion implements CommandLineRunner{
 				}
 			});
 		System.out.println("Despues de subscribirse");
-		
 
+		
 		System.out.println("=====================================");
 		//Ídem con expresión lambda
 		flujoString.subscribe(s -> System.out.println(Thread.currentThread().getName()+"-Con lambda:"+s));
+
 		
-		
+		/*
 		System.out.println("=====================================");		
 		//Utilizando un consumidor definido como una bean de spring
 		Flux<String> flujoGenerado = flujos.flux4();		
 		flujoGenerado.subscribe(consumidorString);
+		*/
+		
+		System.out.println("=====================================");
+		Flux<String> flujoGenerado = flujos.flux4();		
+		flujoGenerado.subscribe(m -> System.out.println(m));
+		
+		Thread.sleep(20000);
+		
+		System.exit(0);
 		
 		
 		System.out.println("=====================================");
@@ -77,23 +91,35 @@ public class Aplicacion implements CommandLineRunner{
 				System.out.println(Thread.currentThread().getName()+":"+l);
 			});
 		
-		Thread.sleep(5000);
+		//Thread.sleep(5000);		
+		
 		System.out.println("Cancelando la subscripción...");
 		d.dispose();
 		
 		//El hilo asignado al consumidor no tiene peso suficiente para mantener viva a la aplicación	
-		Thread.sleep(5000);
+		//Thread.sleep(5000);
+
+		/*
+		System.out.println("=====================================");
+		System.out.println("Números aleatorios...");
+		Disposable d2 = flujos.flux6()
+			.subscribe(s -> System.out.println(s));
+		Thread.sleep(10000);
+		d2.dispose();	
+		*/	
+		
 		
 		System.out.println("=====================================");
 		System.out.println("Ficheros...");
-		Disposable d2 = flujos.flux5()
+		Disposable d3 = flujos.flux5()
 			.subscribeOn(Schedulers.boundedElastic()) //Que pasa si comentamos esta línea
 			.subscribe(s -> System.out.println(s));
 		
-		Thread.sleep(20000);
-		d2.dispose();
-		*/
+		Thread.sleep(200000);
+		d3.dispose();
 		
+		
+		/*
 		//
 		//Con subscribeOn podemos indicar que queremos otro hilo para ejecutar
 		//el codigo del consumidor
@@ -183,7 +209,13 @@ public class Aplicacion implements CommandLineRunner{
 		});		
 		System.out.println("Despues");
 		
+		*/
+		
 		System.out.println("FIN del hilo main");
+		
 	}
 
 }
+
+
+
