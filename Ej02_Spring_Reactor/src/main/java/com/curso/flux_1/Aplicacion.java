@@ -31,8 +31,6 @@ public class Aplicacion implements CommandLineRunner{
 		palabras.stream().forEach( p -> System.out.println(p));
 		
 		System.out.println("=====================================");
-		Flux<String> flujoPalabras = flujos.listarPalabras_Reactivo();
-		
 		//Un flujo no se 'recorre' como si fuera una colección
 		//Se proporciona un consumidor, que recibirá los elementos que componen el flujo
 		//Es tarea del consumidor controlar el ritmo con el que procesa los elementos
@@ -42,7 +40,8 @@ public class Aplicacion implements CommandLineRunner{
 		//Proporcionando un consumidor definido en el momento de la subscripción:
 		//En este caso el mismo hilo que se subscribe ejecuta el código del consumidor
 		//
-		System.out.println("Antes de subscribirse");
+		Flux<String> flujoPalabras = flujos.listarPalabras_Reactivo();
+		System.out.println(Thread.currentThread().getName()+"-Antes de subscribirse");
 		flujoPalabras
 			.subscribe(new Consumer<String>() {
 				@Override
@@ -50,8 +49,7 @@ public class Aplicacion implements CommandLineRunner{
 					System.out.println(Thread.currentThread().getName()+"-"+s);
 				}
 			});
-		System.out.println("Despues de subscribirse");
-		
+		System.out.println(Thread.currentThread().getName()+"-Despues de subscribirse");
 
 		System.out.println("=====================================");
 		//Ídem con expresión lambda

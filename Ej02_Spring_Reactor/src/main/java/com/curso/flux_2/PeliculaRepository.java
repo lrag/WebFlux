@@ -23,6 +23,7 @@ public class PeliculaRepository {
 	private DataSource dataSource;
 	
 	public List<Pelicula> findAll(){		
+
 		List<Pelicula> peliculas = new ArrayList<>();
 		try (Connection cx = dataSource.getConnection()){
 
@@ -44,7 +45,6 @@ public class PeliculaRepository {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} 
-		
 		return peliculas;
 	}
 	
@@ -60,7 +60,7 @@ public class PeliculaRepository {
 					return rs;
 				},
 				//Generator
-				(rs, sink) -> {					
+				(rs, sink) -> {	
 					try {
 						if(rs.next()) {
 							Pelicula p = new Pelicula(
@@ -90,8 +90,7 @@ public class PeliculaRepository {
 					} catch (SQLException e) {
 						e.printStackTrace();
 					}
-				}
-				
+				}				
 			);		
 		return flux;
 	}

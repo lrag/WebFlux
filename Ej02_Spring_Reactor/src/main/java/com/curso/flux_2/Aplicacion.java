@@ -35,15 +35,17 @@ public class Aplicacion implements CommandLineRunner{
 		System.out.println("=====================================");
 		Flux<String> flujoEstado = flujos.flujoConEstado();
 		flujoEstado.subscribe(mensaje -> System.out.println(mensaje));
-
+		
 		System.out.println("=============================================");
 		List<Pelicula> peliculas = peliculaRepo.findAll();
 		for(Pelicula p: peliculas) {
 			System.out.println(p);
 		}
+		
+		Thread.sleep(1000);
 
 		System.out.println("=============================================");
-		peliculaRepo.findAll_Reactivo().subscribe( p -> System.out.println(p));		
+		peliculaRepo.findAll_Reactivo().subscribe( p -> System.out.println(p));	
 		
 		System.out.println("FIN del hilo main");
 	}

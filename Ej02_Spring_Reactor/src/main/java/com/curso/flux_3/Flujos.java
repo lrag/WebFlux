@@ -73,7 +73,7 @@ public class Flujos {
 	}
 
 	public Flux<String> flujoPalabras() {		
-		String[] palabras = {"UNO","DOS","TRES","CUATRO","CINCO","SEIS","SIETE", "OCHO", "NUEVE", "DIEZ", "ONCE", "DOCE", "TRECE", "CATORCE"};		
+		String[] palabras = {"UNO","DOS","TRES","CUATRO","CINCO","SEIS","SIETE","OCHO","NUEVE","DIEZ","ONCE","DOCE","TRECE","CATORCE"};		
 		return Flux.generate(
 				//State supplier
 				() -> 0,
@@ -82,7 +82,7 @@ public class Flujos {
 					sink.next(palabras[state]);
 					
 					try {
-						Thread.sleep(1000);
+						Thread.sleep(100);
 					} catch (InterruptedException e) {
 						System.out.println(e.getMessage());
 					}

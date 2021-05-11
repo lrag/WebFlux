@@ -37,8 +37,11 @@ public class Aplicacion implements CommandLineRunner{
 
 		//System.out.println("=====================================");
 		//System.out.println(Thread.currentThread().getName()+"-Antes de subscribirse");
-		//flujoInfinito.subscribeOn(Schedulers.boundedElastic()).subscribe( numero -> System.out.println(Thread.currentThread().getName()+"-"+numero));
+		//flujoInfinito
+		//	.subscribeOn(Schedulers.boundedElastic())
+		//	.subscribe( numero -> System.out.println(Thread.currentThread().getName()+"-"+numero));
 		//System.out.println(Thread.currentThread().getName()+"-Despues de subscribirse");
+		
 		//
 		//Sin este thread.sleep la aplicación finaliza. El hilo que se queda procesando los elementos del flujo
 		//no tiene peso suficiente para mantenerla viva
@@ -54,10 +57,10 @@ public class Aplicacion implements CommandLineRunner{
 				System.out.println(Thread.currentThread().getName()+":"+l);
 			});		
 		
-		Thread.sleep(6_000);
+		Thread.sleep(4_000);
 		System.out.println("Cancelando la subscripción");
 		d.dispose();
-		Thread.sleep(6_000);
+		Thread.sleep(2_000);
 		
 		System.out.println("=====================================");
 		//El flujo entrega un elemento cada segundo, pero el consumidor que proporciona el subscriptor
@@ -76,7 +79,8 @@ public class Aplicacion implements CommandLineRunner{
 		System.out.println("Ficheros (y procesando el flujo anterior en paralelo)");
 		Flux<List<String>> eventosDirectorio = flujos.monitorizarDirectorio();
 		Disposable d3 = eventosDirectorio.subscribeOn(Schedulers.boundedElastic()).subscribe(mensaje -> System.out.println(mensaje));
-		Thread.sleep(20_000);
+		
+		Thread.sleep(30_000);
 
 		d3.dispose();		
 		d2.dispose();
@@ -92,13 +96,13 @@ public class Aplicacion implements CommandLineRunner{
 			.subscribe(str -> {
 				System.out.println(Thread.currentThread().getName()+" Inicio:"+str);
 				long inicio = System.currentTimeMillis();
-				while(System.currentTimeMillis()<inicio+2000) {
+				while(System.currentTimeMillis()<inicio+4000) {
 					//Estoy haciendo cosas
 				}
 				System.out.println(Thread.currentThread().getName()+"    Fin:"+str);
 			});		
 		
-		Thread.sleep(20_000);
+		Thread.sleep(10_000);
 
 		System.out.println("=====================================");
 		//En este ejemplo es el flujo el que indica que el consumidor debe ser ejecutado por otro hilo distinto al que se subscribe

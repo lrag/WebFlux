@@ -1,13 +1,12 @@
 package com.curso.modelo.entidad;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
-//import org.springframework.data.annotation.Id;
-//import org.springframework.data.relational.core.mapping.Table;
-
-//@Table
+@Table
 public class Pelicula {
 
-	//@Id
+	@Id
 	private Integer id;
 	private String titulo;
 	private String director;

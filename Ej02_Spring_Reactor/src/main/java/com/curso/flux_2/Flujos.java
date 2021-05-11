@@ -36,6 +36,7 @@ public class Flujos {
 				}
 				
 				if(contador.incrementAndGet()==10) {
+					//Indicamos al subscriptor que hemos terminado
 					sink.complete();
 				}
 			}				
@@ -45,6 +46,7 @@ public class Flujos {
 	public Flux<String> flujoConEstado(){
 		Flux<String> flux = Flux.generate(
 			//State supplier
+				//Solo se invoca una vez, antes de entregar el primer elemento al subscriptor
 			() -> 1, 
 			//Generator
 			(state, sink) -> {
@@ -65,3 +67,4 @@ public class Flujos {
 	}
 	
 }
+
