@@ -48,7 +48,7 @@ public class PeliculasREST {
 		return gestorPeliculas.insertar(pelicula);
 	}
 	
-	@PutMapping(path = "/pelicula/{id}")
+	@PutMapping(path = "/peliculas/{id}")
 	public Mono<Pelicula> modificarPelicula(@RequestBody Pelicula pelicula, @PathVariable("id") Integer id) {
 		return gestorPeliculas.modificar(pelicula);
 	}

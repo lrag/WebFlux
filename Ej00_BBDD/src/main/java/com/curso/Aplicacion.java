@@ -16,11 +16,13 @@ public class Aplicacion {
 		
 		PeliculaRepositorio pr = appCtx.getBean(PeliculaRepositorio.class);
 	
-		pr.save(new Pelicula(null,"2001","D1","G1",2000));
-		pr.save(new Pelicula(null,"Alien","D1","G1",2000));
-		pr.save(new Pelicula(null,"Die Hard","D1","G1",2000));
-		pr.save(new Pelicula(null,"Young Frankenstein","D1","G1",2000));
-		pr.save(new Pelicula(null,"Los violentos de Kelly","D1","G1",2000));
+		pr.deleteAll();
+		
+		pr.save(new Pelicula(null,"2001","D1","Ci-fi",2000));
+		pr.save(new Pelicula(null,"Alien","D1","Ci-fi",2000));
+		pr.save(new Pelicula(null,"Die Hard","D1","Accion",2000));
+		pr.save(new Pelicula(null,"Young Frankenstein","D1","Comedia",2000));
+		pr.save(new Pelicula(null,"Los violentos de Kelly","D1","Bélica",2000));
 		
 	}
 
