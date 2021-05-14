@@ -20,9 +20,14 @@ public class Aplicacion {
 		//peliculaRepo.findAll().collect(Collectors.toList()).subscribe(x -> System.out.println(x));
 		//peliculaRepo.findAll().collect(Collectors.toList()).thenReturn(null)
 		
+		//Si no decimos lo contrario nos subscribiremos a los monos y flujos de devuelven 
+		//los repositorios de R2DBC con el MISMO HILO
+		System.out.println("===================================");
+		peliculaRepo.findAll().subscribe(x -> System.out.println(x));		
 		System.out.println("===================================");
 		peliculaHistoricoRepo.findAll().subscribe(x -> System.out.println(x));		
-		
+		System.out.println("===================================");
+				
 	}
 
 }

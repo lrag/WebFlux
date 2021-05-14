@@ -29,7 +29,6 @@ public class PeliculaHistorico {
 	
 	public PeliculaHistorico(Pelicula pelicula) {
 		super();
-		this.id       = pelicula.getId();
 		this.titulo   = pelicula.getTitulo();
 		this.director = pelicula.getDirector();
 		this.genero   = pelicula.getGenero();

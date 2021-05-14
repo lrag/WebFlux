@@ -1,5 +1,6 @@
 package com.curso.modelo.entidad;
 
+import java.util.List;
 
 public class Pelicula {
 
@@ -8,6 +9,7 @@ public class Pelicula {
 	private String director;
 	private String genero;
 	private Integer year;
+	private List<Premio> premios; 
 	
 	public Pelicula() {
 		super();
@@ -60,6 +62,14 @@ public class Pelicula {
 
 	public void setYear(Integer year) {
 		this.year = year;
+	}
+	
+	public List<Premio> getPremios() {
+		return premios;
+	}
+
+	public void setPremios(List<Premio> premios) {
+		this.premios = premios;
 	}
 
 	@Override

@@ -2,6 +2,7 @@ package com.curso.flux_1;
 
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -18,6 +19,9 @@ public class Aplicacion implements CommandLineRunner{
 	
 	@Autowired
 	private Flujos flujos;
+
+	@Autowired
+	private Monos monos;	
 	
 	public static void main(String[] args) {
 		SpringApplication.run(Aplicacion.class, args);
@@ -60,7 +64,17 @@ public class Aplicacion implements CommandLineRunner{
 		System.out.println("=====================================");		
 		//Utilizando un consumidor definido como una bean de spring
 		flujoPalabras.subscribe(consumidor);
-	
+		
+		
+		System.out.println("=====================================");	
+		monos
+			.saludar()
+			.subscribe( saludo -> System.out.println(saludo));
+		
+		//Podemos utilizar block en monos y flujos y nos devuelven el elemento emitido o la coleccion de elementos
+		String saludo = monos.saludar().block();
+		System.out.println("Despues del block: "+saludo);
+
 		System.out.println("FIN del hilo main");
 	}
 

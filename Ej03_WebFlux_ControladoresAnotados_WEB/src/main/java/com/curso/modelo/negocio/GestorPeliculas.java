@@ -35,7 +35,6 @@ public class GestorPeliculas {
 				System.out.println("Encontrado:"+p);
 				System.out.println("GestorPeliculas.borrar:"+Thread.currentThread().getName());
 				PeliculaHistorico ph = new PeliculaHistorico(p);
-				ph.setId(null);
 				return peliculaHistoricoRepo.save(ph);
 			}).flatMap( rs -> {
 				System.out.println("Insertado:"+rs);

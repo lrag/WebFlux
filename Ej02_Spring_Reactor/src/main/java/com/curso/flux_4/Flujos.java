@@ -22,10 +22,10 @@ public class Flujos {
 				() -> 0,
 				//Generator
 				(state,sink) -> {					
-					sink.next(state);					
-					long fin = System.currentTimeMillis()+500;
+					long fin = System.currentTimeMillis()+1000;
 					while(System.currentTimeMillis()<fin) {
 					}
+					sink.next(state);					
 					state +=2;
 					if(state > 12) {
 						sink.complete();
@@ -42,7 +42,7 @@ public class Flujos {
 				//Generator
 				(state,sink) -> {					
 					sink.next(state);					
-					long fin = System.currentTimeMillis()+500;
+					long fin = System.currentTimeMillis()+1000;
 					while(System.currentTimeMillis()<fin) {
 					}
 					state +=2;
@@ -76,12 +76,11 @@ public class Flujos {
 			);
 	}	
 	
-
 	public Mono<String> leerFichero(String fichero){
 		Mono<String> mono = Mono.create( 
 				sink -> {
 					try {
-						Thread.sleep(3000);
+						Thread.sleep(2000);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
@@ -91,25 +90,27 @@ public class Flujos {
 		return mono;
 	}
 	
-	public Mono<String> escribirFichero(String fichero){
+	public Mono<String> escribirFichero(String fichero, String contenido){
 		Mono<String> mono = Mono.create( 
 				sink -> {
+					System.out.println("Escribiendo el fichero...");
 					try {
-						Thread.sleep(3000);
+						Thread.sleep(2000);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
+					System.out.println("Fichero escrito");
 					sink.success();
 				}
 			);
 		return mono;
 	}	
 	
-	public Mono<String> conversorImagen(String imagen){
+	public Mono<String> convertirImagen(String imagen){
 		Mono<String> mono = Mono.create( 
 				sink -> {
 					try {
-						Thread.sleep(3000);
+						Thread.sleep(2000);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}

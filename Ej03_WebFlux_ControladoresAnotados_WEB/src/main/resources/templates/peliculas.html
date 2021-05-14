@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Users</title>
+    <title>Películas</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
 	<script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>    
@@ -14,7 +14,11 @@
 <script type="application/javascript">
 
 function vaciarFormulario(){
-	
+	$("#idPelicula").val('')
+	$("#titulo").val('')
+	$("#director").val('')
+	$("#genero").val('')
+	$("#year").val('')
 }
 
 function cambiarAction(valor){
@@ -56,7 +60,7 @@ function inicializar(){
 	
 	            <div class="mt-4"></div>
 	            
-	            <input type="hidden" th:field="*{id}"/>
+	            <input type="hidden" th:field="*{id}" id="idPelicula"/>
 	            
 	            <td>
 				    <span th:if="${error!=null}" th:text="${error}"></span>

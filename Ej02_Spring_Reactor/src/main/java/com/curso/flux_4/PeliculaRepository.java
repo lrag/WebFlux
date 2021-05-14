@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.sql.DataSource;
 
@@ -93,5 +95,12 @@ public class PeliculaRepository {
 		return mono;
 	}	
 	
+	public Flux<Pelicula> findAllById(Iterable<Integer> ids) {
+		List<Mono<Pelicula>> monos = new ArrayList<>();
+		for(Integer id : ids) {
+			monos.add(findById(id));
+		}
+		return Flux.concat(monos);
+	}
 	
 }

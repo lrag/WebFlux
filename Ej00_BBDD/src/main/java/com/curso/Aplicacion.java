@@ -5,7 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 import com.curso.modelo.entidad.Pelicula;
+import com.curso.modelo.entidad.Premio;
 import com.curso.modelo.persistencia.PeliculaRepositorio;
+import com.curso.modelo.persistencia.PremioRepositorio;
 
 @SpringBootApplication
 public class Aplicacion {
@@ -23,6 +25,13 @@ public class Aplicacion {
 		pr.save(new Pelicula(null,"Die Hard","D1","Accion",2000));
 		pr.save(new Pelicula(null,"Young Frankenstein","D1","Comedia",2000));
 		pr.save(new Pelicula(null,"Los violentos de Kelly","D1","Bélica",2000));
+		
+		PremioRepositorio premioRepo = appCtx.getBean(PremioRepositorio.class);
+		premioRepo.deleteAll();
+		
+		premioRepo.save(new Premio(null, "Mejor pelicula de accion de todos los tiempos", "1234", 3));
+		premioRepo.save(new Premio(null, "Yippee ki yay", "4321", 3));
+		premioRepo.save(new Premio(null, "Mejor pelicula en la que sale Carl Winslow", "5678", 3));
 		
 	}
 
