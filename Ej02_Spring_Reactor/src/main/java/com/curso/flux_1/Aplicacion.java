@@ -71,7 +71,8 @@ public class Aplicacion implements CommandLineRunner{
 			.saludar()
 			.subscribe( saludo -> System.out.println(saludo));
 		
-		//Podemos utilizar block en monos y flujos y nos devuelven el elemento emitido o la coleccion de elementos
+		System.out.println("=====================================");	
+		//Podemos utilizar block en monos y nos devuelven el elemento emitido
 		String saludo = monos.saludar().block();
 		System.out.println("Despues del block: "+saludo);
 

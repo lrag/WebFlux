@@ -1,0 +1,10 @@
+package com.curso.modelo.persistencia;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.reactive.ReactiveCrudRepository;
+import com.curso.modelo.entidad.Pelicula;
+import com.curso.modelo.entidad.Premio;
+
+public interface PremioRepositorio extends JpaRepository<Premio, Integer> {
+
+}
