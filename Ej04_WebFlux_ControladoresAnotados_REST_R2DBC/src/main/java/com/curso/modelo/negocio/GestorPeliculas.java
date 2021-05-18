@@ -12,6 +12,7 @@ import com.curso.modelo.persistencia.PeliculaRepositorio;
 import com.curso.modelo.persistencia.PremioRepositorio;
 
 import reactor.core.publisher.Mono;
+import reactor.core.scheduler.Schedulers;
 
 @Service
 public class GestorPeliculas {
@@ -29,6 +30,27 @@ public class GestorPeliculas {
 		//Lógica de negocio 
 		return peliculaRepo.save(pelicula);
 	}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	public Mono<Void> borrar(Integer idPelicula) {
 		//Buscar la pelicula y obtener sus datos

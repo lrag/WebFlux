@@ -22,7 +22,11 @@ import reactor.core.scheduler.Schedulers;
 @Component
 public class Monos {
 
-	public Mono<String> saludar(){
+	public String saludar(){
+		return "HOLA!";
+	}	
+	
+	public Mono<String> saludar_reactivo(){
 		return Mono.just("HOLA!");
 	}
 	

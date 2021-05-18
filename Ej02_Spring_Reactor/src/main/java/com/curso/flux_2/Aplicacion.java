@@ -28,14 +28,18 @@ public class Aplicacion implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
+		/*
 		System.out.println("=====================================");
 		Flux<Long> flujoFinito = flujos.fluxNumerosAleatoriosFinito();
-		flujoFinito.subscribe(numero -> System.out.println(numero));
-
+		flujoFinito.subscribe(numero -> {
+			System.out.println(Thread.currentThread().getName()+"-Consumidor:"+numero);
+		});
+		
 		System.out.println("=====================================");
 		Flux<String> flujoEstado = flujos.flujoConEstado();
 		flujoEstado.subscribe(mensaje -> System.out.println(mensaje));
 		
+		 */
 		System.out.println("=============================================");
 		List<Pelicula> peliculas = peliculaRepo.findAll();
 		for(Pelicula p: peliculas) {

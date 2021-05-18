@@ -27,6 +27,12 @@ public class Aplicacion {
 		System.out.println("===================================");
 		peliculaHistoricoRepo.findAll().subscribe(x -> System.out.println(x));		
 		System.out.println("===================================");
+		
+		
+		
+		
+		
+		
 				
 	}
 

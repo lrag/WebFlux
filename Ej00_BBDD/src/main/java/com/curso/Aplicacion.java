@@ -6,6 +6,7 @@ import org.springframework.context.ApplicationContext;
 
 import com.curso.modelo.entidad.Pelicula;
 import com.curso.modelo.entidad.Premio;
+import com.curso.modelo.persistencia.PeliculaHistoricoRepositorio;
 import com.curso.modelo.persistencia.PeliculaRepositorio;
 import com.curso.modelo.persistencia.PremioRepositorio;
 
@@ -32,6 +33,11 @@ public class Aplicacion {
 		premioRepo.save(new Premio(null, "Mejor pelicula de accion de todos los tiempos", "1234", 3));
 		premioRepo.save(new Premio(null, "Yippee ki yay", "4321", 3));
 		premioRepo.save(new Premio(null, "Mejor pelicula en la que sale Carl Winslow", "5678", 3));
+		
+		PeliculaHistoricoRepositorio peliculaHistoricoRepo = appCtx.getBean(PeliculaHistoricoRepositorio.class);
+		peliculaHistoricoRepo.deleteAll();
+		
+		
 		
 	}
 

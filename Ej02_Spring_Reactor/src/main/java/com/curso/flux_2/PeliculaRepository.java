@@ -22,11 +22,9 @@ public class PeliculaRepository {
 	@Autowired
 	private DataSource dataSource;
 	
-	public List<Pelicula> findAll(){		
-
+	public List<Pelicula> findAll(){	
 		List<Pelicula> peliculas = new ArrayList<>();
-		try (Connection cx = dataSource.getConnection()){
-
+		try (Connection cx = dataSource.getConnection()) {
 			PreparedStatement pst = cx.prepareStatement("select * from pelicula");
 			ResultSet rs = pst.executeQuery();
 			while(rs.next()) {
@@ -48,19 +46,18 @@ public class PeliculaRepository {
 		return peliculas;
 	}
 	
-	public Flux<Pelicula> findAll_Reactivo(){
-		
-		Flux<Pelicula> flux = Flux.generate(
+	public Flux<Pelicula> findAll_Reactivo(){		
+		return Flux.generate(
 				//State supplier
 				() -> {
 					Connection cx = dataSource.getConnection();
 					PreparedStatement pst = cx.prepareStatement("select * from pelicula");
-					pst.setFetchSize(1);
+					pst.setFetchSize(25);
 					ResultSet rs = pst.executeQuery();
-					return rs;
+					return rs;					
 				},
 				//Generator
-				(rs, sink) -> {	
+				(rs, sink) -> {
 					try {
 						if(rs.next()) {
 							Pelicula p = new Pelicula(
@@ -70,8 +67,8 @@ public class PeliculaRepository {
 									rs.getString("GENERO"),
 									rs.getInt("YEAR")
 								);
-							sink.next(p);
 							Thread.sleep(500);
+							sink.next(p);
 						} else {
 							sink.complete();
 						}
@@ -79,20 +76,20 @@ public class PeliculaRepository {
 						e.printStackTrace();
 					} catch (InterruptedException e) {
 						e.printStackTrace();
-					}					
-					return rs;
+					}
+					return rs; 
 				},
 				//State consumer
-				(rs) -> {
+				//Se invoca a modo de 'finaly', después de que el generator haya incovado 'complete'
+				rs -> {
 					System.out.println("Cerrando la conexión");
 					try {
 						rs.getStatement().getConnection().close();
 					} catch (SQLException e) {
 						e.printStackTrace();
 					}
-				}				
+				}			
 			);		
-		return flux;
 	}
 	
 }
