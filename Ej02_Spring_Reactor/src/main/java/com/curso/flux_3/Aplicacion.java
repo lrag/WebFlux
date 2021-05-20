@@ -47,7 +47,11 @@ public class Aplicacion implements CommandLineRunner{
 		//no tiene peso suficiente para mantenerla viva
 		//Thread.sleep(20_000);
 		
-		System.out.println("=====================================");
+		////////////////
+		// DISPOSABLE //
+		////////////////
+		
+		/*System.out.println("=====================================");
 		//Cancelando una subscripcion a un flujo
 		System.out.println(Thread.currentThread().getName());
 		Disposable d = 
@@ -60,34 +64,47 @@ public class Aplicacion implements CommandLineRunner{
 		Thread.sleep(4_000);
 		System.out.println("Cancelando la subscripción");
 		d.dispose();
-		Thread.sleep(2_000);
+		Thread.sleep(2_000);*/
 		
+		/*
 		System.out.println("=====================================");
 		//El flujo entrega un elemento cada segundo, pero el consumidor que proporciona el subscriptor
 		//tarda dos en procesarlo.
 		//Vemos que no se pierde ningún elemento
-		Disposable d2 = flujos.fluxInterval().subscribeOn(Schedulers.boundedElastic()).subscribe( numero -> {
-			System.out.println(numero);
-			long fin = System.currentTimeMillis()+2000;
-			while(System.currentTimeMillis()<fin) {
-				//Procesando...
-			}
-		});		
-		Thread.sleep(10_000);
+		Disposable d2 = flujos
+			.fluxInterval()
+			//.subscribeOn(Schedulers.boundedElastic())
+			.subscribe( numero -> {
+				System.out.println(numero);
+				long fin = System.currentTimeMillis()+2000;
+				while(System.currentTimeMillis()<fin) {
+					//Procesando...
+				}
+			});	
+
+		Thread.sleep(5_000);
 		
 		System.out.println("=====================================");
 		System.out.println("Ficheros (y procesando el flujo anterior en paralelo)");
 		Flux<List<String>> eventosDirectorio = flujos.monitorizarDirectorio();
-		Disposable d3 = eventosDirectorio.subscribeOn(Schedulers.boundedElastic()).subscribe(mensaje -> System.out.println(mensaje));
+		Disposable d3 = eventosDirectorio
+			.subscribeOn(Schedulers.boundedElastic())
+			.subscribe(mensaje -> System.out.println(mensaje));
 		
 		Thread.sleep(30_000);
 
 		d3.dispose();		
 		d2.dispose();
+		*/
+		
+		//////////////
+		// PARALLEL //
+		//////////////
 		
 		//
 		//Si necesitamos que los elementos del flujo se procesen en paralelo:
 		//
+		/*
 		System.out.println("=====================================");
 		System.out.println("Parallel flux");
 		flujos.flujoPalabras()
@@ -103,7 +120,8 @@ public class Aplicacion implements CommandLineRunner{
 			});		
 		
 		Thread.sleep(10_000);
-
+		*/
+		
 		System.out.println("=====================================");
 		//En este ejemplo es el flujo el que indica que el consumidor debe ser ejecutado por otro hilo distinto al que se subscribe
 		System.out.println("Antes de subscribirse a flujoPublishOn");

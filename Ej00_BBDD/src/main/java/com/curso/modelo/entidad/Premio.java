@@ -16,6 +16,9 @@ public class Premio {
 	private String fecha;
 	@Column(name="FK_ID_PELICULA")
 	private Integer idPelicula;
+	
+	//@ManyToOne
+	//private Pelicula pelicula;
 
 	public Premio() {
 		super();

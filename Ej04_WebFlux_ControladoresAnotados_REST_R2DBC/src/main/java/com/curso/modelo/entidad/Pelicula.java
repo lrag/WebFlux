@@ -12,7 +12,7 @@ public class Pelicula {
 	private String director;
 	private String genero;
 	private Integer year;
-	
+
 	public Pelicula() {
 		super();
 	}
@@ -64,12 +64,6 @@ public class Pelicula {
 
 	public void setYear(Integer year) {
 		this.year = year;
-	}
-
-	@Override
-	public String toString() {
-		return "Pelicula [id=" + id + ", titulo=" + titulo + ", director=" + director + ", genero=" + genero + ", year="
-				+ year + "]";
 	}
 
 }

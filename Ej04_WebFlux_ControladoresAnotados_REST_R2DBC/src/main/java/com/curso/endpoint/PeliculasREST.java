@@ -1,7 +1,5 @@
 package com.curso.endpoint;
 
-import java.util.function.Consumer;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -25,10 +23,10 @@ public class PeliculasREST {
 	@Autowired private PeliculaRepositorio peliculaRepo;
 	@Autowired private GestorPeliculas gestorPeliculas;
 	
-	//GET /peliculas   
-	//GET /peliculas/{id}
-	//POST /peliculas
-	//PUT /peliculas/{id}
+	//GET    /peliculas   
+	//GET    /peliculas/{id}
+	//POST   /peliculas
+	//PUT    /peliculas/{id}
 	//DELETE /peliculas/{id}  
 	
 	@GetMapping(path = "/peliculas",

@@ -70,36 +70,37 @@ public class PeliculaRepository {
 		return flux;
 	}
 	
-	public Mono<Pelicula> findById(Integer id){		
-		Mono<Pelicula> mono = Mono.create(
-				sink -> {	
-					try(Connection cx = dataSource.getConnection()){
-						PreparedStatement pst = cx.prepareStatement("select * from pelicula where id=?");
-						pst.setInt(1, id);
-						ResultSet rs = pst.executeQuery();
-						if(rs.next()) {
-							Pelicula p = new Pelicula(
-									rs.getInt("ID"),
-									rs.getString("TITULO"),
-									rs.getString("DIRECTOR"),
-									rs.getString("GENERO"),
-									rs.getInt("YEAR")
-								);
-							sink.success(p);
-						} 
-					} catch (SQLException e) {
-						e.printStackTrace();
-					} 
+	public Mono<Pelicula> findById(Integer idPelicula) {
+		
+		return Mono.create(sink -> {			
+			try(Connection cx = dataSource.getConnection()) {
+				PreparedStatement pst = cx.prepareStatement("select * from pelicula where id=?");
+				pst.setInt(1, idPelicula);
+				ResultSet rs = pst.executeQuery();
+				
+				if(rs.next()) {
+					Pelicula p = new Pelicula(
+							rs.getInt("ID"),
+							rs.getString("TITULO"),
+							rs.getString("DIRECTOR"),
+							rs.getString("GENERO"),
+							rs.getInt("YEAR")
+						);						
+					sink.success(p);	
+				} else {
+					sink.success();
 				}
-			);		
-		return mono;
-	}	
+			} catch (SQLException e) {				
+				sink.error(e);
+			}	
+		});	
+	}
 	
 	public Flux<Pelicula> findAllById(Iterable<Integer> ids) {
 		List<Mono<Pelicula>> monos = new ArrayList<>();
-		for(Integer id : ids) {
+		for(Integer id: ids) {
 			monos.add(findById(id));
-		}
+		}	
 		return Flux.concat(monos);
 	}
 	

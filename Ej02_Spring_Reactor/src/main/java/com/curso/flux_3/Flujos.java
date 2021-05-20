@@ -31,6 +31,7 @@ public class Flujos {
 		return Flux.generate(
 			//Generator
 			sink -> {
+				System.out.println(Thread.currentThread().getName()+"-Creando numero aleatorio");
 				Long numero = Math.round(Math.random()*10_000);
 				sink.next(numero);
 				

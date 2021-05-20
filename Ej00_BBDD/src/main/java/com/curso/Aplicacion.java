@@ -21,11 +21,14 @@ public class Aplicacion {
 	
 		pr.deleteAll();
 		
-		pr.save(new Pelicula(null,"2001","D1","Ci-fi",2000));
-		pr.save(new Pelicula(null,"Alien","D1","Ci-fi",2000));
-		pr.save(new Pelicula(null,"Die Hard","D1","Accion",2000));
-		pr.save(new Pelicula(null,"Young Frankenstein","D1","Comedia",2000));
-		pr.save(new Pelicula(null,"Los violentos de Kelly","D1","Bélica",2000));
+		pr.save(new Pelicula(null,"2001","Stanley Kubrik","Ci-fi",2000));
+		pr.save(new Pelicula(null,"Alien","Ridley Scott","Ci-fi",2000));
+		pr.save(new Pelicula(null,"Die Hard","John McTiernan","Acción",2000));
+		pr.save(new Pelicula(null,"Young Frankenstein","Mel Brooks","Comedia",2000));
+		pr.save(new Pelicula(null,"Los violentos de Kelly","Brian G. Hutton","Bélica",2000));
+		pr.save(new Pelicula(null,"La diligencia","John Ford","Western",2000));
+		pr.save(new Pelicula(null,"Depredador","John McTiernan","Acción",2000));
+		pr.save(new Pelicula(null,"rio Bravo","Howard Hawks","Western",2000));
 		
 		PremioRepositorio premioRepo = appCtx.getBean(PremioRepositorio.class);
 		premioRepo.deleteAll();
@@ -36,8 +39,6 @@ public class Aplicacion {
 		
 		PeliculaHistoricoRepositorio peliculaHistoricoRepo = appCtx.getBean(PeliculaHistoricoRepositorio.class);
 		peliculaHistoricoRepo.deleteAll();
-		
-		
 		
 	}
 

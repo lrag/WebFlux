@@ -22,10 +22,10 @@ public class Flujos {
 				() -> 0,
 				//Generator
 				(state,sink) -> {					
+					sink.next(state);					
 					long fin = System.currentTimeMillis()+1000;
 					while(System.currentTimeMillis()<fin) {
 					}
-					sink.next(state);					
 					state +=2;
 					if(state > 12) {
 						sink.complete();

@@ -1,5 +1,7 @@
 package com.curso.controlador;
 
+import java.time.Duration;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,20 +25,51 @@ public class ControladorPeliculas {
 	@Autowired private GestorPeliculas gestorPeliculas;
 	
 	@GetMapping("/peliculas")
-	public String paginaPeliculas(Model model) {
-		IReactiveDataDriverContextVariable peliculasFlux = new ReactiveDataDriverContextVariable(peliculaRepositorio.findAll());
-		model.addAttribute("peliculas", peliculasFlux);
+	public String verPaginaPeliculas(Model model) {
+		
+		//IReactiveDataDriverContextVariable peliculasFlux = new ReactiveDataDriverContextVariable(peliculaRepositorio.findAll());
+		//model.addAttribute("peliculas", peliculasFlux);		
+		
+		/*
+		//Si nos subscribimos...mala idea
+		peliculaRepositorio.findAll().subscribeOn(Schedulers.boundedElastic()).collect(Collectors.toList()).subscribe( peliculas -> {
+			System.out.println("DEMASIADO TARDE");
+			model.addAttribute("peliculas", peliculas);
+		});
+		
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		*/
+		
+		model.addAttribute("peliculas", peliculaRepositorio.findAll());
 		model.addAttribute("pelicula", new Pelicula());
 		return "peliculas";
 	}	
 
-	@GetMapping("/seleccionarPelicula")
-	public String buscarPelicula(@RequestParam("id") Integer id, Model model) {
-		IReactiveDataDriverContextVariable peliculasFlux = new ReactiveDataDriverContextVariable(peliculaRepositorio.findAll());
+	@GetMapping("/seleccionarPelicula_Full")
+	public String buscarPelicula_Full(@RequestParam("id") Integer id, Model model) {
+		model.addAttribute("peliculas", peliculaRepositorio.findAll());
+		model.addAttribute("pelicula", peliculaRepositorio.findById(id));
+		return "peliculas";
+	}	
+
+	@GetMapping("/seleccionarPelicula_Data_Driven")
+	public String buscarPelicula_Data_Driven(@RequestParam("id") Integer id, Model model) {
+		
+		//IReactiveDataDriverContextVariable peliculasFlux = 
+		//	new ReactiveDataDriverContextVariable(peliculaRepositorio.findAll().delayElements(Duration.ofSeconds(1)), 1);
+		IReactiveDataDriverContextVariable peliculasFlux = 
+				new ReactiveDataDriverContextVariable(peliculaRepositorio.findAll());
 		model.addAttribute("peliculas", peliculasFlux);
 		model.addAttribute("pelicula", peliculaRepositorio.findById(id));
 		return "peliculas";
 	}	
+	
+	//spring.thymeleaf.reactive.max-chunk-size=1024
+	
 	
 	@PostMapping("/insertarPelicula")
 	public Mono<String> insertarPelicula(@ModelAttribute(name = "pelicula") Pelicula pelicula, Model model) {

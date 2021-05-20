@@ -15,18 +15,20 @@ public class PeliculaHistorico {
 	private String director;
 	private String genero;
 	private Integer year;
+	private String premios;
 	
 	public PeliculaHistorico() {
 		super();
 	}
 
-	public PeliculaHistorico(Integer id, String titulo, String director, String genero, Integer year) {
+	public PeliculaHistorico(Integer id, String titulo, String director, String genero, Integer year, String premios) {
 		super();
 		this.id = id;
 		this.titulo = titulo;
 		this.director = director;
 		this.genero = genero;
 		this.year = year;
+		this.premios = premios;
 	}
 
 	public Integer getId() {
@@ -69,4 +71,12 @@ public class PeliculaHistorico {
 		this.year = year;
 	}
 
+	public String getPremios() {
+		return premios;
+	}
+
+	public void setPremios(String premios) {
+		this.premios = premios;
+	}
+	
 }

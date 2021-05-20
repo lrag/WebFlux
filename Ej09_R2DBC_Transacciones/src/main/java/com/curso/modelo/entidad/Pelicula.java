@@ -1,12 +1,10 @@
-package com.curso.endpoint.dto;
+package com.curso.modelo.entidad;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
-import com.curso.modelo.entidad.Pelicula;
-
 @Table
-public class PeliculaDTO {
+public class Pelicula {
 
 	@Id
 	private Integer id;
@@ -14,26 +12,18 @@ public class PeliculaDTO {
 	private String director;
 	private String genero;
 	private Integer year;
-	
-	public PeliculaDTO() {
+
+	public Pelicula() {
 		super();
 	}
 
-	public PeliculaDTO(Integer id, String titulo, String director, String genero, Integer year) {
+	public Pelicula(Integer id, String titulo, String director, String genero, Integer year) {
 		super();
 		this.id = id;
 		this.titulo = titulo;
 		this.director = director;
 		this.genero = genero;
 		this.year = year;
-	}
-	
-	public PeliculaDTO(Pelicula pelicula) {
-		id       = pelicula.getId();
-		titulo   = pelicula.getTitulo();
-		director = pelicula.getDirector();
-		genero   = pelicula.getGenero();
-		year     = pelicula.getYear();		
 	}
 
 	public Integer getId() {
@@ -80,10 +70,6 @@ public class PeliculaDTO {
 	public String toString() {
 		return "Pelicula [id=" + id + ", titulo=" + titulo + ", director=" + director + ", genero=" + genero + ", year="
 				+ year + "]";
-	}
-	
-	public Pelicula getAsPelicula() {
-		return new Pelicula(id, titulo, director, genero, year);
 	}
 
 }
