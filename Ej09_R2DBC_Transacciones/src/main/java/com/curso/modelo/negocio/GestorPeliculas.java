@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.curso.modelo.entidad.Pelicula;
@@ -25,22 +26,22 @@ public class GestorPeliculas {
 	@Autowired private PremioRepositorio premioRepo;
 	@Autowired private PeliculaHistoricoRepositorio peliculaHistoricoRepo;
 
-	//@Transactional(rollbackFor = Exception.class)
+	@Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class)
 	public Mono<List<Pelicula>> pruebaTransacciones(){
 		
 		/*
-		Pelicula[] peliculas = new Pelicula[10];
+		List<Pelicula> peliculas = new ArrayList<>();
 		int escort;
 		for(escort=0; escort<10; escort++) {
-			peliculas[a] = new Pelicula(null, "T"+escort, "D"+escort, "G"+escort, 1980+escort);
+			peliculas.add(new Pelicula(null, "T"+escort, "D"+escort, "G"+escort, 1980+escort));
 		}
 		Flux
-			.just(peliculas)
+			.fromIterable(peliculas)
 			.flatMap( pelicula -> {
 				System.out.println("Insertando: "+pelicula);
 				return peliculaRepo.save(pelicula);
 			});
-		*/
+		*/		
 		
 		return Flux
 			.range(1, 10).map( n -> {
@@ -53,7 +54,7 @@ public class GestorPeliculas {
 				}
 				
 				System.out.println("Insertando: "+pelicula);
-				return peliculaRepo.save(pelicula);
+				return peliculaRepo.save(pelicula); //Mono<PeliculaInsertada>
 			})
 			.collect(Collectors.toList());		
 	}	

@@ -109,19 +109,19 @@ function inicializar(){
                     <th>Genero</th>
                     <th>Estreno</th>
                 </tr>
-                <tr th:each="pelicula: ${peliculas}">
-                	<td>
-                		<a th:href="@{seleccionarPelicula_Full(id=${pelicula.id})}"><button>1</button></a>
-                		<a th:href="@{seleccionarPelicula_Data_Driven(id=${pelicula.id})}"><button>2</button></a>
-                	 	<span th:text="${pelicula.titulo}"></span>
-                	</td>
-                	
-                    <td th:text="${pelicula.director}"/>
-                    <td th:text="${pelicula.genero}"/>
-                    <td th:text="${pelicula.year}"/>
-                </tr>
                 </thead>
-                <tbody id="tablaPeliculas"></tbody>
+                <tbody id="tablaPeliculas">
+	                <tr th:each="pelicula: ${peliculas}">
+	                	<td>
+	                		<a th:href="@{seleccionarPelicula_Full(id=${pelicula.id})}"><button>1</button></a>
+	                		<a th:href="@{seleccionarPelicula_Data_Driven(id=${pelicula.id})}"><button>2</button></a>
+	                	 	<span th:text="${pelicula.titulo}"></span>
+	                	</td>	                	
+	                    <td th:text="${pelicula.director}"/>
+	                    <td th:text="${pelicula.genero}"/>
+	                    <td th:text="${pelicula.year}"/>
+	                </tr>
+                </tbody>
             </table>
 
         </div>

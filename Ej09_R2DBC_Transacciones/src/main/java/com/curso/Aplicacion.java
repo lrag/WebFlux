@@ -22,11 +22,14 @@ public class Aplicacion {
 		//los repositorios de R2DBC con el MISMO HILO
 		System.out.println("===================================");
 		peliculaRepo.findAll().subscribe(x -> System.out.println(x));		
+		
+		
+		/*
 		System.out.println("===================================");
 		gestorPeliculas.pruebaTransacciones().block(); // :)
 		System.out.println("===================================");
 		peliculaRepo.findAll().subscribe(x -> System.out.println(x));		
-		
+		*/
 		
 				
 	}

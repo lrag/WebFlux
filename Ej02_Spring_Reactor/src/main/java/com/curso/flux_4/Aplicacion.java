@@ -212,6 +212,11 @@ public class Aplicacion implements CommandLineRunner{
 				mapa.forEach( (clave,valor) -> System.out.println(clave+":"+valor) );
 			});
 		
+		/*
+		.defaultIfEmpty(valor por defecto);
+		.switchIfEmpty(Mono.error(new Exception("EL AÑO NO PUEDE SER NEGATIVO!")));
+		*/
+		
 	}
 	
 }

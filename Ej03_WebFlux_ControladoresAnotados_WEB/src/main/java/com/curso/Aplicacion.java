@@ -4,8 +4,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import com.curso.modelo.entidad.Pelicula;
 import com.curso.modelo.persistencia.PeliculaHistoricoRepositorio;
 import com.curso.modelo.persistencia.PeliculaRepositorio;
+
+import reactor.core.publisher.Mono;
+import reactor.core.scheduler.Schedulers;
 
 @SpringBootApplication
 public class Aplicacion {
@@ -28,6 +32,8 @@ public class Aplicacion {
 		
 		System.out.println("===================================");
 		peliculaHistoricoRepo.findAll().subscribe(x -> System.out.println(x));
+		
+		
 		
 		
 		
