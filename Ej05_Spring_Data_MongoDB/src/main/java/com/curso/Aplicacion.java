@@ -33,12 +33,12 @@ public class Aplicacion implements CommandLineRunner{
 		
 		//clienteRepo.deleteAll();
 		
-		Cliente c1 = new Cliente(1,"Bart","C/Evergreen Terrace","666");
-		Cliente c2 = new Cliente(2,"Harry Callahan","S.F.","555");
+		Cliente c1 = new Cliente(null,"Bart","C/Evergreen Terrace","666");
+		Cliente c2 = new Cliente(null,"Harry Callahan","S.F.","555");
 		
 		clienteRepo.save(c1);
 		clienteRepo.save(c2);
-		
+
 		List<Cliente> clientes = clienteRepo.findAll();
 		clientes.forEach(c -> System.out.println(c));
 		

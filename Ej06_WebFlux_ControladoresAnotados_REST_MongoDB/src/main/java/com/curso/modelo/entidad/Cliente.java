@@ -1,6 +1,7 @@
 package com.curso.modelo.entidad;
 
 import javax.validation.constraints.NotBlank;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 

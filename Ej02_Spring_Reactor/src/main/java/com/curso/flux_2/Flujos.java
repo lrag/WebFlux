@@ -16,7 +16,7 @@ public class Flujos {
 		Flux<Long> flujo = Flux.generate( 
 				//Generator
 				sink -> {
-					System.out.println(Thread.currentThread().getName()+"-Generando numero aleatorio...");
+					System.out.println(Thread.currentThread().getName()+"-Generando número aleatorio...");
 					try {
 						Thread.sleep(500);
 					} catch (InterruptedException e) {
@@ -29,7 +29,6 @@ public class Flujos {
 						sink.complete();
 					}
 				});
-
 		return flujo;
 	}
 		
@@ -58,6 +57,34 @@ public class Flujos {
 		);		
 		return flux;
 	}
+	
+	public Flux<String> flujoConEstadoYStateConsumer(){
+		Flux<String> flux = Flux.generate(
+			//State supplier
+			() -> 1,
+			//Generator
+			(state, sink) -> {
+
+				sink.next("Mensaje nº:"+state);
+				state++;
+				
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				
+				if(state == 11) {
+					sink.complete();
+				}
+				
+				return state;
+			},
+			//State consumer
+			(state) -> System.out.println("FIN")
+		);		
+		return flux;
+	}	
 	
 }
 

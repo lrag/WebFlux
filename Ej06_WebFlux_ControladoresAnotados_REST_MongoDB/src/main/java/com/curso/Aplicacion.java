@@ -48,39 +48,43 @@ public class Aplicacion implements CommandLineRunner{
 
 		//Nos da igual el resultado, pero se insertan	
 		//Además se insertan el un orden aleatorio porque estos cuatro 'save'
-		//se ejecutarán en paralelo!
+		//se ejecutarán en paralelo!		
+		
 		//clienteRepo.save(c1).subscribe();
 		//clienteRepo.save(c2).subscribe();
 		//clienteRepo.save(c3).subscribe();
 		//clienteRepo.save(c4).subscribe();
 		
-
 		//Queremos saber algo del resultado, pero sigue dandonos igual el orden
+		//System.out.println(Thread.currentThread().getName()+"-ANTES");
 		//clienteRepo.save(c1).subscribe( c -> System.out.println(Thread.currentThread().getName()+"-"+c));
 		//clienteRepo.save(c2).subscribe( c -> System.out.println(Thread.currentThread().getName()+"-"+c));
 		//clienteRepo.save(c3).subscribe( c -> System.out.println(Thread.currentThread().getName()+"-"+c));
 		//clienteRepo.save(c4).subscribe( c -> System.out.println(Thread.currentThread().getName()+"-"+c));
+		//System.out.println(Thread.currentThread().getName()+"-DESPUES");
 		
 		
 		//Nos interesa el orden. Esto no está del todo mal. La verdad es que está mal puesto que no debemos hacer cosas
 		//bloqueantes en los then
 		//clienteRepo.save(c1)
-		//	.then(clienteRepo.save(c2))
+		//	.then(clienteRepo.save(c2)).
 		//	.then(clienteRepo.save(c3))
 		//	.then(clienteRepo.save(c4))
 		//	.subscribe();
 		 
 
 		//Ídem. Este si que está 100% bien
+		/*
 		Mono<Void>    mv = clienteRepo.deleteAll();
 		Mono<Cliente> m1 = clienteRepo.save(c1);
 		Mono<Cliente> m2 = clienteRepo.save(c2);
 		Mono<Cliente> m3 = clienteRepo.save(c3);
 		Mono<Cliente> m4 = clienteRepo.save(c4);		
 		Flux.concat(mv,m1,m2,m3,m4).subscribe();
-		 
-		/*
+		*/
+		
 		//Si además queremos añadir código entre las operaciones reactivas
+		/*
 		clienteRepo
 			.deleteAll() //Devuelve Mono<Void>
 			.thenReturn("OK") //Devuelve Mono<String>
@@ -107,6 +111,7 @@ public class Aplicacion implements CommandLineRunner{
 			})
 			.subscribe( c -> System.out.println(c));
 		*/
+		
 		 
 				
 	}

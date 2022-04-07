@@ -24,9 +24,13 @@ public class Aplicacion implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
+		//////////////////
+		// SUBSCRIBE ON //
+		//////////////////
+		
 		Flux<Long> flujoInfinito = flujos.fluxNumerosAleatoriosInfinito();
 		
-		//Si nos subscribimos a un flujoInfinito y no tenemos cuidad con cuál hilo
+		//Si nos subscribimos a un flujoInfinito y no tenemos cuidado con cuál hilo
 		//ejecutara el código del consumer nos quedaremos bloqueados procesando
 		//los elementos del flujo
 		//
@@ -35,23 +39,25 @@ public class Aplicacion implements CommandLineRunner{
 		//flujoInfinito.subscribe(numero -> System.out.println(Thread.currentThread().getName()+"-"+numero));
 		//System.out.println("Aqui ya no llega :(");
 
-		//System.out.println("=====================================");
-		//System.out.println(Thread.currentThread().getName()+"-Antes de subscribirse");
-		//flujoInfinito
-		//	.subscribeOn(Schedulers.boundedElastic())
-		//	.subscribe( numero -> System.out.println(Thread.currentThread().getName()+"-"+numero));
-		//System.out.println(Thread.currentThread().getName()+"-Despues de subscribirse");
+		System.out.println("=====================================");
+		System.out.println(Thread.currentThread().getName()+"-Antes de subscribirse");
+		flujoInfinito
+			.subscribeOn(Schedulers.boundedElastic())
+			.subscribe( numero -> System.out.println(Thread.currentThread().getName()+"-"+numero));
+		System.out.println(Thread.currentThread().getName()+"-Despues de subscribirse");
 		
 		//
 		//Sin este thread.sleep la aplicación finaliza. El hilo que se queda procesando los elementos del flujo
 		//no tiene peso suficiente para mantenerla viva
-		//Thread.sleep(20_000);
+		Thread.sleep(20_000);
+		
+		System.exit(0);
 		
 		////////////////
 		// DISPOSABLE //
 		////////////////
 		
-		/*System.out.println("=====================================");
+		System.out.println("=====================================");
 		//Cancelando una subscripcion a un flujo
 		System.out.println(Thread.currentThread().getName());
 		Disposable d = 
@@ -64,9 +70,8 @@ public class Aplicacion implements CommandLineRunner{
 		Thread.sleep(4_000);
 		System.out.println("Cancelando la subscripción");
 		d.dispose();
-		Thread.sleep(2_000);*/
+		Thread.sleep(2_000);
 		
-		/*
 		System.out.println("=====================================");
 		//El flujo entrega un elemento cada segundo, pero el consumidor que proporciona el subscriptor
 		//tarda dos en procesarlo.
@@ -95,7 +100,6 @@ public class Aplicacion implements CommandLineRunner{
 
 		d3.dispose();		
 		d2.dispose();
-		*/
 		
 		//////////////
 		// PARALLEL //
@@ -104,7 +108,6 @@ public class Aplicacion implements CommandLineRunner{
 		//
 		//Si necesitamos que los elementos del flujo se procesen en paralelo:
 		//
-		/*
 		System.out.println("=====================================");
 		System.out.println("Parallel flux");
 		flujos.flujoPalabras()
@@ -120,7 +123,6 @@ public class Aplicacion implements CommandLineRunner{
 			});		
 		
 		Thread.sleep(10_000);
-		*/
 		
 		System.out.println("=====================================");
 		//En este ejemplo es el flujo el que indica que el consumidor debe ser ejecutado por otro hilo distinto al que se subscribe

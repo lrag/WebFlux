@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Cliente {
 
 	@Id //'Mapea' el campo anotado con @id a '_id'
-	private Integer id; 
+	private String id; 
 	private String nombre;
 	private String direccion;
 	private String telefono;
@@ -16,7 +16,7 @@ public class Cliente {
 		super();
 	}
 
-	public Cliente(Integer id, String nombre, String direccion, String telefono) {
+	public Cliente(String id, String nombre, String direccion, String telefono) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -24,11 +24,11 @@ public class Cliente {
 		this.telefono = telefono;
 	}
 
-	public Integer getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 

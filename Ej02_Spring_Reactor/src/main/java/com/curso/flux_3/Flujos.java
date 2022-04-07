@@ -51,10 +51,12 @@ public class Flujos {
 					WatchKey key = null;
 					final Path path = Paths.get("");
 					final WatchService watchService = FileSystems.getDefault().newWatchService();
-					path.register(watchService, 
-					StandardWatchEventKinds.ENTRY_CREATE, 
-					StandardWatchEventKinds.ENTRY_DELETE, 
-					StandardWatchEventKinds.ENTRY_MODIFY);		
+					path.register(
+							watchService, 
+							StandardWatchEventKinds.ENTRY_CREATE, 
+							StandardWatchEventKinds.ENTRY_DELETE, 
+							StandardWatchEventKinds.ENTRY_MODIFY
+						);		
 
 					System.out.println("Esperando a una accion en el directorio para publicar el siguiente mensaje...");
 					key = watchService.take();

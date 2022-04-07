@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import reactor.core.publisher.Mono;
+import reactor.core.scheduler.Schedulers;
 
 @SpringBootApplication
 public class Aplicacion implements CommandLineRunner{
@@ -26,7 +27,13 @@ public class Aplicacion implements CommandLineRunner{
 		
 		Mono<String> mono1 = monos.saludoMono();
 		mono1.subscribe( str -> System.out.println(str) );
+		System.out.println("UNO");
 		
+		mono1 = monos.saludoMono();
+		mono1.subscribeOn(Schedulers.boundedElastic()).subscribe( str -> System.out.println(str) );
+		System.out.println("DOS");
+		
+		Thread.sleep(1000);		
 	}
 
 }

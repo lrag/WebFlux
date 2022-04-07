@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -31,22 +32,27 @@ public class ClientesRest {
 			    consumes = MediaType.APPLICATION_JSON_VALUE, 
 			    produces = MediaType.APPLICATION_JSON_VALUE)
 	public Mono<ResponseEntity<ClienteDTO>> modificar(@RequestBody ClienteDTO clienteDto){	
-		Mono<Cliente> monoCliente = gestorClientes.modificar(clienteDto.asCliente());
-		return monoCliente.map( cliente -> new ResponseEntity<ClienteDTO>(new ClienteDTO(cliente), HttpStatus.OK));
+		return gestorClientes
+			.insertar(clienteDto.asCliente())
+			.map( cliente -> {
+				return new ResponseEntity<ClienteDTO>(new ClienteDTO(cliente), HttpStatus.OK);
+			});		
 	}
 
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, 
 				 produces = MediaType.APPLICATION_JSON_VALUE)
 	public Mono<ResponseEntity<ClienteDTO>> insertar(@RequestBody ClienteDTO clienteDto){	
-		Mono<Cliente> monoCliente = gestorClientes.insertar(clienteDto.asCliente());
-		return monoCliente.map( cliente -> new ResponseEntity<ClienteDTO>(new ClienteDTO(cliente), HttpStatus.OK));
+		return gestorClientes
+			.insertar(clienteDto.asCliente())
+			.map( cliente -> {
+				return new ResponseEntity<ClienteDTO>(new ClienteDTO(cliente), HttpStatus.CREATED);
+			});
 	}
 	
 	@GetMapping(path="/{id}",
 			    produces = MediaType.APPLICATION_JSON_VALUE)
 	public Mono<ResponseEntity<ClienteDTO>> buscar(@PathVariable("id") String id){	
 		System.out.println("BUSCAR:"+id);
-
 		return clienteRepo
 			.findById(id) //Devuelve Mono<Cliente> o Mono<Void>!
 			.map( cliente -> {
@@ -57,8 +63,32 @@ public class ClientesRest {
 
 	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	public Flux<ClienteDTO> listar(){
-		Flux<Cliente> fluxClientes = clienteRepo.findAll();
-		return fluxClientes.map( c -> new ClienteDTO(c));
+		return clienteRepo
+			.findAll() //Aqui llegan clientes
+			.map( cliente -> new ClienteDTO(cliente) );
+	}
+	
+	@DeleteMapping(path="/{id}")
+	public Mono<ResponseEntity<Object>> borrar(@PathVariable("id") String idCliente){
+		/*
+		Cliente c = new Cliente();
+		c.setId(id);
+		return gestorClientes
+				.borrar(c);
+		*/
+
+		return Mono
+			.just(idCliente)
+			.map( id -> {
+				Cliente c = new Cliente();
+				c.setId(id);
+				return c;
+			})
+			.flatMap( cliente -> {
+				return gestorClientes.borrar(cliente);
+			})
+			.thenReturn(new ResponseEntity<Object>(HttpStatus.OK));	
+		
 	}
 	
 }

@@ -19,16 +19,16 @@ public class ConfiguracionEndpointsFuncionales {
 	@Bean
 	public RouterFunction<ServerResponse> functionalRoutesClientes(ClientesHandler clientesHandler) {
 		return RouterFunctions
-			.route(RequestPredicates.GET("/clientes")             , serverRequest -> clientesHandler.listar(serverRequest))
-			.andRoute(RequestPredicates.GET("/clientes/{id}")     , serverRequest -> clientesHandler.buscar(serverRequest))
-			.andRoute(RequestPredicates.POST("/clientes")         , serverRequest -> clientesHandler.insertar(serverRequest))
+			.route(RequestPredicates.GET("/clientes")           , serverRequest -> clientesHandler.listar(serverRequest))
+			.andRoute(RequestPredicates.GET("/clientes/{id}")   , serverRequest -> clientesHandler.buscar(serverRequest))
+			.andRoute(RequestPredicates.POST("/clientes")       , serverRequest -> clientesHandler.insertar(serverRequest))
 			.andRoute(RequestPredicates.PUT("/clientes/{id}")   , serverRequest -> clientesHandler.modificar(serverRequest))
 			.andRoute(RequestPredicates.DELETE("/clientes/{id}"), serverRequest -> clientesHandler.borrar(serverRequest));
 	}		
 
 	/*
 	@Bean
-	public RouterFunction<ServerResponse> functionalRoutesFacturas(ClientesHandler clientesHandler) {
+	public RouterFunction<ServerResponse> functionalRoutesFacturas(FacturasHandler facturasHandler) {
 		return RouterFunctions
 			.route(RequestPredicates.GET("/facturas")             , serverRequest -> facturasHandler.listar(serverRequest))
 			.andRoute(RequestPredicates.GET("/facturas/{id}")     , serverRequest -> facturasHandler.buscar(serverRequest))
@@ -36,8 +36,9 @@ public class ConfiguracionEndpointsFuncionales {
 			.andRoute(RequestPredicates.PUT("/facturas/{id}")   , serverRequest -> facturasHandler.insertar(serverRequest));
 			.andRoute(RequestPredicates.DELETE("/facturas/{id}"), serverRequest -> facturasHandler.insertar(serverRequest));
 	}
-	*/		
-  
-  
+	*/		  
   
 }
+
+
+

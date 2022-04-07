@@ -1,6 +1,5 @@
 package com.curso.modelo.negocio;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -99,23 +98,7 @@ public class GestorPeliculas {
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	/*
-	
-
-
 		//Aqui tenemos tres consultas que ejecutar!!!
 		/*
 		Mono<Void> mono = peliculaRepo

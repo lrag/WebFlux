@@ -23,7 +23,7 @@ public class ClientesHandler {
 	 
 	POST /clientes
 	CT: app/json
-	-----------------------
+	---------------------
 	{ cliente }	
 	
 	*/
@@ -31,16 +31,24 @@ public class ClientesHandler {
 	public Mono<ServerResponse> insertar(ServerRequest request){		
 		return
 			request
-				.bodyToMono(ClienteDTO.class) //Devuelve Mono<VlienteDTO>
+				.bodyToMono(ClienteDTO.class) //Devuelve Mono<ClienteDTO>
 				.map(clienteDTO -> clienteDTO.asCliente())
 				.flatMap(cliente -> {
 					return ServerResponse
 							.ok()
+							.contentType(MediaType.APPLICATION_JSON)
 							//.body(gestorClientes.insertar(cliente).flatMap(cli -> Mono.just( new ClienteDTO(cli)) ),
 							.body(gestorClientes.insertar(cliente), ClienteDTO.class); 					
 				});
 	}
-
+	
+	/*
+	PUT /clientes/{id}
+	CT: app/json
+	---------------------
+	{ cliente }
+	*/
+	
 	public Mono<ServerResponse> modificar(ServerRequest request){		
 		String id = request.pathVariable("id");
 		return
@@ -48,17 +56,23 @@ public class ClientesHandler {
 				.bodyToMono(ClienteDTO.class) //Devuelve Mono<VlienteDTO>
 				.map(clienteDTO -> clienteDTO.asCliente())
 				.flatMap(cliente -> {
+					Mono<Cliente> elMonoDeEstallido = gestorClientes.modificar(cliente);
 					return ServerResponse
 							.ok()
+							.contentType(MediaType.APPLICATION_JSON)							
 							//.body(gestorClientes.insertar(cliente).flatMap(cli -> Mono.just( new ClienteDTO(cli)) ),
-							.body(gestorClientes.modificar(cliente), ClienteDTO.class); 					
+							.body(elMonoDeEstallido , ClienteDTO.class); 					
 				});
 	}
+	
+	/*
+	DELETE /clientes/{id}
+	*/	
 	
 	public Mono<ServerResponse> borrar(ServerRequest request){		
 		String id = request.pathVariable("id");
 		return gestorClientes
-					.borrar(id)
+					.borrar(id) //Mono<Void>
 					.then(ServerResponse.ok().build());		
 	}
 	
@@ -89,7 +103,8 @@ public class ClientesHandler {
 		//	.contentType(MediaType.APPLICATION_JSON)
 		//	.body(clienteRepo.findById(id).map( c -> new ClienteDTO(c)), ClienteDTO.class);
 		
-		return clienteRepo.findById(id) //Devuelve Mono<Cliente> ó Mono<Void>
+		return clienteRepo
+				.findById(id) //Devuelve Mono<Cliente> ó Mono<Void>
 	            .flatMap( cliente -> {	//Si estamos aquí es que ha sido Mono<Cliente>. Llega CLIENTE y queremos que salga Mono<ServerResponse>           	
 	            	return ServerResponse
 	            		.ok()
@@ -97,7 +112,7 @@ public class ClientesHandler {
 	            		.body(Mono.just(new ClienteDTO(cliente)), ClienteDTO.class);
 	            })
 	            .switchIfEmpty(ServerResponse.notFound().build());
-	    
+		
 	}
 
 	/*

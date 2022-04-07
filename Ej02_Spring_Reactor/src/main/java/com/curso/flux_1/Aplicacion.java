@@ -67,6 +67,7 @@ public class Aplicacion implements CommandLineRunner{
 		System.out.println("=====================================");		
 		//Utilizando un consumidor definido como una bean de spring
 		flujoPalabras.subscribe(consumidor);
+		System.exit(0);
 
 		///////////
 		// MONOS //
@@ -81,8 +82,6 @@ public class Aplicacion implements CommandLineRunner{
 			.subscribe(saludo -> System.out.println(saludo));
 		//Aqui no tenemos el saludo
 		
-		System.exit(0);
-
 		System.out.println("=====================================");			
 		//Podemos utilizar block en monos y nos devuelven el elemento emitido
 		//Usar solo en caso de extrema necesidad

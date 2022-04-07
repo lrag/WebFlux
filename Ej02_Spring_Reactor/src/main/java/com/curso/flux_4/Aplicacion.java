@@ -52,7 +52,7 @@ public class Aplicacion implements CommandLineRunner{
 		Thread.sleep(10_000);
 
 		System.out.println("======================================");
-		//Tambien podemos concatenar vários monos para obtener un flujo
+		//Tambien podemos concatenar varios monos para obtener un flujo
 		Flux.concat(
 				peliculaRepo.findById(1), 
 				peliculaRepo.findById(2), 

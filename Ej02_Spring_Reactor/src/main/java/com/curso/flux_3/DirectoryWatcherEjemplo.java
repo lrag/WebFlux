@@ -18,18 +18,21 @@ public class DirectoryWatcherEjemplo {
         Path path = Paths.get("");
 
         path.register(
-          watchService, 
-            StandardWatchEventKinds.ENTRY_CREATE, 
-              StandardWatchEventKinds.ENTRY_DELETE, 
-                StandardWatchEventKinds.ENTRY_MODIFY);
+	           watchService, 
+	           StandardWatchEventKinds.ENTRY_CREATE, 
+	           StandardWatchEventKinds.ENTRY_DELETE, 
+	           StandardWatchEventKinds.ENTRY_MODIFY
+           );
 
         WatchKey key;
         while ((key = watchService.take()) != null) {
         	System.out.println("hola");
             for (WatchEvent<?> event : key.pollEvents()) {
                 System.out.println(
-                  "Event kind:" + event.kind() 
-                    + ". File affected: " + event.context() + ".");
+	                  "Event kind:" + event.kind() 
+	                  + ". File affected: " + event.context() 
+	                  + "."
+                  );
             }
             key.reset();
         }

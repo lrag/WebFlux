@@ -1,7 +1,0 @@
-package com.curso.modelo.persistencia;
-
-import org.springframework.data.repository.reactive.ReactiveCrudRepository;
-
-public interface PeliculaRepositorio extends ReactiveCrudRepository {
-
-}
