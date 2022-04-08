@@ -15,7 +15,7 @@ public class Flujos {
 		AtomicInteger contador = new AtomicInteger(0);
 		Flux<Long> flujo = Flux.generate( 
 				//Generator
-				sink -> {
+				consumidores -> {
 					System.out.println(Thread.currentThread().getName()+"-Generando número aleatorio...");
 					try {
 						Thread.sleep(500);
@@ -23,10 +23,10 @@ public class Flujos {
 						e.printStackTrace();
 					}	
 					
-					sink.next(Math.round(Math.random()*10_000));
+					consumidores.next(Math.round(Math.random()*10_000));
 					if(contador.incrementAndGet() == 10) {
 						//Indicamos al subscriptor que hemos terminado
-						sink.complete();
+						consumidores.complete();
 					}
 				});
 		return flujo;
@@ -37,9 +37,9 @@ public class Flujos {
 			//State supplier
 			() -> 1,
 			//Generator
-			(state, sink) -> {
+			(state, consumidores) -> {
 
-				sink.next("Mensaje nº:"+state);
+				consumidores.next("Mensaje nº:"+state);
 				state++;
 				
 				try {
@@ -49,7 +49,7 @@ public class Flujos {
 				}
 				
 				if(state == 11) {
-					sink.complete();
+					consumidores.complete();
 				}
 				
 				return state;
@@ -63,9 +63,9 @@ public class Flujos {
 			//State supplier
 			() -> 1,
 			//Generator
-			(state, sink) -> {
+			(state, consumidores) -> {
 
-				sink.next("Mensaje nº:"+state);
+				consumidores.next("Mensaje nº:"+state);
 				state++;
 				
 				try {
@@ -75,13 +75,13 @@ public class Flujos {
 				}
 				
 				if(state == 11) {
-					sink.complete();
+					consumidores.complete();
 				}
 				
 				return state;
 			},
 			//State consumer
-			(state) -> System.out.println("FIN")
+			(state) -> System.out.println("E TERMINAO")
 		);		
 		return flux;
 	}	

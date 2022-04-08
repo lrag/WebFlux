@@ -66,4 +66,10 @@ public class Pelicula {
 		this.year = year;
 	}
 
+	@Override
+	public String toString() {
+		return "Pelicula [id=" + id + ", titulo=" + titulo + ", director=" + director + ", genero=" + genero + ", year="
+				+ year + "]";
+	}
+	
 }

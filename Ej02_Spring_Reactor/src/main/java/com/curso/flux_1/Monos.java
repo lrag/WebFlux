@@ -27,7 +27,7 @@ public class Monos {
 	}	
 	
 	public Mono<String> saludar_reactivo(){
-		return Mono.just("HOLA!");
+		return Mono.just("HOLA, SOY UN MONO!");
 	}
 	
 }

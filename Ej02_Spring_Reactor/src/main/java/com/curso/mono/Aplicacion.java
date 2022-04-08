@@ -23,17 +23,19 @@ public class Aplicacion implements CommandLineRunner{
 		
 		System.out.println("=====================================");
 		String saludo = monos.saludo();
-		System.out.println(saludo);
+		System.out.println(Thread.currentThread().getName()+":"+saludo);
 		
 		Mono<String> mono1 = monos.saludoMono();
-		mono1.subscribe( str -> System.out.println(str) );
-		System.out.println("UNO");
+		mono1.subscribe( str -> System.out.println(Thread.currentThread().getName()+":"+str) );
+		System.out.println(Thread.currentThread().getName()+":"+"UNO");
 		
+		System.out.println("=====================================");
 		mono1 = monos.saludoMono();
-		mono1.subscribeOn(Schedulers.boundedElastic()).subscribe( str -> System.out.println(str) );
-		System.out.println("DOS");
+		mono1.subscribeOn(Schedulers.boundedElastic()).subscribe( str -> System.out.println(Thread.currentThread().getName()+":"+str) );
+		//Aqui no tenemos el saludo!
+		System.out.println(Thread.currentThread().getName()+":"+"DOS");
 		
-		Thread.sleep(1000);		
+		Thread.sleep(1000);	
 	}
 
 }

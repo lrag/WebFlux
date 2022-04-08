@@ -1,5 +1,8 @@
 package com.curso.endpoint;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -31,7 +34,14 @@ public class PeliculasREST {
 	
 	@GetMapping(path = "/peliculas",
 			    produces = MediaType.APPLICATION_JSON_VALUE)
-	public Flux<Pelicula> listarPeliculas() {		
+	public Flux<Pelicula> listarPeliculas() {	
+		
+		//Esto es aberrante
+		//Muerte y destrucción
+		//List<Pelicula> pelis = new ArrayList<>();
+		//peliculaRepo.findAll().subscribe( p -> pelis.add(p) );
+		//return pelis;
+		
 		return peliculaRepo.findAll();
 	}
 		

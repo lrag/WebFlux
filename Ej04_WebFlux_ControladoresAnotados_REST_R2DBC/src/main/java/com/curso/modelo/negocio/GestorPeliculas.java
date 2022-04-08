@@ -37,12 +37,18 @@ public class GestorPeliculas {
 		System.out.println("========================================");
 		System.out.println("Borrando la pelicula: "+idPelicula);
 		
-		//Su no subscribimos a un Mono<Void> y proporcionamos un consumidor
+		//Si no nos subscribimos a un Mono<Void> y proporcionamos un consumidor
 		//este no se ejecutará porque no hay nada que consumir
-		//peliculaRepo.deleteById(idPelicula).subscribe(c -> System.out.println(c));
+		
+		//Si lo hacemos así este método debería ser void o devolver un boolean
+		//Y nos estamos cargando la reactividad
+		//peliculaRepo.deleteById(idPelicula).subscribe(x -> System.out.println(x));
+		
+		//Si solo queremos borrar la película esta es la manera correcta: devolviendo el mono
 		//return peliculaRepo.deleteById(idPelicula);
 		
 		//Imperativo, síncrono de toda la vida
+		//Si peliculaRepo no fuera reactivo:
 		//Pelicula p = peliculaRepo.findById(idPelicula);
 		//PeliculaHistorico ph = new PeliculaHistorico(p);
 		//peliculaRepo.save(ph);
@@ -50,11 +56,9 @@ public class GestorPeliculas {
 		
 		//
 		//Si lo hacemos asi en nuestro local funciona pero nos estamos cargando todo lo reactivo que haya
-		//
-		
+		//		
 		/*
 		PeliculaHistorico ph = new PeliculaHistorico();
-		
 		peliculaRepo
 			.findById(idPelicula)
 			.subscribe( p-> {
@@ -74,12 +78,40 @@ public class GestorPeliculas {
 		
 		//Devolvemos un Mono<Void> para finjir que sabemos mogollón de programación reactiva
 		return Mono.empty();
+		*/		
+		
+		//
+		//ESTO NO FUNCIONA
+		//Se hacen las tres consultas en paralelo!
+		//		
+		/*
+		peliculaRepo
+			.findById(idPelicula)
+			.subscribeOn(Schedulers.boundedElastic())
+			.subscribe( p-> {
+				ph.setTitulo(p.getTitulo());
+				ph.setDirector(p.getDirector());
+				ph.setGenero(p.getGenero());
+				ph.setYear(p.getYear());					
+			});
+	
+		peliculaHistoricoRepo
+			.save(ph)
+			.subscribeOn(Schedulers.boundedElastic())
+			.subscribe( phInsertado -> System.out.println(phInsertado) );
+		
+		peliculaRepo
+			.deleteById(idPelicula) 
+			.subscribeOn(Schedulers.boundedElastic())
+			.subscribe(); //Es un Mono<Void>
+		
+		//Devolvemos un Mono<Void> para finjir que sabemos mogollón de programación reactiva
+		return Mono.empty();		
 		*/
 		
 		//
 		//Con callbacks y callback hell, pero al menos podemos lograr que sea reactivo
 		//
-		/*
 		System.out.println(Thread.currentThread().getName()+"-A borrar!");
 		peliculaRepo
 			.findById(idPelicula)
@@ -100,8 +132,10 @@ public class GestorPeliculas {
 							});						
 					});
 			});
-			*/
 		
+		return Mono.empty();	
+		
+		/*
 		PeliculaHistorico ph = new PeliculaHistorico();
 		
 		return peliculaRepo
@@ -130,6 +164,8 @@ public class GestorPeliculas {
 			})
 			//Este do on success no sirve para nada
 			.doOnSuccess( x -> System.out.println("Pelicula borrada!!!!!!"));
+		*/
+		
 					
 	}
 	

@@ -23,9 +23,9 @@ public class Aplicacion {
 		//Si no decimos lo contrario nos subscribiremos a los monos y flujos de devuelven 
 		//los repositorios de R2DBC con el MISMO HILO
 		System.out.println("===================================");
-		peliculaRepo.findAll().subscribe(x -> System.out.println(x));		
+		peliculaRepo.findAll().subscribe(p -> System.out.println(p));		
 		System.out.println("===================================");
-		peliculaHistoricoRepo.findAll().subscribe(x -> System.out.println(x));		
+		peliculaHistoricoRepo.findAll().subscribe(ph -> System.out.println(ph));		
 		System.out.println("===================================");
 		
 		

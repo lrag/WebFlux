@@ -40,7 +40,7 @@ public class Aplicacion implements CommandLineRunner{
 		
 		//Un flujo no se 'recorre' como si fuera una colección
 		//Nos subscribimos a un flujo para recibir los elementos
-		//Se proporciona un consumidor, que recibirá los elementos que componen el flujo
+		//Se proporciona un subscriptor, que recibirá los elementos que componen el flujo
 		//Es tarea del consumidor controlar el ritmo con el que procesan los elementos
 		//Es tarea del flujo controlar el ritmo con el que se entregan los elementos
 		
@@ -57,18 +57,17 @@ public class Aplicacion implements CommandLineRunner{
 				}
 			});
 		System.out.println(Thread.currentThread().getName()+"-Despues de subscribirse");
-		
+				
 		System.out.println("=====================================");
 		//Ídem con expresión lambda
-		//Vemos que podemos volver a subscribirnos a un flujo		
+		//Vemos que podemos volver a subscribirnos a un flujo
 		flujoPalabras.subscribe( s -> System.out.println(Thread.currentThread().getName()+"-Lambda-"+s));
 		//AQUI NO TENEMOS LAS PALABRAS
 		
 		System.out.println("=====================================");		
 		//Utilizando un consumidor definido como una bean de spring
 		flujoPalabras.subscribe(consumidor);
-		System.exit(0);
-
+		
 		///////////
 		// MONOS //
 		///////////
@@ -84,8 +83,7 @@ public class Aplicacion implements CommandLineRunner{
 		
 		System.out.println("=====================================");			
 		//Podemos utilizar block en monos y nos devuelven el elemento emitido
-		//Usar solo en caso de extrema necesidad
-		
+		//Usar solo en caso de extrema necesidad		
 		String saludo_2 = monos.saludar_reactivo().block();
 		System.out.println("Despues del block: "+saludo_2);
 

@@ -57,7 +57,7 @@ public class PeliculaRepository {
 					return rs;					
 				},
 				//Generator
-				(rs, sink) -> {
+				(rs, consumidores) -> {
 					try {
 						if(rs.next()) {
 							Pelicula p = new Pelicula(
@@ -68,9 +68,9 @@ public class PeliculaRepository {
 									rs.getInt("YEAR")
 								);
 							Thread.sleep(500);
-							sink.next(p);
+							consumidores.next(p);
 						} else {
-							sink.complete();
+							consumidores.complete();
 						}
 					} catch (SQLException e) {
 						e.printStackTrace();
@@ -80,7 +80,7 @@ public class PeliculaRepository {
 					return rs; 
 				},
 				//State consumer
-				//Se invoca a modo de 'finaly', después de que el generator haya incovado 'complete'
+				//Se invoca a modo de 'finaly', después de que el generator haya invocado 'complete'
 				rs -> {
 					System.out.println("Cerrando la conexión");
 					try {
