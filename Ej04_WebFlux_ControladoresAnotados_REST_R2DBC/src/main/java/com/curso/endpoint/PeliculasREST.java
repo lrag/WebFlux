@@ -22,6 +22,7 @@ import com.curso.modelo.persistencia.PremioRepositorio;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import reactor.util.function.Tuple2;
 
 @RestController
 public class PeliculasREST {
@@ -62,22 +63,18 @@ public class PeliculasREST {
 	}
 		
 	@GetMapping(path = "/peliculas/{idPelicula}")	
-	public Mono<Pelicula> buscarPelicula(@PathVariable("id") Integer idPelicula) {
-		peliculaRepo
+	public Mono<Pelicula> buscarPelicula(@PathVariable("idPelicula") Integer idPelicula) {
+		return peliculaRepo
 			.findById(idPelicula) //De aqui sale un Mono en patines
-			.flatMapMany( p -> { //Aqui llega la pelicula
-				Mono<List<Premio>> monoPremios = premioRepo.findAllByIdPelicula(p.getId()).collectList();
-				Mono<Pelicula> peliculaMono = Mono.just(p);
-				return Mono.zip(peliculaMono, monoPremios);
-				//return Mono.just(p).zipWith(premioRepo.findAllByIdPelicula(p.getId()).collectList()); 
+			//FLAT_MAP_MANY :(
+			.flatMap( p -> { //Aqui llega la pelicula
+				return Mono.just(p).zipWith(premioRepo.findAllByIdPelicula(p.getId()).collectList()); 
 			})
-			.flatMap( tupla -> {
+			.map( tupla -> {
 				Pelicula p = tupla.getT1();
 				p.setPremios(tupla.getT2());
-				return Mono.just(p);
+				return p;
 			});	
-		
-		return peliculaRepo.findById(idPelicula);
 	}
 	
 	@PostMapping(path = "/peliculas",
