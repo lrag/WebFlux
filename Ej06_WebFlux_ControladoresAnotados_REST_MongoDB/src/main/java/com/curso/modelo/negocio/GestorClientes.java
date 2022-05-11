@@ -23,10 +23,15 @@ public class GestorClientes {
 		//LN...
 		return clienteRepo.save(cliente);
 	}
-	
-	public Mono<Void> borrar(Cliente cliente) {
+
+	public Mono<Boolean> borrar(Cliente cliente) {
 		//LN...
-		return clienteRepo.delete(cliente);
+		return clienteRepo
+			.findById(cliente.getId()) //De aqui sale Mono<Cliente> o Mono<Void>
+			.flatMap(clienteABorrar -> {
+				return clienteRepo.delete(clienteABorrar).thenReturn(true); //De aqui sale Mono<Boolean> (true)
+			})
+			.defaultIfEmpty(false);
 	}
 	
 }

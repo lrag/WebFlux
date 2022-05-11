@@ -11,9 +11,7 @@ import com.curso.modelo.persistencia.PeliculaHistoricoRepositorio;
 import com.curso.modelo.persistencia.PeliculaRepositorio;
 import com.curso.modelo.persistencia.PremioRepositorio;
 
-import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import reactor.core.scheduler.Schedulers;
 
 @Service
 public class GestorPeliculas {
@@ -25,8 +23,7 @@ public class GestorPeliculas {
 	public Mono<Pelicula> insertar(Pelicula pelicula) {
 		//Lógica de negocio 
 		return peliculaRepo.save(pelicula);
-		
-		
+				
 		/*
 		Si aqui nos subscribimos estmoa forzando al hilo del event loop a ejecutar I/O bloquetan
 		y nos acabamos de cargar el rendimiento de toda la aplicación
@@ -61,14 +58,6 @@ public class GestorPeliculas {
 		//PeliculaHistorico ph = new PeliculaHistorico(p);
 		//peliculaHistoricoRepo.save(ph);
 		//peliculaRepo.deleteById(idPelicula);		
-		
-		
-		//Si no nos subscribimos a un Mono<Void> y proporcionamos un consumidor
-		//este no se ejecutará porque no hay nada que consumir
-		
-		//Si lo hacemos así este método debería ser void o devolver un boolean
-		//Y nos estamos cargando la reactividad
-		//peliculaRepo.deleteById(idPelicula).subscribe(x -> System.out.println(x));
 		
 		//Si solo queremos borrar la película esta es la manera correcta: devolviendo el mono
 		//return peliculaRepo.deleteById(idPelicula);
@@ -134,6 +123,10 @@ public class GestorPeliculas {
 		//
 		//Con callbacks y callback hell, pero al menos podemos lograr que sea reactivo
 		//
+		//Con callback hell el código es un infierno
+		//Además, como nos subscribimos a los flujos/monos no podemos devolvelos
+		//Y tampoco podemos devolver el resultado si el código está en un método
+		//Y para más INRI no podremos avisar de que ha habido un fallo		
 		/*
 		System.out.println(Thread.currentThread().getName()+"-A borrar!");
 		peliculaRepo
@@ -157,8 +150,54 @@ public class GestorPeliculas {
 			});
 		
 		return Mono.empty();
-		*/		
+		*/	
 		
+		
+		//Esta cadena de operadores ya es correcta
+		//-busca la película
+		//-crea pelicula histórico y lo inserta
+		//-borra la película
+		/*
+		return peliculaRepo
+			.findById(idPelicula) //De aqui sale un Mono<Pelicula>
+			.flatMap(pelicula -> {
+				PeliculaHistorico ph = new PeliculaHistorico(pelicula);
+				return peliculaHistoricoRepo.save(ph); //De aqui sale un Mono<Peliculahistorico>
+			})
+			.flatMap( peliculaHistoricoInsertada -> {
+				return peliculaRepo.deleteById(idPelicula); //De aqui sale un Mono<Void>
+			});
+		*/
+		
+		return peliculaRepo
+				.findById(idPelicula) //De aqui sale un Mono<Pelicula>
+				.flatMap(pelicula -> {
+					System.out.println("Pelicula:"+pelicula);
+					PeliculaHistorico ph = new PeliculaHistorico(pelicula);
+					return Mono.just(ph).zipWith(
+						premioRepo
+							.findAllByIdPelicula(idPelicula)   //de aqui van saliendo premios
+							.map( premio -> premio.getNombre())        //de aqui salen los nombres de los premios
+							.collect(Collectors.joining("",", ","."))); //De aqui sale un Mono<String> que tiene los nombres de los premios separados por comas 
+				})
+				.map(tupla -> { 
+					PeliculaHistorico ph = tupla.getT1();
+					String premios = tupla.getT2();
+					ph.setPremios(premios);
+					System.out.println("Pelicula historico:"+ph);
+					return peliculaHistoricoRepo.save(ph); //De aqui sale un Mono<Peliculahistorico>
+				})
+				.flatMap( peliculaHistoricoInsertada -> {
+					System.out.println("Pelicula historico insertada");
+					//return premioRepo.deleteByIdPelicula(idPelicula); //De aqui sale mono<Void> asi que el siguiente operador no se ejecuta!!!
+					return premioRepo.deleteByIdPelicula(idPelicula).thenReturn(true); //De aqui sale un Mono<Boolean> y podemos seguir
+				})
+				.flatMap( bool ->{						
+					System.out.println("Premios borrados");
+					return peliculaRepo.deleteById(idPelicula); //De aqui sale un Mono<Void>
+				});
+		
+		/*
 		PeliculaHistorico ph = new PeliculaHistorico();
 		
 		return peliculaRepo

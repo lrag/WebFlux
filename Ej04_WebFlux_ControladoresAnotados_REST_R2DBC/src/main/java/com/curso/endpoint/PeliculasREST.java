@@ -1,5 +1,8 @@
 package com.curso.endpoint;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -12,8 +15,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.curso.modelo.entidad.Pelicula;
+import com.curso.modelo.entidad.Premio;
 import com.curso.modelo.negocio.GestorPeliculas;
 import com.curso.modelo.persistencia.PeliculaRepositorio;
+import com.curso.modelo.persistencia.PremioRepositorio;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -22,6 +27,7 @@ import reactor.core.publisher.Mono;
 public class PeliculasREST {
 
 	@Autowired private PeliculaRepositorio peliculaRepo;
+	@Autowired private PremioRepositorio premioRepo;
 	@Autowired private GestorPeliculas gestorPeliculas;
 	
 	//GET    /peliculas   
@@ -29,6 +35,18 @@ public class PeliculasREST {
 	//POST   /peliculas
 	//PUT    /peliculas/{id}
 	//DELETE /peliculas/{id}  
+	
+	//No es obligatorio que un métod del endpoint devuelva un flujo o un mono
+	@GetMapping(path = "/peliculas_destructor_de_la_reactividad",
+		    produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<Pelicula> listarPeliculas_el_horror_el_horror() {	
+		//Esto es aberrante
+		//Muerte y destrucción
+		List<Pelicula> pelis = new ArrayList<>();
+		//Aqui estamos forzando al hijo del event loop a ejecutar una consulta a la bb.dd
+		peliculaRepo.findAll().subscribe( p -> pelis.add(p) );
+		return pelis;
+	}
 	
 	@GetMapping(path = "/peliculas",
 			    produces = MediaType.APPLICATION_JSON_VALUE)
@@ -43,9 +61,23 @@ public class PeliculasREST {
 		return peliculaRepo.findAll();
 	}
 		
-	@GetMapping(path = "/peliculas/{id}")	
-	public Mono<Pelicula> buscarPelicula(@PathVariable("id") Integer id) {
-		return peliculaRepo.findById(id);
+	@GetMapping(path = "/peliculas/{idPelicula}")	
+	public Mono<Pelicula> buscarPelicula(@PathVariable("id") Integer idPelicula) {
+		peliculaRepo
+			.findById(idPelicula) //De aqui sale un Mono en patines
+			.flatMapMany( p -> { //Aqui llega la pelicula
+				Mono<List<Premio>> monoPremios = premioRepo.findAllByIdPelicula(p.getId()).collectList();
+				Mono<Pelicula> peliculaMono = Mono.just(p);
+				return Mono.zip(peliculaMono, monoPremios);
+				//return Mono.just(p).zipWith(premioRepo.findAllByIdPelicula(p.getId()).collectList()); 
+			})
+			.flatMap( tupla -> {
+				Pelicula p = tupla.getT1();
+				p.setPremios(tupla.getT2());
+				return Mono.just(p);
+			});	
+		
+		return peliculaRepo.findById(idPelicula);
 	}
 	
 	@PostMapping(path = "/peliculas",

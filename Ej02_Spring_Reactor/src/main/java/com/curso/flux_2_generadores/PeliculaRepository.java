@@ -1,4 +1,4 @@
-package com.curso.flux_2;
+package com.curso.flux_2_generadores;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -1,4 +1,4 @@
-package com.curso.flux_4;
+package com.curso.flux_4_operadores;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

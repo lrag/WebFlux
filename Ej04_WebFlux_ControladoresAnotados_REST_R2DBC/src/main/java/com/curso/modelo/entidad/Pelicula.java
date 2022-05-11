@@ -1,6 +1,9 @@
 package com.curso.modelo.entidad;
 
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.relational.core.mapping.Table;
 
 @Table
@@ -12,6 +15,8 @@ public class Pelicula {
 	private String director;
 	private String genero;
 	private Integer year;
+	@Transient
+	private List<Premio> premios;
 
 	public Pelicula() {
 		super();
@@ -64,6 +69,14 @@ public class Pelicula {
 
 	public void setYear(Integer year) {
 		this.year = year;
+	}
+	
+	public List<Premio> getPremios() {
+		return premios;
+	}
+
+	public void setPremios(List<Premio> premios) {
+		this.premios = premios;
 	}
 
 	@Override

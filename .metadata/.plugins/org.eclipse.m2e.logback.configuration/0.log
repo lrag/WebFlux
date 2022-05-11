@@ -14713,3 +14713,486 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact antlr:antlr:j
 2022-05-10 09:02:45,162 [Worker-832: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2022-05-10 09:02:45,162 [Worker-832: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2022-05-10 09:02:45,162 [Worker-832: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 16:58:02,421 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 16:58:02,422 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 16:58:02,423 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 16:58:02,509 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 16:58:02,511 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 16:58:02,511 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 16:58:02,511 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 16:58:20,131 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 16:58:20,131 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 16:58:20,131 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 16:58:20,158 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 16:58:20,161 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 16:58:20,161 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 16:58:20,161 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 17:06:55,407 [Worker-907: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:06:55,408 [Worker-907: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:06:55,408 [Worker-907: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 17:06:55,415 [Worker-907: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 17:06:55,416 [Worker-907: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:06:55,416 [Worker-907: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:06:55,416 [Worker-907: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 17:09:19,363 [Worker-909: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:09:19,363 [Worker-909: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:09:19,364 [Worker-909: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 17:09:19,367 [Worker-909: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 17:09:19,368 [Worker-909: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:09:19,368 [Worker-909: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:09:19,369 [Worker-909: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 17:09:35,696 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:09:35,696 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:09:35,697 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 17:09:35,703 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 17:09:35,704 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:09:35,704 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:09:35,704 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 17:11:35,545 [Worker-907: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:11:35,545 [Worker-907: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:11:35,545 [Worker-907: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 17:11:35,551 [Worker-907: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 17:11:35,554 [Worker-907: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:11:35,554 [Worker-907: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:11:35,554 [Worker-907: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 17:11:43,822 [Worker-908: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:11:43,822 [Worker-908: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:11:43,822 [Worker-908: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 17:11:43,826 [Worker-908: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 17:11:43,827 [Worker-908: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:11:43,827 [Worker-908: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:11:43,827 [Worker-908: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 17:13:16,622 [Worker-907: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:13:16,622 [Worker-907: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:13:16,622 [Worker-907: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 17:13:16,625 [Worker-907: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 17:13:16,627 [Worker-907: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:13:16,627 [Worker-907: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:13:16,627 [Worker-907: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 17:13:26,192 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:13:26,192 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:13:26,193 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 17:13:26,195 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 17:13:26,196 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:13:26,196 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:13:26,196 [Worker-904: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 17:32:41,718 [Worker-912: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:32:41,718 [Worker-912: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:32:41,718 [Worker-912: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 17:32:41,736 [Worker-912: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 17:32:41,737 [Worker-912: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:32:41,737 [Worker-912: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:32:41,737 [Worker-912: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 17:35:44,934 [Worker-910: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:35:44,934 [Worker-910: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:35:44,934 [Worker-910: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 17:35:44,938 [Worker-910: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 17:35:44,939 [Worker-910: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:35:44,940 [Worker-910: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:35:44,940 [Worker-910: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 17:35:52,975 [Worker-910: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:35:52,975 [Worker-910: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:35:52,975 [Worker-910: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 17:35:52,975 [Worker-910: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 17:35:52,977 [Worker-910: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:35:52,977 [Worker-910: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:35:52,977 [Worker-910: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 17:43:12,052 [Worker-912: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:43:12,052 [Worker-912: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:43:12,052 [Worker-912: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 17:43:12,059 [Worker-912: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 17:43:12,061 [Worker-912: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:43:12,061 [Worker-912: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:43:12,061 [Worker-912: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 17:46:11,118 [Worker-919: Launching Ej02_Spring_Reactor - MultiplesSubscriptores] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:46:11,118 [Worker-919: Launching Ej02_Spring_Reactor - MultiplesSubscriptores] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:46:11,118 [Worker-919: Launching Ej02_Spring_Reactor - MultiplesSubscriptores] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 17:46:11,126 [Worker-919: Launching Ej02_Spring_Reactor - MultiplesSubscriptores] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 17:46:11,129 [Worker-919: Launching Ej02_Spring_Reactor - MultiplesSubscriptores] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:46:11,129 [Worker-919: Launching Ej02_Spring_Reactor - MultiplesSubscriptores] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:46:11,129 [Worker-919: Launching Ej02_Spring_Reactor - MultiplesSubscriptores] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 17:48:28,789 [Worker-921: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:48:28,789 [Worker-921: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:48:28,790 [Worker-921: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 17:48:28,794 [Worker-921: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 17:48:28,797 [Worker-921: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:48:28,797 [Worker-921: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:48:28,797 [Worker-921: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 17:49:09,682 [Worker-921: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:49:09,682 [Worker-921: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:49:09,682 [Worker-921: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 17:49:09,687 [Worker-921: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 17:49:09,689 [Worker-921: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:49:09,689 [Worker-921: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:49:09,689 [Worker-921: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 17:53:23,710 [Worker-927: Launching Ej02_Spring_Reactor - MultiplesSubscriptores] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:53:23,710 [Worker-927: Launching Ej02_Spring_Reactor - MultiplesSubscriptores] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:53:23,710 [Worker-927: Launching Ej02_Spring_Reactor - MultiplesSubscriptores] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 17:53:23,714 [Worker-927: Launching Ej02_Spring_Reactor - MultiplesSubscriptores] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 17:53:23,716 [Worker-927: Launching Ej02_Spring_Reactor - MultiplesSubscriptores] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:53:23,716 [Worker-927: Launching Ej02_Spring_Reactor - MultiplesSubscriptores] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:53:23,716 [Worker-927: Launching Ej02_Spring_Reactor - MultiplesSubscriptores] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 17:56:13,604 [Worker-930: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:56:13,604 [Worker-930: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:56:13,605 [Worker-930: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 17:56:13,610 [Worker-930: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 17:56:13,612 [Worker-930: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:56:13,612 [Worker-930: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:56:13,612 [Worker-930: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 17:56:18,679 [Worker-923: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:56:18,679 [Worker-923: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:56:18,679 [Worker-923: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 17:56:18,683 [Worker-923: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 17:56:18,685 [Worker-923: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:56:18,685 [Worker-923: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:56:18,685 [Worker-923: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 17:59:10,153 [Worker-931: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:59:10,153 [Worker-931: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:59:10,154 [Worker-931: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 17:59:10,162 [Worker-931: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 17:59:10,164 [Worker-931: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 17:59:10,164 [Worker-931: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 17:59:10,164 [Worker-931: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 18:03:15,010 [Worker-923: Launching Ej02_Spring_Reactor - Aplicacion (4)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:03:15,010 [Worker-923: Launching Ej02_Spring_Reactor - Aplicacion (4)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:03:15,011 [Worker-923: Launching Ej02_Spring_Reactor - Aplicacion (4)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 18:03:15,023 [Worker-923: Launching Ej02_Spring_Reactor - Aplicacion (4)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 18:03:15,025 [Worker-923: Launching Ej02_Spring_Reactor - Aplicacion (4)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:03:15,026 [Worker-923: Launching Ej02_Spring_Reactor - Aplicacion (4)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:03:15,026 [Worker-923: Launching Ej02_Spring_Reactor - Aplicacion (4)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 18:19:41,437 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:19:41,437 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:19:41,437 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 18:19:41,450 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2022-05-10 18:19:41,452 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:19:41,452 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:19:41,452 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej04_WebFlux_ControladoresAnotados_REST_R2DBC\src\test\resources
+2022-05-10 18:26:37,371 [Worker-947: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:26:37,371 [Worker-947: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:26:37,372 [Worker-947: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 18:26:37,378 [Worker-947: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2022-05-10 18:26:37,380 [Worker-947: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:26:37,380 [Worker-947: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:26:37,380 [Worker-947: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej04_WebFlux_ControladoresAnotados_REST_R2DBC\src\test\resources
+2022-05-10 18:39:17,264 [Worker-952: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:39:17,264 [Worker-952: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:39:17,264 [Worker-952: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 18:39:17,281 [Worker-952: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2022-05-10 18:39:17,282 [Worker-952: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:39:17,282 [Worker-952: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:39:17,282 [Worker-952: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej04_WebFlux_ControladoresAnotados_REST_R2DBC\src\test\resources
+2022-05-10 18:39:27,277 [Worker-951: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:39:27,277 [Worker-951: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:39:27,278 [Worker-951: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 18:39:27,293 [Worker-951: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2022-05-10 18:39:27,294 [Worker-951: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:39:27,294 [Worker-951: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:39:27,294 [Worker-951: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej04_WebFlux_ControladoresAnotados_REST_R2DBC\src\test\resources
+2022-05-10 18:43:44,188 [Worker-949: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:43:44,188 [Worker-949: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:43:44,188 [Worker-949: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 18:43:44,193 [Worker-949: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 18:43:44,194 [Worker-949: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:43:44,195 [Worker-949: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:43:44,195 [Worker-949: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 18:43:51,316 [Worker-949: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:43:51,316 [Worker-949: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:43:51,316 [Worker-949: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 18:43:51,319 [Worker-949: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 18:43:51,321 [Worker-949: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:43:51,321 [Worker-949: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:43:51,321 [Worker-949: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 18:44:39,080 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:44:39,080 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:44:39,081 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 18:44:39,087 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 18:44:39,088 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:44:39,088 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:44:39,088 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 18:45:45,755 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:45:45,755 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:45:45,755 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 18:45:45,760 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 18:45:45,762 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:45:45,762 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:45:45,762 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 18:46:11,722 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:46:11,722 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:46:11,723 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 18:46:11,726 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 18:46:11,728 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:46:11,728 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:46:11,728 [Worker-943: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 18:46:20,821 [Worker-949: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:46:20,821 [Worker-949: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:46:20,821 [Worker-949: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 18:46:20,825 [Worker-949: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 18:46:20,827 [Worker-949: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:46:20,827 [Worker-949: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:46:20,827 [Worker-949: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 18:54:18,711 [Worker-958: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:54:18,711 [Worker-958: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:54:18,712 [Worker-958: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 18:54:18,718 [Worker-958: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 18:54:18,719 [Worker-958: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:54:18,719 [Worker-958: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:54:18,719 [Worker-958: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 18:54:49,820 [Worker-957: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:54:49,820 [Worker-957: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:54:49,820 [Worker-957: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 18:54:49,824 [Worker-957: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 18:54:49,826 [Worker-957: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:54:49,826 [Worker-957: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:54:49,826 [Worker-957: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 18:56:39,019 [Worker-960: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:56:39,019 [Worker-960: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:56:39,019 [Worker-960: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 18:56:39,024 [Worker-960: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 18:56:39,026 [Worker-960: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:56:39,026 [Worker-960: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:56:39,026 [Worker-960: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 18:57:57,480 [Worker-952: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:57:57,480 [Worker-952: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:57:57,481 [Worker-952: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 18:57:57,485 [Worker-952: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 18:57:57,486 [Worker-952: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:57:57,486 [Worker-952: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:57:57,486 [Worker-952: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 18:58:25,066 [Worker-954: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:58:25,066 [Worker-954: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:58:25,066 [Worker-954: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 18:58:25,070 [Worker-954: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 18:58:25,071 [Worker-954: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:58:25,071 [Worker-954: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:58:25,071 [Worker-954: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 18:59:15,527 [Worker-954: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:59:15,527 [Worker-954: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:59:15,527 [Worker-954: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 18:59:15,533 [Worker-954: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 18:59:15,535 [Worker-954: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 18:59:15,535 [Worker-954: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 18:59:15,535 [Worker-954: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 19:19:17,736 [Worker-965: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 19:19:17,736 [Worker-965: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 19:19:17,737 [Worker-965: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 19:19:17,746 [Worker-965: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 19:19:17,748 [Worker-965: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 19:19:17,748 [Worker-965: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 19:19:17,748 [Worker-965: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 19:19:27,890 [Worker-966: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 19:19:27,890 [Worker-966: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 19:19:27,891 [Worker-966: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 19:19:27,905 [Worker-966: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 19:19:27,906 [Worker-966: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 19:19:27,906 [Worker-966: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 19:19:27,906 [Worker-966: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 19:26:07,681 [Worker-971: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 19:26:07,681 [Worker-971: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 19:26:07,682 [Worker-971: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 19:26:07,688 [Worker-971: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 19:26:07,689 [Worker-971: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 19:26:07,689 [Worker-971: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 19:26:07,689 [Worker-971: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 19:29:48,285 [Worker-968: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 19:29:48,285 [Worker-968: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 19:29:48,285 [Worker-968: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 19:29:48,292 [Worker-968: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 19:29:48,293 [Worker-968: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 19:29:48,293 [Worker-968: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 19:29:48,293 [Worker-968: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 19:30:55,328 [Worker-970: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 19:30:55,328 [Worker-970: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 19:30:55,329 [Worker-970: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 19:30:55,335 [Worker-970: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 19:30:55,337 [Worker-970: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 19:30:55,337 [Worker-970: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 19:30:55,337 [Worker-970: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 19:37:20,838 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 19:37:20,838 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 19:37:20,838 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 19:37:20,844 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 19:37:20,846 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 19:37:20,846 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 19:37:20,846 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 19:37:23,436 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 19:37:23,436 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 19:37:23,436 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 19:37:23,445 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 19:37:23,446 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 19:37:23,446 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 19:37:23,446 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 19:39:26,748 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 19:39:26,749 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 19:39:26,749 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 19:39:26,755 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 19:39:26,757 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 19:39:26,757 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 19:39:26,757 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 19:44:12,602 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 19:44:12,602 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 19:44:12,602 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 19:44:12,605 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 19:44:12,606 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 19:44:12,606 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 19:44:12,606 [Worker-973: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 19:52:01,339 [Worker-980: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 19:52:01,339 [Worker-980: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 19:52:01,339 [Worker-980: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 19:52:01,344 [Worker-980: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 19:52:01,346 [Worker-980: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 19:52:01,346 [Worker-980: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 19:52:01,346 [Worker-980: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 19:57:11,961 [Worker-983: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 19:57:11,961 [Worker-983: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 19:57:11,961 [Worker-983: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 19:57:11,968 [Worker-983: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 19:57:11,969 [Worker-983: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 19:57:11,969 [Worker-983: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 19:57:11,969 [Worker-983: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 19:58:23,395 [Worker-983: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 19:58:23,395 [Worker-983: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 19:58:23,395 [Worker-983: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 19:58:23,401 [Worker-983: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 19:58:23,402 [Worker-983: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 19:58:23,402 [Worker-983: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 19:58:23,403 [Worker-983: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 20:05:14,978 [Worker-987: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 20:05:14,978 [Worker-987: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 20:05:14,979 [Worker-987: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 20:05:14,986 [Worker-987: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 20:05:14,988 [Worker-987: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 20:05:14,988 [Worker-987: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 20:05:14,988 [Worker-987: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 20:07:11,105 [Worker-983: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 20:07:11,105 [Worker-983: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 20:07:11,106 [Worker-983: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 20:07:11,116 [Worker-983: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 20:07:11,118 [Worker-983: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 20:07:11,118 [Worker-983: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 20:07:11,118 [Worker-983: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 20:08:06,209 [Worker-986: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 20:08:06,209 [Worker-986: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 20:08:06,210 [Worker-986: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 20:08:06,218 [Worker-986: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 20:08:06,219 [Worker-986: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 20:08:06,219 [Worker-986: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 20:08:06,219 [Worker-986: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 20:08:10,460 [Worker-988: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 20:08:10,460 [Worker-988: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 20:08:10,460 [Worker-988: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 20:08:10,466 [Worker-988: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 20:08:10,467 [Worker-988: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 20:08:10,467 [Worker-988: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 20:08:10,467 [Worker-988: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 20:08:22,560 [Worker-986: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 20:08:22,560 [Worker-986: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 20:08:22,561 [Worker-986: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 20:08:22,566 [Worker-986: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 20:08:22,567 [Worker-986: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 20:08:22,567 [Worker-986: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 20:08:22,567 [Worker-986: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 20:08:28,789 [Worker-988: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 20:08:28,789 [Worker-988: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 20:08:28,789 [Worker-988: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 20:08:28,795 [Worker-988: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 20:08:28,797 [Worker-988: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 20:08:28,797 [Worker-988: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 20:08:28,797 [Worker-988: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 20:11:23,288 [Worker-990: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 20:11:23,288 [Worker-990: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 20:11:23,289 [Worker-990: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 20:11:23,297 [Worker-990: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 20:11:23,299 [Worker-990: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 20:11:23,299 [Worker-990: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 20:11:23,299 [Worker-990: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 20:12:21,962 [Worker-987: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 20:12:21,962 [Worker-987: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 20:12:21,963 [Worker-987: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 20:12:21,967 [Worker-987: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 20:12:21,969 [Worker-987: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 20:12:21,970 [Worker-987: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 20:12:21,970 [Worker-987: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 20:13:30,541 [Worker-991: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 20:13:30,541 [Worker-991: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 20:13:30,542 [Worker-991: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 20:13:30,548 [Worker-991: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 20:13:30,549 [Worker-991: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 20:13:30,549 [Worker-991: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 20:13:30,550 [Worker-991: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-10 20:21:41,248 [Worker-993: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 20:21:41,249 [Worker-993: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 20:21:41,249 [Worker-993: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 20:21:41,255 [Worker-993: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2022-05-10 20:21:41,256 [Worker-993: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 20:21:41,256 [Worker-993: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 20:21:41,256 [Worker-993: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej04_WebFlux_ControladoresAnotados_REST_R2DBC\src\test\resources
+2022-05-10 23:26:14,771 [Worker-1034: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 23:26:14,773 [Worker-1034: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 23:26:14,774 [Worker-1034: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-10 23:26:14,862 [Worker-1034: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-10 23:26:14,863 [Worker-1034: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-10 23:26:14,863 [Worker-1034: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-10 23:26:14,863 [Worker-1034: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-11 00:32:57,815 [Worker-1051: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 00:32:57,815 [Worker-1051: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 00:32:57,816 [Worker-1051: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-11 00:32:57,887 [Worker-1051: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-11 00:32:57,889 [Worker-1051: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 00:32:57,889 [Worker-1051: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 00:32:57,889 [Worker-1051: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-11 00:46:22,260 [Worker-1054: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 00:46:22,260 [Worker-1054: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 00:46:22,260 [Worker-1054: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-11 00:46:22,287 [Worker-1054: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-11 00:46:22,288 [Worker-1054: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 00:46:22,288 [Worker-1054: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 00:46:22,288 [Worker-1054: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-11 00:46:54,819 [Worker-1056: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 00:46:54,819 [Worker-1056: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 00:46:54,819 [Worker-1056: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-11 00:46:54,868 [Worker-1056: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-11 00:46:54,871 [Worker-1056: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 00:46:54,871 [Worker-1056: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 00:46:54,871 [Worker-1056: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-11 00:47:21,225 [Worker-1059: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 00:47:21,226 [Worker-1059: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 00:47:21,226 [Worker-1059: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-11 00:47:21,228 [Worker-1059: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-11 00:47:21,230 [Worker-1059: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 00:47:21,230 [Worker-1059: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 00:47:21,230 [Worker-1059: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-11 00:48:30,559 [Worker-1051: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 00:48:30,559 [Worker-1051: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 00:48:30,560 [Worker-1051: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-11 00:48:30,562 [Worker-1051: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-11 00:48:30,563 [Worker-1051: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 00:48:30,563 [Worker-1051: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 00:48:30,563 [Worker-1051: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-11 00:49:42,388 [Worker-1051: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 00:49:42,388 [Worker-1051: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 00:49:42,388 [Worker-1051: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-11 00:49:42,416 [Worker-1051: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-11 00:49:42,418 [Worker-1051: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 00:49:42,418 [Worker-1051: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 00:49:42,418 [Worker-1051: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-11 00:50:35,446 [Worker-1051: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 00:50:35,446 [Worker-1051: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 00:50:35,447 [Worker-1051: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-11 00:50:35,452 [Worker-1051: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-11 00:50:35,453 [Worker-1051: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 00:50:35,453 [Worker-1051: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 00:50:35,453 [Worker-1051: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-11 00:50:49,566 [Worker-1057: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 00:50:49,566 [Worker-1057: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 00:50:49,566 [Worker-1057: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-11 00:50:49,577 [Worker-1057: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-11 00:50:49,581 [Worker-1057: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 00:50:49,581 [Worker-1057: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 00:50:49,581 [Worker-1057: Launching Ej02_Spring_Reactor - Aplicacion (5)] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-11 08:13:21,919 [Worker-1063: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 08:13:21,919 [Worker-1063: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 08:13:21,920 [Worker-1063: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-11 08:13:21,934 [Worker-1063: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-11 08:13:21,936 [Worker-1063: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 08:13:21,936 [Worker-1063: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 08:13:21,936 [Worker-1063: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources

@@ -63,7 +63,6 @@ public class Aplicacion implements CommandLineRunner{
 		//clienteRepo.save(c4).subscribe( c -> System.out.println(Thread.currentThread().getName()+"-"+c));
 		//System.out.println(Thread.currentThread().getName()+"-DESPUES");
 		
-		
 		//Nos interesa el orden. Esto no está del todo mal. La verdad es que está mal puesto que no debemos hacer cosas
 		//bloqueantes en los then
 		//clienteRepo.save(c1)
@@ -71,7 +70,6 @@ public class Aplicacion implements CommandLineRunner{
 		//	.then(clienteRepo.save(c3))
 		//	.then(clienteRepo.save(c4))
 		//	.subscribe();
-		 
 
 		//Ídem. Este si que está 100% bien
 		/*
@@ -111,8 +109,6 @@ public class Aplicacion implements CommandLineRunner{
 			})
 			.subscribe( c -> System.out.println(c));
 		*/
-		
-		 
 				
 	}
 		

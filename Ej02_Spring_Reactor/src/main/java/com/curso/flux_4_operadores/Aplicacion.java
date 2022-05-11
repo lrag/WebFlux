@@ -1,4 +1,6 @@
-package com.curso.flux_4;
+package com.curso.flux_4_operadores;
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -6,7 +8,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.curso.modelo.entidad.Pelicula;
+import com.curso.modelo.entidad.Premio;
 
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @SpringBootApplication
@@ -44,6 +48,7 @@ public class Aplicacion implements CommandLineRunner{
 		Thread.sleep(20_000);
 		*/
 		
+		
 		/*
 		System.out.println("======================================");
 		//Tambien podemos concatenar varios monos para obtener un flujo
@@ -76,6 +81,24 @@ public class Aplicacion implements CommandLineRunner{
 		
 		Thread.sleep(10_000);
 
+		System.exit(0);
+		*/
+		
+		/////////
+		// ZIP //
+		/////////
+		/*
+		System.out.println("======================================");		
+		Flux.zip(
+				flujos.numerosPares().subscribeOn(Schedulers.boundedElastic()).collect(Collectors.toList()), 
+				flujos.numerosImpares().subscribeOn(Schedulers.boundedElastic()).collect(Collectors.toList())
+			)
+			.subscribe( tupla -> {
+				System.out.println(tupla.getT1());
+				System.out.println(tupla.getT2());
+			});		
+
+		Thread.sleep(15_000);
 		System.exit(0);
 		*/
 		
@@ -145,7 +168,7 @@ public class Aplicacion implements CommandLineRunner{
 		
 		//Con callback hell el código es un infierno
 		//Además, como nos subscribimos a los flujos/monos no podemos devolvelos
-		//Y probablemente tampoco podamos devolver el resultado si el código está en un método
+		//Y tampoco podemos devolver el resultado si el código está en un método
 		//Y para más INRI no podremos avisar de que ha habido un fallo
 		/*
 		flujos
@@ -210,18 +233,23 @@ public class Aplicacion implements CommandLineRunner{
 		// FLAT MAP MANY //
 		///////////////////			
 		System.out.println("======================================");		
+		
+		Integer idPelicula = 3;
 		peliculaRepo
-			.findById(3) //De aqui sale un Mono en patines
+			.findById(idPelicula) //De aqui sale un Mono en patines
 			.flatMapMany( p -> { //Aqui llega la pelicula
-				return premioRepo.findAllByIdPelicula(p.getId()).collectList().zipWith(Mono.just(p)); 
+				Mono<List<Premio>> monoPremios = premioRepo.findAllByIdPelicula(p.getId()).collectList();
+				Mono<Pelicula> peliculaMono = Mono.just(p);
+				return Mono.zip(peliculaMono, monoPremios);
+				//return Mono.just(p).zipWith(premioRepo.findAllByIdPelicula(p.getId()).collectList()); 
 			})
-			.map( T -> {
-				Pelicula p = T.getT2();
-				p.setPremios(T.getT1());
+			.map( tupla -> {
+				Pelicula p = tupla.getT1();
+				p.setPremios(tupla.getT2());
 				return p;
 			})
 			.subscribe(pelicula -> System.out.println(pelicula));			
-		
+
 		/////////////
 		// COLLECT //
 		/////////////

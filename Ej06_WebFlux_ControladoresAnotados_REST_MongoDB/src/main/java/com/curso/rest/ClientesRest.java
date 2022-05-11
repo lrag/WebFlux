@@ -28,6 +28,37 @@ public class ClientesRest {
 	@Autowired private GestorClientes gestorClientes;
 	@Autowired private ClienteRepository clienteRepo;
 	
+	
+
+	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+	public Flux<ClienteDTO> listar(){
+		return clienteRepo
+			.findAll() //Devuelve Flux<Cliente>
+			.map( cliente -> new ClienteDTO(cliente) );
+	}	
+	
+	@GetMapping(path="/{id}", 
+			    produces = MediaType.APPLICATION_JSON_VALUE)
+	public Mono<ResponseEntity<ClienteDTO>> buscar(@PathVariable("id") String id){	
+		System.out.println("BUSCAR:"+id);
+		return clienteRepo
+			.findById(id) //Devuelve Mono<Cliente> o Mono<Void>!
+			.map( cliente -> {
+				return new ResponseEntity<ClienteDTO>(new ClienteDTO(cliente), HttpStatus.OK);
+			})
+			.defaultIfEmpty(new ResponseEntity<ClienteDTO>(HttpStatus.NOT_FOUND));	
+	}	
+	
+	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, 
+			     produces = MediaType.APPLICATION_JSON_VALUE)
+	public Mono<ResponseEntity<ClienteDTO>> insertar(@RequestBody ClienteDTO clienteDto){	
+		return gestorClientes
+				.insertar(clienteDto.asCliente()) //De aqui sale un Mono<Cliente>
+				.map( cliente -> {
+					return new ResponseEntity<ClienteDTO>(new ClienteDTO(cliente), HttpStatus.CREATED); //De aqui sale un Mono<ResponseEntity<ClienteDTO>>
+				});
+	}
+
 	@PutMapping(path="/{id}",
 			    consumes = MediaType.APPLICATION_JSON_VALUE, 
 			    produces = MediaType.APPLICATION_JSON_VALUE)
@@ -38,48 +69,24 @@ public class ClientesRest {
 				return new ResponseEntity<ClienteDTO>(new ClienteDTO(cliente), HttpStatus.OK);//De aqui sale Mono<ResponseEntity>
 			});		
 	}
-
-	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, 
-				 produces = MediaType.APPLICATION_JSON_VALUE)
-	public Mono<ResponseEntity<ClienteDTO>> insertar(@RequestBody ClienteDTO clienteDto){	
-		return gestorClientes
-			.insertar(clienteDto.asCliente())
-			.map( cliente -> {
-				return new ResponseEntity<ClienteDTO>(new ClienteDTO(cliente), HttpStatus.CREATED);
-			});
-	}
-	
-	@GetMapping(path="/{id}",
-			    produces = MediaType.APPLICATION_JSON_VALUE)
-	public Mono<ResponseEntity<ClienteDTO>> buscar(@PathVariable("id") String id){	
-		System.out.println("BUSCAR:"+id);
-		return clienteRepo
-			.findById(id) //Devuelve Mono<Cliente> o Mono<Void>!
-			.map( cliente -> {
-				return new ResponseEntity<ClienteDTO>(new ClienteDTO(cliente), HttpStatus.OK);
-			})
-			.defaultIfEmpty(new ResponseEntity<ClienteDTO>(HttpStatus.NOT_FOUND));	
-	}
-
-	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-	public Flux<ClienteDTO> listar(){
-		return clienteRepo
-			.findAll() //Aqui llegan clientes
-			.map( cliente -> new ClienteDTO(cliente) );
-	}
 	
 	@DeleteMapping(path="/{id}")
 	public Mono<ResponseEntity<Object>> borrar(@PathVariable("id") String idCliente){
 		
-		/*
 		Cliente c = new Cliente();
 		c.setId(idCliente);
 		return gestorClientes
-				.borrar(c);
-		*/
-
+			.borrar(c) //De aqui sale Mono<Boolean>
+			.map( borrado -> {
+				if(borrado) {
+					return new ResponseEntity<Object>(HttpStatus.OK);
+				}
+				return new ResponseEntity<Object>(HttpStatus.NOT_FOUND);
+			});
+		
+		/*
 		return Mono
-			.just(idCliente) //De aqui sale un Mono<Integer>
+			.just(idCliente) //De aqui sale un Mono<String>
 			.map( id -> {
 				Cliente c = new Cliente();
 				c.setId(id);
@@ -90,6 +97,7 @@ public class ClientesRest {
 			})
 			//Utilizamos esto porque despues de un Mono<Void> ya no hay nada que hacer
 			.thenReturn(new ResponseEntity<Object>(HttpStatus.OK));	
+			*/
 
 		
 	}

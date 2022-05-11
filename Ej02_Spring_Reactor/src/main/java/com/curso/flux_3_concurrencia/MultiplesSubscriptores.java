@@ -1,4 +1,4 @@
-package com.curso.flux_3;
+package com.curso.flux_3_concurrencia;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

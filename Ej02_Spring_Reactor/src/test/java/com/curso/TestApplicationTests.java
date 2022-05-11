@@ -7,12 +7,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import reactor.core.publisher.Flux;
 import reactor.test.StepVerifier;
 
-@SpringBootTest( classes = com.curso.flux_2.Flujos.class )
+@SpringBootTest( classes = com.curso.flux_2_generadores.Flujos.class )
 class TestApplicationTests {
 
 	@Autowired
 	//Este es el objeto real que queremos probar
-	com.curso.flux_2.Flujos flujos2;
+	com.curso.flux_2_generadores.Flujos flujos2;
 
 	@Test
 	void testFlujo() {

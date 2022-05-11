@@ -1,4 +1,4 @@
-package com.curso.flux_3;
+package com.curso.flux_3_concurrencia;
 
 import java.util.List;
 
@@ -127,8 +127,11 @@ public class Aplicacion implements CommandLineRunner{
 		
 		Thread.sleep(40_000);
 		
+		////////////////
+		// PUBLISH ON //
+		////////////////
 		
-		/*
+		/*		
 		System.out.println("=====================================");
 		//En este ejemplo es el flujo el que indica que el consumidor debe ser ejecutado por otro hilo distinto al que se subscribe
 		System.out.println("Antes de subscribirse a flujoPublishOn");
