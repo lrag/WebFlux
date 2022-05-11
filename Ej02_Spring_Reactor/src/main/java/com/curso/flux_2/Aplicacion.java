@@ -35,18 +35,19 @@ public class Aplicacion implements CommandLineRunner{
 			System.out.println(Thread.currentThread().getName()+"-Consumidor:"+numero);
 		});
 		*/
-
+		
 		//System.out.println("=====================================");
 		//Flux<String> flujoEstado = flujos.flujoConEstado();
 		//flujoEstado.subscribe(mensaje -> System.out.println(mensaje));
 		 
+		/*
 		System.out.println("=====================================");
-		//Flux<String> flujoEstado2 = flujos.flujoConEstadoYStateConsumer();
-		//flujoEstado2.subscribe(mensaje -> System.out.println(mensaje));
+		Flux<String> flujoEstado2 = flujos.flujoConEstadoYStateConsumer();
+		flujoEstado2.subscribe(mensaje -> System.out.println(mensaje));
 				
-		//System.out.println("FIN");
-		//System.exit(0);		
-		
+		System.out.println("FIN");
+		System.exit(0);
+		*/		
 		
 		/*
 		System.out.println("=============================================");
@@ -57,9 +58,7 @@ public class Aplicacion implements CommandLineRunner{
 		
 		Thread.sleep(1000);
 		System.out.println("FIN");
-		System.exit(0);	
-		*/	
-				
+		*/				
 
 		System.out.println("=============================================");
 		peliculaRepo.findAll_Reactivo().subscribe( p -> System.out.println(p));	

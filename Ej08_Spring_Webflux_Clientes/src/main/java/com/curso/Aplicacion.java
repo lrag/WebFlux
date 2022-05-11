@@ -31,6 +31,7 @@ public class Aplicacion implements CommandLineRunner{
 		//Todos los métodos de WebClient tienen el publishOn en otro hilo!!!!
 		Thread.sleep(5000);
 		
+		/*
 		System.out.println("=====================================");
 
 		clienteRestProxy
@@ -38,10 +39,11 @@ public class Aplicacion implements CommandLineRunner{
 			.subscribe(c-> System.out.println(c));
 		
 		Thread.sleep(5000);		
+		 */
 
 		System.out.println("=====================================");
 
-		Cliente cliente = new Cliente(null,"Montgomery Burns","C/Falsa,123","111222333","1/1/2009", new DatosBancarios("HTb",9999));
+		Cliente cliente = new Cliente(null,"Bud Spencer","C/Falsa,123","111222333","1/1/2009", new DatosBancarios("HTb",9999));
 		clienteRestProxy
 			.insertar(cliente)
 			.subscribe(c-> System.out.println(c));

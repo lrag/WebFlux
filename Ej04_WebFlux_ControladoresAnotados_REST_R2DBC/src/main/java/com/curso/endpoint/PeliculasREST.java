@@ -1,8 +1,5 @@
 package com.curso.endpoint;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -11,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.curso.modelo.entidad.Pelicula;
@@ -66,6 +64,42 @@ public class PeliculasREST {
 		return gestorPeliculas.borrar(id);
 	}
 	
+	/////////////////////////////////////////
+	
+	@PostMapping(path="sumar")
+	public Double sumar(@RequestParam("sumando1") Double sumando1, @RequestParam("sumando2") Double sumando2) {
+		//Este código se ejecuta muy rápido y no estamo bloqueando al hilo del event loop
+		return sumando1 + sumando2;	
+	}
+
+	public Mono<Double> sumar_reactivo(@RequestParam("sumando1") Double sumando1, @RequestParam("sumando2") Double sumando2) {
+		//Aqui quizas estemos matando moscas a cañonazos
+		return Mono.create(subscriptores -> subscriptores.success(sumando1 + sumando2));	
+	}	
+	
+	public Byte[] convertirImagen_Bloqueante(Byte[] imagen) {
+		//llamada a la lógica de conversión, que está un buen rato con ello aunque no haya I/O 
+		//Aqui estamos 'bloqueando' al event loop con la conversión de la imagen
+		return ConversorImagenes.convertir(imagen);
+	}
+		
+	public Mono<Byte[]> convertirImagen_Reactivo(Byte[] imagen) {
+		//llamada a la lógica de conversión, que está un buen rato con ello
+		//Aqui estamos 'bloqueando' al event loop con la conversión de la imagen
+		//return ConversorImagenes.convertir(imagen);
+		
+		Mono<Byte[]> chimpance = Mono.create( subcriptores -> {
+			Byte[] nuevaImagen = ConversorImagenes.convertir(imagen);
+			subcriptores.success(nuevaImagen);
+		});
+		return chimpance;	
+	}
+	
 }
 
-
+class ConversorImagenes {
+	public static Byte[] convertir(Byte[] imagen) {
+		//Supongamos que esto dedica 5 segundos a procesar la imagen y convertirla...
+		return null;
+	}
+}

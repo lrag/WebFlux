@@ -25,6 +25,24 @@ public class GestorPeliculas {
 	public Mono<Pelicula> insertar(Pelicula pelicula) {
 		//Lógica de negocio 
 		return peliculaRepo.save(pelicula);
+		
+		
+		/*
+		Si aqui nos subscribimos estmoa forzando al hilo del event loop a ejecutar I/O bloquetan
+		y nos acabamos de cargar el rendimiento de toda la aplicación
+		
+		Mono<Pelicula> macaco = peliculaRepo.save(pelicula);
+		Pelicula peliculaInsertada = new Pelicula(); 
+		macaco.subscribe(pi -> {
+			peliculaInsertada.setId(pi.getId());
+			peliculaInsertada.setTitulo(pi.getTitulo());
+			//..
+		});
+		return peliculaInsertada;
+
+		//También pod´riamos haver hecho esto, que está igual de mal:
+		return macaco.block();		
+		 */
 	}
 	
 	public Mono<Pelicula> modificar(Pelicula pelicula) {
@@ -37,6 +55,14 @@ public class GestorPeliculas {
 		System.out.println("========================================");
 		System.out.println("Borrando la pelicula: "+idPelicula);
 		
+		//Imperativo, síncrono de toda la vida
+		//Si peliculaRepo no fuera reactivo:
+		//Pelicula p = peliculaRepo.findById(idPelicula);
+		//PeliculaHistorico ph = new PeliculaHistorico(p);
+		//peliculaHistoricoRepo.save(ph);
+		//peliculaRepo.deleteById(idPelicula);		
+		
+		
 		//Si no nos subscribimos a un Mono<Void> y proporcionamos un consumidor
 		//este no se ejecutará porque no hay nada que consumir
 		
@@ -46,22 +72,16 @@ public class GestorPeliculas {
 		
 		//Si solo queremos borrar la película esta es la manera correcta: devolviendo el mono
 		//return peliculaRepo.deleteById(idPelicula);
-		
-		//Imperativo, síncrono de toda la vida
-		//Si peliculaRepo no fuera reactivo:
-		//Pelicula p = peliculaRepo.findById(idPelicula);
-		//PeliculaHistorico ph = new PeliculaHistorico(p);
-		//peliculaRepo.save(ph);
-		//peliculaRepo.deleteById(idPelicula);
-		
+
+		/*
 		//
 		//Si lo hacemos asi en nuestro local funciona pero nos estamos cargando todo lo reactivo que haya
+		//Estamos forzando al hilo del event loop a ejecutar las consultas!!!
 		//		
-		/*
 		PeliculaHistorico ph = new PeliculaHistorico();
 		peliculaRepo
 			.findById(idPelicula)
-			.subscribe( p-> {
+			.subscribe( p -> {
 				ph.setTitulo(p.getTitulo());
 				ph.setDirector(p.getDirector());
 				ph.setGenero(p.getGenero());
@@ -78,13 +98,14 @@ public class GestorPeliculas {
 		
 		//Devolvemos un Mono<Void> para finjir que sabemos mogollón de programación reactiva
 		return Mono.empty();
-		*/		
+		*/
 		
 		//
 		//ESTO NO FUNCIONA
 		//Se hacen las tres consultas en paralelo!
-		//		
+		//
 		/*
+		PeliculaHistorico ph = new PeliculaHistorico();
 		peliculaRepo
 			.findById(idPelicula)
 			.subscribeOn(Schedulers.boundedElastic())
@@ -106,12 +127,14 @@ public class GestorPeliculas {
 			.subscribe(); //Es un Mono<Void>
 		
 		//Devolvemos un Mono<Void> para finjir que sabemos mogollón de programación reactiva
-		return Mono.empty();		
-		*/
+		return Mono.empty();
+		*/		
+		
 		
 		//
 		//Con callbacks y callback hell, pero al menos podemos lograr que sea reactivo
 		//
+		/*
 		System.out.println(Thread.currentThread().getName()+"-A borrar!");
 		peliculaRepo
 			.findById(idPelicula)
@@ -133,29 +156,24 @@ public class GestorPeliculas {
 					});
 			});
 		
-		return Mono.empty();	
+		return Mono.empty();
+		*/		
 		
-		/*
 		PeliculaHistorico ph = new PeliculaHistorico();
 		
 		return peliculaRepo
 			.findById(idPelicula) //Mono<Pelicula>
-			.subscribeOn(Schedulers.boundedElastic())
+			//.subscribeOn(Schedulers.boundedElastic())
 			.flatMapMany( pelicula -> {
 				ph.setTitulo(pelicula.getTitulo());
 				ph.setDirector(pelicula.getDirector());
 				ph.setGenero(pelicula.getGenero());
 				ph.setYear(pelicula.getYear());
-
-				return premioRepo.findByIdPelicula(idPelicula); //De aqui sale un flujo
+				return premioRepo.findByIdPelicula(idPelicula); //De aqui sale un flujo de premios
 			}) 
 			.map( premio -> premio.getNombre())
-			.collect(Collectors.joining(", ", "Premios:", "."))
+			.collect(Collectors.joining(", ", "Premios:", ".")) //De aqui sale un Mono<String>
 			.flatMap( premios -> { //Aqui llega un mono
-				//String premios = listaPremios
-				//	.stream()
-				//	.map(premio -> premio.getNombre())
-				//	.collect(Collectors.joining(", ", "Premios:", "."));
 				ph.setPremios(premios);
 				return peliculaHistoricoRepo.save(ph); //Mono<Peliculahistorico>
 			})
@@ -164,32 +182,11 @@ public class GestorPeliculas {
 			})
 			//Este do on success no sirve para nada
 			.doOnSuccess( x -> System.out.println("Pelicula borrada!!!!!!"));
-		*/
 		
-					
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	/*
-	
-
 
 		//Aqui tenemos tres consultas que ejecutar!!!
 		/*
-		Mono<Void> mono = peliculaRepo
+		return peliculaRepo
 			.findById(idPelicula) //devuelve Mono<Pelicula>
 			.flatMap( pelicula -> {
 				System.out.println("Pelicula encontrada:"+pelicula);
@@ -208,8 +205,8 @@ public class GestorPeliculas {
 				return peliculaRepo.deleteById(idPelicula); //Devuelve un Mono<Void>
 			})
 			.doOnSuccess( nada -> System.out.println("Pelicula borrada"));
-		
-		return mono;
+			*/
+
 	}	
-	*/
+	
 }

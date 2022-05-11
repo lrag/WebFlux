@@ -13,7 +13,8 @@ import io.r2dbc.h2.H2ConnectionFactory;
 public class Configuracion {
 
 	//
-	//
+	//Con R2DBC no tenemos datasource
+	//Ni siquiera se utiliza el driver JDBC
 	//
     @Bean
     public H2ConnectionFactory connectionFactory() {

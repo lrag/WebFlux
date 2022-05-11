@@ -37,7 +37,7 @@ public class PremioRepository {
 					return rs;
 				},
 				//Generator
-				(rs, sink) -> {	
+				(rs, consumidores) -> {	
 					try {
 						if(rs.next()) {
 							Premio p = new Premio(
@@ -46,10 +46,10 @@ public class PremioRepository {
 									rs.getString("FECHA"),
 									rs.getInt("FK_ID_PELICULA")
 								);
-							sink.next(p);
+							consumidores.next(p);
 							Thread.sleep(500);
 						} else {
-							sink.complete();
+							consumidores.complete();
 						}
 					} catch (SQLException e) {
 						e.printStackTrace();

@@ -21,12 +21,12 @@ import reactor.core.scheduler.Schedulers;
 @Component
 public class Flujos {
 	
-	//Un flujo que emite un elemento cada periodo de tiempo
+	//Un flujo que emite un elemento cada cierto tiempo
 	public Flux<Long> fluxInterval(){
 		Flux<Long> flux = Flux.interval(Duration.ofSeconds(1));
 		return flux;
 	}	
-	
+		
 	public Flux<Long> fluxNumerosAleatoriosInfinito(){
 		return Flux.generate(
 			//Generator
@@ -43,13 +43,35 @@ public class Flujos {
 			}				
 		);
 	}
+	
+	public Flux<String> flujoConEstado(){
+		Flux<String> flux = Flux.generate(
+			//State supplier
+			() -> 1,
+			//Generator
+			(state, consumidores) -> {
+				consumidores.next("Mensaje nº:"+state);
+				state++;
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				if(state == 11) {
+					consumidores.complete();
+				}
+				return state;
+			}
+		);		
+		return flux;
+	}	
 
 	public Flux<List<String>> monitorizarDirectorio() throws IOException{				
-		Flux<List<String>> flux = Flux.generate(
-			(sink) -> {				
+		return Flux.generate(
+			consumidores -> {				
 				try {
 					WatchKey key = null;
-					final Path path = Paths.get("");
+					final Path path = Paths.get("directorio_monitorizado");
 					final WatchService watchService = FileSystems.getDefault().newWatchService();
 					path.register(
 							watchService, 
@@ -61,10 +83,11 @@ public class Flujos {
 					System.out.println("Esperando a una accion en el directorio para publicar el siguiente mensaje...");
 					key = watchService.take();
 					List<String> mensaje = new ArrayList<>();
+					//el método 'pollEvents' bloquea al hijo que lo invoca hasta que haya un nuevo evento
 					for (WatchEvent<?> event : key.pollEvents()) {
 						mensaje.add(event.kind()+":"+event.context());
 					}
-					sink.next(mensaje);
+					consumidores.next(mensaje);
 				} catch (InterruptedException e) {
 					System.out.println(e.getMessage());
 				} catch (IOException e) {
@@ -72,7 +95,6 @@ public class Flujos {
 				}
 			} 
 		);
-		return flux;
 	}
 
 	public Flux<String> flujoPalabras() {		

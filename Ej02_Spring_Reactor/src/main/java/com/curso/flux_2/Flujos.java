@@ -4,14 +4,13 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import org.springframework.stereotype.Component;
 
+import io.netty.util.internal.shaded.org.jctools.queues.MessagePassingQueue.Supplier;
 import reactor.core.publisher.Flux;
 
 @Component
 public class Flujos {
 
-	
 	public Flux<Long> fluxNumerosAleatoriosFinito(){
-
 		AtomicInteger contador = new AtomicInteger(0);
 		Flux<Long> flujo = Flux.generate( 
 				//Generator
@@ -87,8 +86,6 @@ public class Flujos {
 	}	
 	
 }
-
-
 
 
 

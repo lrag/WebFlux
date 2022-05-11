@@ -88,7 +88,8 @@ public class PeliculaRepository {
 						);						
 					consumidores.success(p);	
 				} else {
-					consumidores.success();
+					Exception e = new Exception("No existe una pelicula con ese id");
+					consumidores.error(e);
 				}
 			} catch (SQLException e) {				
 				consumidores.error(e);

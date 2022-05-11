@@ -33,9 +33,9 @@ public class ClientesRest {
 			    produces = MediaType.APPLICATION_JSON_VALUE)
 	public Mono<ResponseEntity<ClienteDTO>> modificar(@RequestBody ClienteDTO clienteDto){	
 		return gestorClientes
-			.insertar(clienteDto.asCliente())
+			.modificar(clienteDto.asCliente()) //Esto devuelve Mono<Cliente>
 			.map( cliente -> {
-				return new ResponseEntity<ClienteDTO>(new ClienteDTO(cliente), HttpStatus.OK);
+				return new ResponseEntity<ClienteDTO>(new ClienteDTO(cliente), HttpStatus.OK);//De aqui sale Mono<ResponseEntity>
 			});		
 	}
 
@@ -70,24 +70,27 @@ public class ClientesRest {
 	
 	@DeleteMapping(path="/{id}")
 	public Mono<ResponseEntity<Object>> borrar(@PathVariable("id") String idCliente){
+		
 		/*
 		Cliente c = new Cliente();
-		c.setId(id);
+		c.setId(idCliente);
 		return gestorClientes
 				.borrar(c);
 		*/
 
 		return Mono
-			.just(idCliente)
+			.just(idCliente) //De aqui sale un Mono<Integer>
 			.map( id -> {
 				Cliente c = new Cliente();
 				c.setId(id);
-				return c;
+				return c; //De aqui sale un Mono<Cliente>
 			})
 			.flatMap( cliente -> {
-				return gestorClientes.borrar(cliente);
+				return gestorClientes.borrar(cliente); //DE aqui sale un Mono<Void>, pero uno nuevo
 			})
+			//Utilizamos esto porque despues de un Mono<Void> ya no hay nada que hacer
 			.thenReturn(new ResponseEntity<Object>(HttpStatus.OK));	
+
 		
 	}
 	

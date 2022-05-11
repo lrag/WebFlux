@@ -5,9 +5,10 @@ import org.springframework.stereotype.Repository;
 
 import com.curso.modelo.entidad.Pelicula;
 
-import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 @Repository
 public interface PeliculaRepositorio extends ReactiveCrudRepository<Pelicula, Integer>{
+	//Mono<Pelicula> save(Pelicula pelicula);
 }
 

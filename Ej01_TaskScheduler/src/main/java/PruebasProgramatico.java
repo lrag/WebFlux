@@ -12,9 +12,7 @@ public class PruebasProgramatico {
 		
 		ApplicationContext appCtx = new ClassPathXmlApplicationContext("beansProgramatico.xml");
 		System.out.println("====================================");
-		
 		TaskScheduler sch = (TaskScheduler) appCtx.getBean("taskScheduler");
-		
 		sch.scheduleAtFixedRate(new Tarea("T1"), 1000);
 		
 	}

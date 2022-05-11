@@ -10,13 +10,13 @@ import java.util.List;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import com.curso.modelo.entidad.Pelicula;
 
 import reactor.core.publisher.Flux;
 
-@Component
+@Repository
 public class PeliculaRepository {
 
 	@Autowired
@@ -52,7 +52,7 @@ public class PeliculaRepository {
 				() -> {
 					Connection cx = dataSource.getConnection();
 					PreparedStatement pst = cx.prepareStatement("select * from pelicula");
-					pst.setFetchSize(25);
+					pst.setFetchSize(20);
 					ResultSet rs = pst.executeQuery();
 					return rs;					
 				},
@@ -72,10 +72,9 @@ public class PeliculaRepository {
 						} else {
 							consumidores.complete();
 						}
-					} catch (SQLException e) {
+					} catch (Exception e) {
 						e.printStackTrace();
-					} catch (InterruptedException e) {
-						e.printStackTrace();
+						consumidores.error(e);
 					}
 					return rs; 
 				},
