@@ -19,7 +19,7 @@ public class ConfiguracionEndpointsFuncionales {
 	@Bean
 	public RouterFunction<ServerResponse> functionalRoutesClientes(ClientesHandler clientesHandler) {
 		return RouterFunctions
-			.route(RequestPredicates.GET("/clientes")           , serverRequest -> clientesHandler.listar(serverRequest))
+			.route   (RequestPredicates.GET("/clientes")        , serverRequest -> clientesHandler.listar(serverRequest))
 			.andRoute(RequestPredicates.GET("/clientes/{id}")   , serverRequest -> clientesHandler.buscar(serverRequest))
 			.andRoute(RequestPredicates.POST("/clientes")       , serverRequest -> clientesHandler.insertar(serverRequest))
 			.andRoute(RequestPredicates.PUT("/clientes/{id}")   , serverRequest -> clientesHandler.modificar(serverRequest))
@@ -30,7 +30,7 @@ public class ConfiguracionEndpointsFuncionales {
 	@Bean
 	public RouterFunction<ServerResponse> functionalRoutesFacturas(FacturasHandler facturasHandler) {
 		return RouterFunctions
-			.route(RequestPredicates.GET("/facturas")             , serverRequest -> facturasHandler.listar(serverRequest))
+			.route   (RequestPredicates.GET("/facturas")          , serverRequest -> facturasHandler.listar(serverRequest))
 			.andRoute(RequestPredicates.GET("/facturas/{id}")     , serverRequest -> facturasHandler.buscar(serverRequest))
 			.andRoute(RequestPredicates.POST("/facturas")         , serverRequest -> facturasHandler.insertar(serverRequest));
 			.andRoute(RequestPredicates.PUT("/facturas/{id}")   , serverRequest -> facturasHandler.insertar(serverRequest));

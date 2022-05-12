@@ -20,15 +20,14 @@ public class ClientesHandler {
 	@Autowired private ClienteRepository clienteRepo;
 	
 	/*
-	 
 	POST /clientes
 	CT: app/json
 	---------------------
 	{ cliente }	
-	
 	*/
 	
 	public Mono<ServerResponse> insertar(ServerRequest request){		
+		/*
 		return
 			request
 				.bodyToMono(ClienteDTO.class) //Devuelve Mono<ClienteDTO>
@@ -37,8 +36,19 @@ public class ClientesHandler {
 					return ServerResponse
 							.ok()
 							.contentType(MediaType.APPLICATION_JSON)
-							//.body(gestorClientes.insertar(cliente).flatMap(cli -> Mono.just( new ClienteDTO(cli)) ),
-							.body(gestorClientes.insertar(cliente), ClienteDTO.class); 					
+							.body(gestorClientes.insertar(cliente).map(cli -> new ClienteDTO(cli)), 
+								  ClienteDTO.class);					
+				});
+		*/
+		return
+				request
+				.bodyToMono(ClienteDTO.class) //Devuelve Mono<ClienteDTO>
+				.flatMap(clienteDTO -> {
+					Cliente cliente = clienteDTO.asCliente();
+					return ServerResponse
+							.ok()
+							.contentType(MediaType.APPLICATION_JSON)
+							.body(gestorClientes.insertar(cliente).map(cli -> new ClienteDTO(cli)), ClienteDTO.class);					
 				});
 	}
 	
@@ -47,16 +57,17 @@ public class ClientesHandler {
 	CT: app/json
 	---------------------
 	{ cliente }
+	
 	*/
 	
 	public Mono<ServerResponse> modificar(ServerRequest request){		
-		String id = request.pathVariable("id");
 		return
 			request
 				.bodyToMono(ClienteDTO.class) //Devuelve Mono<VlienteDTO>
 				.map(clienteDTO -> clienteDTO.asCliente())
 				.flatMap(cliente -> {
-					Mono<Cliente> elMonoDeEstallido = gestorClientes.modificar(cliente);
+					cliente.setId(request.pathVariable("id"));
+					Mono<ClienteDTO> elMonoDeEstallido = gestorClientes.modificar(cliente).map(clienteModificado -> new ClienteDTO(clienteModificado));
 					return ServerResponse
 							.ok()
 							.contentType(MediaType.APPLICATION_JSON)							
@@ -132,7 +143,6 @@ public class ClientesHandler {
 	}
 	
 }
-
 
 
 

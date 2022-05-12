@@ -35,9 +35,6 @@
 			</artifactId>
 		</dependency>
 
-		<!-- <dependency> <groupId>de.bwaldvogel</groupId> <artifactId>mongo-java-server</artifactId> 
-			<version>1.24.0</version> </dependency> -->
-
 		<dependency>
 			<groupId>de.flapdoodle.embed</groupId>
 			<artifactId>de.flapdoodle.embed.mongo</artifactId>
@@ -75,6 +72,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
+
 	</dependencies>
 
 	<build>

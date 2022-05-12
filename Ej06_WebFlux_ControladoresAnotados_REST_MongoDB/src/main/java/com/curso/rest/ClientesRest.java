@@ -1,5 +1,9 @@
 package com.curso.rest;
 
+import java.util.List;
+import java.util.concurrent.Callable;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -15,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.curso.modelo.entidad.Cliente;
 import com.curso.modelo.negocio.GestorClientes;
+import com.curso.modelo.persistencia.ClienteRepoJPA;
 import com.curso.modelo.persistencia.ClienteRepository;
 import com.curso.rest.dto.ClienteDTO;
 
@@ -27,7 +32,36 @@ public class ClientesRest {
 
 	@Autowired private GestorClientes gestorClientes;
 	@Autowired private ClienteRepository clienteRepo;
+	@Autowired private ClienteRepoJPA clienteRepoJPA;
 	
+	/////////////////////////////////////////////////////////////////////////
+	// Cómo utilizar un api/código imperativa en una aplicación con WebFlux//
+	/////////////////////////////////////////////////////////////////////////
+	@GetMapping("/path")
+	public Mono<List<ClienteDTO>> listarNoReactivo(){
+		/*Esto funciona, pero es una chapucilla...
+		return Mono
+				.just("for men")
+				//.subscribeOn(Schedulers.boundedElastic())
+				.map(s -> {
+					return clienteRepoJPA.findAll().stream().map(cliente -> new ClienteDTO(cliente)).collect(Collectors.toList());
+				});
+		*/
+
+		//...porque existe esto:
+		return Mono.fromCallable(() -> {
+				return clienteRepoJPA.findAll().stream().map(cliente -> new ClienteDTO(cliente)).collect(Collectors.toList());
+			}
+		);
+
+		/*Lo mismo con clase interna anónima:
+		return Mono.fromCallable(new Callable<List<ClienteDTO>>() {
+			public List<ClienteDTO> call() {
+				return clienteRepoJPA.findAll().stream().map(cliente -> new ClienteDTO(cliente)).collect(Collectors.toList());
+			}
+		});*/		
+		
+	}	
 	
 
 	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
@@ -72,7 +106,7 @@ public class ClientesRest {
 	
 	@DeleteMapping(path="/{id}")
 	public Mono<ResponseEntity<Object>> borrar(@PathVariable("id") String idCliente){
-		
+		/*
 		Cliente c = new Cliente();
 		c.setId(idCliente);
 		return gestorClientes
@@ -83,26 +117,30 @@ public class ClientesRest {
 				}
 				return new ResponseEntity<Object>(HttpStatus.NOT_FOUND);
 			});
-		
-		/*
-		return Mono
-			.just(idCliente) //De aqui sale un Mono<String>
-			.map( id -> {
+		*/
+
+		return Mono.just(idCliente) //De aqui nos sacamos de la manga un Mono<String>
+			.flatMap( id -> {
 				Cliente c = new Cliente();
 				c.setId(id);
-				return c; //De aqui sale un Mono<Cliente>
+				return gestorClientes.borrar(c); //De aqui sale un Mono<Boolean>
 			})
-			.flatMap( cliente -> {
-				return gestorClientes.borrar(cliente); //DE aqui sale un Mono<Void>, pero uno nuevo
-			})
-			//Utilizamos esto porque despues de un Mono<Void> ya no hay nada que hacer
-			.thenReturn(new ResponseEntity<Object>(HttpStatus.OK));	
-			*/
-
+			.map(borrado -> {
+				if(borrado) {
+					return new ResponseEntity<Object>(HttpStatus.OK);
+				}
+				return new ResponseEntity<Object>(HttpStatus.NOT_FOUND);				
+			});
 		
 	}
 	
 }
+
+
+
+
+
+
 
 
 

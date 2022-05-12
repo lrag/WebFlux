@@ -15,14 +15,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.curso.modelo.entidad.Pelicula;
-import com.curso.modelo.entidad.Premio;
 import com.curso.modelo.negocio.GestorPeliculas;
 import com.curso.modelo.persistencia.PeliculaRepositorio;
 import com.curso.modelo.persistencia.PremioRepositorio;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import reactor.util.function.Tuple2;
 
 @RestController
 public class PeliculasREST {
@@ -37,7 +35,8 @@ public class PeliculasREST {
 	//PUT    /peliculas/{id}
 	//DELETE /peliculas/{id}  
 	
-	//No es obligatorio que un métod del endpoint devuelva un flujo o un mono
+	//No es obligatorio que un método del endpoint devuelva un flujo o un mono.
+	//Puede ser imperativo mientras no estemos bloqueando el hilo del event loop
 	@GetMapping(path = "/peliculas_destructor_de_la_reactividad",
 		    produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<Pelicula> listarPeliculas_el_horror_el_horror() {	
@@ -66,7 +65,6 @@ public class PeliculasREST {
 	public Mono<Pelicula> buscarPelicula(@PathVariable("idPelicula") Integer idPelicula) {
 		return peliculaRepo
 			.findById(idPelicula) //De aqui sale un Mono en patines
-			//FLAT_MAP_MANY :(
 			.flatMap( p -> { //Aqui llega la pelicula
 				return Mono.just(p).zipWith(premioRepo.findAllByIdPelicula(p.getId()).collectList()); 
 			})

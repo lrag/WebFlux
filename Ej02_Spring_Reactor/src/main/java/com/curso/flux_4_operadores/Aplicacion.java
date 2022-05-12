@@ -237,7 +237,7 @@ public class Aplicacion implements CommandLineRunner{
 		Integer idPelicula = 3;
 		peliculaRepo
 			.findById(idPelicula) //De aqui sale un Mono en patines
-			.flatMapMany( p -> { //Aqui llega la pelicula
+			.flatMap( p -> { //Aqui llega la pelicula
 				Mono<List<Premio>> monoPremios = premioRepo.findAllByIdPelicula(p.getId()).collectList();
 				Mono<Pelicula> peliculaMono = Mono.just(p);
 				return Mono.zip(peliculaMono, monoPremios);

@@ -7,6 +7,7 @@ import com.curso.modelo.entidad.Cliente;
 import com.curso.modelo.persistencia.ClienteRepository;
 
 import reactor.core.publisher.Mono;
+import reactor.core.scheduler.Schedulers;
 
 @Service
 public class GestorClientes {
@@ -24,12 +25,22 @@ public class GestorClientes {
 		return clienteRepo.save(cliente);
 	}
 
+	//si lo dejamos así se borrará cuando el Dispatcher Hendler se suscriba al Mono que devolvemos,
+	//pero no nos enteraremos de si el cliente existía o no
+	//public Mono<Void> borrar_(Cliente cliente){
+	//	return clienteRepo.delete(cliente);
+	//}	
+	
 	public Mono<Boolean> borrar(Cliente cliente) {
 		//LN...
 		return clienteRepo
 			.findById(cliente.getId()) //De aqui sale Mono<Cliente> o Mono<Void>
+			.subscribeOn(Schedulers.boundedElastic())
 			.flatMap(clienteABorrar -> {
-				return clienteRepo.delete(clienteABorrar).thenReturn(true); //De aqui sale Mono<Boolean> (true)
+				return clienteRepo
+						.delete(clienteABorrar)
+						.subscribeOn(Schedulers.boundedElastic())
+						.thenReturn(true); //De delete sale un Mono<Void> que sustituimos por un Mono<Boolean> (true)
 			})
 			.defaultIfEmpty(false);
 	}

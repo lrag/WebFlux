@@ -15532,3 +15532,403 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact antlr:antlr:j
 2022-05-11 20:24:15,652 [Worker-1222: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2022-05-11 20:24:15,652 [Worker-1222: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2022-05-11 20:24:15,652 [Worker-1222: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej06_WebFlux_ControladoresAnotados_REST_MongoDB\src\test\resources
+2022-05-11 20:31:05,084 [Worker-1214: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 20:31:05,084 [Worker-1214: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 20:31:05,084 [Worker-1214: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-11 20:31:05,099 [Worker-1214: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2022-05-11 20:31:05,101 [Worker-1214: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 20:31:05,101 [Worker-1214: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 20:31:05,101 [Worker-1214: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej04_WebFlux_ControladoresAnotados_REST_R2DBC\src\test\resources
+2022-05-11 20:31:23,365 [Worker-1232: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 20:31:23,365 [Worker-1232: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 20:31:23,366 [Worker-1232: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-11 20:31:23,382 [Worker-1232: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2022-05-11 20:31:23,384 [Worker-1232: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 20:31:23,384 [Worker-1232: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 20:31:23,384 [Worker-1232: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej04_WebFlux_ControladoresAnotados_REST_R2DBC\src\test\resources
+2022-05-11 20:33:00,289 [Worker-1232: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 20:33:00,290 [Worker-1232: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 20:33:00,290 [Worker-1232: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-11 20:33:00,294 [Worker-1232: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2022-05-11 20:33:00,296 [Worker-1232: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 20:33:00,296 [Worker-1232: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 20:33:00,296 [Worker-1232: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej04_WebFlux_ControladoresAnotados_REST_R2DBC\src\test\resources
+2022-05-11 20:38:10,092 [Worker-1235: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 20:38:10,092 [Worker-1235: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 20:38:10,092 [Worker-1235: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-11 20:38:10,098 [Worker-1235: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-11 20:38:10,100 [Worker-1235: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 20:38:10,100 [Worker-1235: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 20:38:10,100 [Worker-1235: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej02_Spring_Reactor\src\test\resources
+2022-05-11 20:42:09,748 [Worker-1222: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 20:42:09,748 [Worker-1222: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 20:42:09,749 [Worker-1222: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-11 20:42:09,755 [Worker-1222: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-11 20:42:09,756 [Worker-1222: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 20:42:09,756 [Worker-1222: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 20:42:09,757 [Worker-1222: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej06_WebFlux_ControladoresAnotados_REST_MongoDB\src\test\resources
+2022-05-11 21:19:19,865 [Worker-1240: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 21:19:19,865 [Worker-1240: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 21:19:19,866 [Worker-1240: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-11 21:19:19,883 [Worker-1240: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-11 21:19:19,884 [Worker-1240: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 21:19:19,884 [Worker-1240: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 21:19:19,884 [Worker-1240: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej06_WebFlux_ControladoresAnotados_REST_MongoDB\src\test\resources
+2022-05-11 22:15:51,989 [Worker-1251: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 22:15:51,989 [Worker-1251: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 22:15:51,990 [Worker-1251: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-11 22:15:52,271 [Worker-1251: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-11 22:15:52,273 [Worker-1251: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 22:15:52,273 [Worker-1251: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 22:15:52,273 [Worker-1251: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB\src\test\resources
+2022-05-11 22:21:45,910 [Worker-1253: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 22:21:45,910 [Worker-1253: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 22:21:45,911 [Worker-1253: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-11 22:21:46,002 [Worker-1253: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-11 22:21:46,004 [Worker-1253: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 22:21:46,005 [Worker-1253: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 22:21:46,005 [Worker-1253: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB\src\test\resources
+2022-05-11 22:37:27,555 [Worker-1251: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 22:37:27,555 [Worker-1251: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 22:37:27,555 [Worker-1251: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-11 22:37:27,569 [Worker-1251: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-11 22:37:27,571 [Worker-1251: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 22:37:27,571 [Worker-1251: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 22:37:27,571 [Worker-1251: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB\src\test\resources
+2022-05-11 22:39:05,502 [Worker-1257: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 22:39:05,502 [Worker-1257: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 22:39:05,503 [Worker-1257: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-11 22:39:05,508 [Worker-1257: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-11 22:39:05,510 [Worker-1257: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-11 22:39:05,510 [Worker-1257: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-11 22:39:05,510 [Worker-1257: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB\src\test\resources
+2022-05-12 17:37:05,287 [Worker-1371: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 17:37:05,287 [Worker-1371: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 17:37:05,288 [Worker-1371: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 17:37:06,167 [Worker-1371: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2022-05-12 17:37:06,171 [Worker-1371: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 17:37:06,171 [Worker-1371: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 17:37:06,171 [Worker-1371: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej04_WebFlux_ControladoresAnotados_REST_R2DBC\src\test\resources
+2022-05-12 17:40:51,285 [Worker-1377: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 17:40:51,285 [Worker-1377: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 17:40:51,286 [Worker-1377: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 17:40:51,306 [Worker-1377: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 17:40:51,307 [Worker-1377: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 17:40:51,308 [Worker-1377: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 17:40:51,308 [Worker-1377: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej06_WebFlux_ControladoresAnotados_REST_MongoDB\src\test\resources
+2022-05-12 17:45:24,945 [Worker-1366: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 17:45:24,945 [Worker-1366: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 17:45:24,946 [Worker-1366: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 17:45:24,987 [Worker-1366: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 17:45:24,989 [Worker-1366: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 17:45:24,989 [Worker-1366: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 17:45:24,989 [Worker-1366: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej06_WebFlux_ControladoresAnotados_REST_MongoDB\src\test\resources
+2022-05-12 17:45:52,999 [Worker-1371: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 17:45:52,999 [Worker-1371: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 17:45:52,999 [Worker-1371: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 17:45:53,099 [Worker-1371: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2022-05-12 17:45:53,102 [Worker-1371: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 17:45:53,102 [Worker-1371: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 17:45:53,102 [Worker-1371: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej04_WebFlux_ControladoresAnotados_REST_R2DBC\src\test\resources
+2022-05-12 17:50:42,516 [Worker-1380: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 17:50:42,517 [Worker-1380: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 17:50:42,517 [Worker-1380: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 17:50:42,526 [Worker-1380: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 17:50:42,527 [Worker-1380: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 17:50:42,527 [Worker-1380: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 17:50:42,527 [Worker-1380: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej06_WebFlux_ControladoresAnotados_REST_MongoDB\src\test\resources
+2022-05-12 18:13:56,331 [Worker-1389: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:13:56,331 [Worker-1389: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:13:56,332 [Worker-1389: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:13:56,366 [Worker-1389: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:13:56,368 [Worker-1389: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:13:56,368 [Worker-1389: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:13:56,368 [Worker-1389: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej06_WebFlux_ControladoresAnotados_REST_MongoDB\src\test\resources
+2022-05-12 18:14:02,349 [Worker-1389: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:14:02,349 [Worker-1389: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:14:02,349 [Worker-1389: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:14:02,358 [Worker-1389: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:14:02,359 [Worker-1389: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:14:02,360 [Worker-1389: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:14:02,360 [Worker-1389: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej06_WebFlux_ControladoresAnotados_REST_MongoDB\src\test\resources
+2022-05-12 18:21:30,160 [Worker-1392: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.curso:Ej06_WebFlux_ControladoresAnotados_REST_MongoDB:0.0.1-SNAPSHOT @ D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB\pom.xml.
+2022-05-12 18:21:32,274 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:21:32,274 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:21:32,274 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-12 18:21:32,274 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-12 18:21:32,275 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:21:32,275 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:21:32,275 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB\src\test\resources
+2022-05-12 18:22:30,145 [Worker-1392: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2022-05-12 18:22:30,631 [Worker-1392: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.curso:Ej06_WebFlux_ControladoresAnotados_REST_MongoDB:0.0.1-SNAPSHOT @ D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB\pom.xml.
+2022-05-12 18:22:31,215 [Worker-1392: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB/src/main/java
+2022-05-12 18:22:31,215 [Worker-1392: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB/src/main/resources
+2022-05-12 18:22:31,215 [Worker-1392: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB/src/main/resources
+2022-05-12 18:22:31,215 [Worker-1392: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB/src/test/java
+2022-05-12 18:22:31,784 [Worker-1392: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 1 sec
+2022-05-12 18:22:32,417 [Worker-1387: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:22:32,417 [Worker-1387: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:22:32,417 [Worker-1387: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:22:32,418 [Worker-1387: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:22:32,476 [Worker-1387: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:22:32,476 [Worker-1387: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:22:32,476 [Worker-1387: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB\src\test\resources
+2022-05-12 18:22:41,762 [Worker-1391: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.curso:Ej06_WebFlux_ControladoresAnotados_REST_MongoDB:0.0.1-SNAPSHOT @ D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB\pom.xml.
+2022-05-12 18:22:42,566 [Worker-1391: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:22:42,567 [Worker-1391: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:22:42,567 [Worker-1391: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-12 18:22:42,567 [Worker-1391: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-12 18:22:42,568 [Worker-1391: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:22:42,568 [Worker-1391: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:22:42,568 [Worker-1391: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB\src\test\resources
+2022-05-12 18:22:57,124 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:22:57,124 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:22:57,125 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:22:57,132 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:22:57,134 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:22:57,134 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:22:57,134 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB\src\test\resources
+2022-05-12 18:33:22,698 [Worker-1393: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:33:22,698 [Worker-1393: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:33:22,698 [Worker-1393: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:33:22,704 [Worker-1393: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2022-05-12 18:33:22,706 [Worker-1393: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:33:22,706 [Worker-1393: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:33:22,706 [Worker-1393: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej04_WebFlux_ControladoresAnotados_REST_R2DBC\src\test\resources
+2022-05-12 18:33:42,434 [Worker-1387: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:33:42,434 [Worker-1387: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:33:42,434 [Worker-1387: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:33:42,439 [Worker-1387: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2022-05-12 18:33:42,441 [Worker-1387: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:33:42,441 [Worker-1387: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:33:42,441 [Worker-1387: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej04_WebFlux_ControladoresAnotados_REST_R2DBC\src\test\resources
+2022-05-12 18:34:25,375 [Worker-1394: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:34:25,375 [Worker-1394: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:34:25,376 [Worker-1394: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:34:25,382 [Worker-1394: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:34:25,384 [Worker-1394: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:34:25,384 [Worker-1394: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:34:25,384 [Worker-1394: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB\src\test\resources
+2022-05-12 18:36:00,621 [Worker-1393: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:36:00,622 [Worker-1393: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:36:00,622 [Worker-1393: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:36:00,626 [Worker-1393: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:36:00,628 [Worker-1393: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:36:00,628 [Worker-1393: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:36:00,628 [Worker-1393: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB\src\test\resources
+2022-05-12 18:37:05,595 [Worker-1392: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:37:05,595 [Worker-1392: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:37:05,596 [Worker-1392: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:37:05,600 [Worker-1392: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:37:05,603 [Worker-1392: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:37:05,603 [Worker-1392: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:37:05,603 [Worker-1392: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej06_WebFlux_ControladoresAnotados_REST_MongoDB\src\test\resources
+2022-05-12 18:37:05,672 [Worker-1392: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:37:05,672 [Worker-1392: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:37:05,673 [Worker-1392: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:37:05,678 [Worker-1392: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:37:05,679 [Worker-1392: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:37:05,679 [Worker-1392: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:37:05,679 [Worker-1392: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB\src\test\resources
+2022-05-12 18:37:10,030 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:37:10,030 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:37:10,030 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:37:10,036 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:37:10,038 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:37:10,038 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:37:10,038 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB\src\test\resources
+2022-05-12 18:37:20,322 [Worker-1386: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.curso:Ej06_WebFlux_ControladoresAnotados_REST_MongoDB:0.0.1-SNAPSHOT @ D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB\pom.xml.
+2022-05-12 18:37:20,827 [Worker-1386: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:37:20,827 [Worker-1386: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:37:20,827 [Worker-1386: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-12 18:37:20,827 [Worker-1386: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-12 18:37:20,828 [Worker-1386: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:37:20,829 [Worker-1386: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:37:20,829 [Worker-1386: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB\src\test\resources
+2022-05-12 18:37:21,655 [Worker-1394: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:37:21,655 [Worker-1394: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:37:21,655 [Worker-1394: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:37:21,657 [Worker-1394: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:37:21,661 [Worker-1394: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:37:21,661 [Worker-1394: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:37:21,661 [Worker-1394: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB\src\test\resources
+2022-05-12 18:37:29,485 [Worker-1386: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.curso:Ej07_WebFlux_ControladoresAnotados_REST_MongoDB:0.0.1-SNAPSHOT @ D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej06_WebFlux_ControladoresAnotados_REST_MongoDB\pom.xml.
+2022-05-12 18:37:30,060 [Worker-1386: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:37:30,060 [Worker-1386: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:37:30,060 [Worker-1386: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-12 18:37:30,061 [Worker-1386: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-12 18:37:30,061 [Worker-1386: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:37:30,061 [Worker-1386: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:37:30,062 [Worker-1386: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej06_WebFlux_ControladoresAnotados_REST_MongoDB\src\test\resources
+2022-05-12 18:37:30,763 [Worker-1395: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:37:30,764 [Worker-1395: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:37:30,764 [Worker-1395: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:37:30,765 [Worker-1395: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:37:30,814 [Worker-1395: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:37:30,814 [Worker-1395: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:37:30,814 [Worker-1395: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej06_WebFlux_ControladoresAnotados_REST_MongoDB\src\test\resources
+2022-05-12 18:42:09,683 [Worker-1396: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:42:09,683 [Worker-1396: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:42:09,683 [Worker-1396: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:42:09,689 [Worker-1396: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:42:09,691 [Worker-1396: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:42:09,691 [Worker-1396: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:42:09,691 [Worker-1396: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej06_WebFlux_ControladoresAnotados_REST_MongoDB\src\test\resources
+2022-05-12 18:42:24,975 [Worker-1396: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:42:24,975 [Worker-1396: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:42:24,975 [Worker-1396: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:42:24,984 [Worker-1396: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:42:24,985 [Worker-1396: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:42:24,985 [Worker-1396: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:42:24,985 [Worker-1396: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB\src\test\resources
+2022-05-12 18:42:37,091 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:42:37,091 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:42:37,091 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:42:37,107 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:42:37,108 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:42:37,108 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:42:37,108 [Worker-1392: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB\src\test\resources
+2022-05-12 18:43:46,558 [Worker-1397: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.curso:Ej00_BBDD:0.0.1-SNAPSHOT @ D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej00_Carga_datos\pom.xml.
+2022-05-12 18:43:47,392 [Worker-1397: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:43:47,392 [Worker-1397: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:43:47,392 [Worker-1397: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:43:47,398 [Worker-1397: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-12 18:43:47,400 [Worker-1397: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:43:47,400 [Worker-1397: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:43:47,400 [Worker-1397: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej00_Carga_datos\src\test\resources
+2022-05-12 18:43:47,986 [Worker-1397: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:43:47,986 [Worker-1397: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:43:47,987 [Worker-1397: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:43:47,988 [Worker-1397: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-12 18:43:47,989 [Worker-1397: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:43:47,989 [Worker-1397: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:43:47,989 [Worker-1397: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej00_Carga_datos\src\test\resources
+2022-05-12 18:44:09,666 [Worker-1400: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:44:09,666 [Worker-1400: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:44:09,667 [Worker-1400: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-12 18:44:09,667 [Worker-1400: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-12 18:44:09,668 [Worker-1400: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:44:09,668 [Worker-1400: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:44:09,668 [Worker-1400: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej00_Carga_datos\src\test\resources
+2022-05-12 18:56:39,867 [Worker-1405: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:56:39,867 [Worker-1405: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:56:39,868 [Worker-1405: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:56:39,880 [Worker-1405: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:56:39,881 [Worker-1405: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:56:39,882 [Worker-1405: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:56:39,882 [Worker-1405: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB\src\test\resources
+2022-05-12 18:58:05,224 [Worker-1406: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:58:05,224 [Worker-1406: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:58:05,225 [Worker-1406: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 18:58:05,233 [Worker-1406: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2022-05-12 18:58:05,235 [Worker-1406: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 18:58:05,235 [Worker-1406: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 18:58:05,235 [Worker-1406: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej04_WebFlux_ControladoresAnotados_REST_R2DBC\src\test\resources
+2022-05-12 19:23:05,783 [Worker-1407: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 19:23:05,783 [Worker-1407: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 19:23:05,783 [Worker-1407: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 19:23:05,802 [Worker-1407: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 19:23:05,803 [Worker-1407: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 19:23:05,803 [Worker-1407: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 19:23:05,803 [Worker-1407: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB\src\test\resources
+2022-05-12 19:46:50,471 [Worker-1420: Launching Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB - Aplicacion] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 19:46:50,471 [Worker-1420: Launching Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB - Aplicacion] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 19:46:50,472 [Worker-1420: Launching Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB - Aplicacion] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 19:46:50,481 [Worker-1420: Launching Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB - Aplicacion] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 19:46:50,483 [Worker-1420: Launching Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB - Aplicacion] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 19:46:50,483 [Worker-1420: Launching Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB - Aplicacion] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 19:46:50,483 [Worker-1420: Launching Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB - Aplicacion] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej07_WebFlux_ControladoresFuncionales_REST_MongoDB\src\test\resources
+2022-05-12 20:17:39,781 [Worker-1435: Updating Maven Dependencies] ERROR o.e.m.j.i.l.MavenLaunchConfigurationListener - Launch configuration Aplicacion (8) references non-existing project Ej08_Spring_Webflux_Clientes.
+org.eclipse.core.runtime.CoreException: Launch configuration Aplicacion (8) references non-existing project Ej08_Spring_Webflux_Clientes.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1861)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1736)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:62)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:48)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:225)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setDirty(LaunchConfigurationWorkingCopy.java:523)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setAttribute(LaunchConfigurationWorkingCopy.java:411)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:401)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:427)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:134)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:818)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:985)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.lambda$0(ProjectRegistryRefreshJob.java:148)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:182)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:156)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:103)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1416)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:83)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2022-05-12 20:17:39,792 [Worker-1435: Updating Maven Dependencies] ERROR o.e.m.j.i.l.MavenLaunchConfigurationListener - Launch configuration Aplicacion (8) references non-existing project Ej08_Spring_Webflux_Clientes.
+org.eclipse.core.runtime.CoreException: Launch configuration Aplicacion (8) references non-existing project Ej08_Spring_Webflux_Clientes.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1861)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1736)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:62)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:48)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:225)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setDirty(LaunchConfigurationWorkingCopy.java:523)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.setAttribute(LaunchConfigurationWorkingCopy.java:411)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:402)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:427)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:134)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:818)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:985)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.lambda$0(ProjectRegistryRefreshJob.java:148)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:182)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:156)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:103)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1416)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:83)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2022-05-12 20:17:39,819 [Worker-1435: Updating Maven Dependencies] ERROR o.e.m.j.i.l.MavenLaunchConfigurationListener - Launch configuration Aplicacion (8) references non-existing project Ej08_Spring_Webflux_Clientes.
+org.eclipse.core.runtime.CoreException: Launch configuration Aplicacion (8) references non-existing project Ej08_Spring_Webflux_Clientes.
+	at org.eclipse.jdt.launching.JavaRuntime.abort(JavaRuntime.java:1861)
+	at org.eclipse.jdt.launching.JavaRuntime.getJavaProject(JavaRuntime.java:1736)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.updateLaunchConfiguration(MavenLaunchConfigurationListener.java:62)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.launchConfigurationChanged(MavenLaunchConfigurationListener.java:48)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.run(LaunchManager.java:225)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.debug.internal.core.LaunchManager$ConfigurationNotifier.notify(LaunchManager.java:209)
+	at org.eclipse.debug.internal.core.LaunchManager.launchConfigurationChanged(LaunchManager.java:2128)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.writeNewFile(LaunchConfigurationWorkingCopy.java:376)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave0(LaunchConfigurationWorkingCopy.java:259)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:229)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:187)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:403)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.disable(MavenRuntimeClasspathProvider.java:427)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:134)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:818)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:985)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.lambda$0(ProjectRegistryRefreshJob.java:148)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:182)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:156)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:103)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1416)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob.run(ProjectRegistryRefreshJob.java:83)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2022-05-12 20:17:40,052 [Worker-1433: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.example:Ej02_Spring_Reactor:0.0.1-SNAPSHOT @ D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej08_Spring_Webflux_ClientesReactivos\pom.xml.
+2022-05-12 20:17:40,595 [Worker-1433: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 20:17:40,595 [Worker-1433: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 20:17:40,595 [Worker-1433: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 20:17:40,602 [Worker-1433: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-12 20:17:40,603 [Worker-1433: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 20:17:40,603 [Worker-1433: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 20:17:40,603 [Worker-1433: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej08_Spring_Webflux_ClientesReactivos\src\test\resources
+2022-05-12 20:17:44,184 [Worker-1436: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 20:17:44,184 [Worker-1436: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 20:17:44,184 [Worker-1436: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 20:17:44,186 [Worker-1436: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-12 20:17:44,187 [Worker-1436: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 20:17:44,187 [Worker-1436: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 20:17:44,187 [Worker-1436: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej08_Spring_Webflux_ClientesReactivos\src\test\resources
+2022-05-12 20:48:33,694 [Worker-1435: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 20:48:33,694 [Worker-1435: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 20:48:33,694 [Worker-1435: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-05-12 20:48:33,725 [Worker-1435: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-12 20:48:33,727 [Worker-1435: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-05-12 20:48:33,727 [Worker-1435: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-05-12 20:48:33,727 [Worker-1435: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\JAVA\workspaces\SPRING\ws_webflux_2021\Ej08_Spring_Webflux_ClientesReactivos\src\test\resources
