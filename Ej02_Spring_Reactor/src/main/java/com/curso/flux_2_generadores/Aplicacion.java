@@ -16,7 +16,7 @@ import reactor.core.publisher.Flux;
 public class Aplicacion implements CommandLineRunner{
 
 	@Autowired
-	private PeliculaRepository peliculaRepo;
+	private PeliculaRepositorio peliculaRepo;
 	
 	@Autowired
 	private Flujos flujos;
@@ -27,6 +27,7 @@ public class Aplicacion implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
+
 
 		/*
 		System.out.println("=====================================");
@@ -48,20 +49,51 @@ public class Aplicacion implements CommandLineRunner{
 		System.out.println("FIN");
 		System.exit(0);
 		*/		
-		
+			
 		/*
 		System.out.println("=============================================");
 		List<Pelicula> peliculas = peliculaRepo.findAll();
 		for(Pelicula p: peliculas) {
 			System.out.println(p);
-		}
+		}	
 		
 		Thread.sleep(1000);
 		System.out.println("FIN");
-		*/				
 
 		System.out.println("=============================================");
-		peliculaRepo.findAll_Reactivo().subscribe( p -> System.out.println(p));	
+		peliculaRepo.findAll_Reactivo().subscribe( pelicula -> System.out.println(pelicula));	
+		
+		System.out.println("=============================================");
+		peliculaRepo
+			.findAll_Reactivo_Sin_Historias() //De aqui sale un Mono<List<Pelicula>>
+			.subscribe(listado -> listado.forEach(p -> System.out.println(":"+p)));
+		*/
+			
+		////////////////////////
+		// CONTROL DE ERRORES //
+		////////////////////////
+		System.out.println("=============================================");
+		peliculaRepo
+			.findById(1000)
+			.subscribe(
+				pelicula -> System.out.println(pelicula), 
+				error -> System.out.println(error.getMessage())
+			);
+		
+		Thread.sleep(2000);
+		
+		System.out.println("=============================================");
+		peliculaRepo
+			.findById(1000)
+			.doOnError(error -> System.out.println("1-"+error.getMessage())) //Cuidado que esto relanza la excepción
+			.subscribe(
+					pelicula -> System.out.println(pelicula), 
+					error -> System.out.println("2-"+error.getMessage())
+				);
+		
+		System.exit(0);		
+		
+		
 		
 		System.out.println("FIN del hilo main");
 	}

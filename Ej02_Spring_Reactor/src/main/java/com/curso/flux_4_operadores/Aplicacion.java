@@ -1,6 +1,7 @@
 package com.curso.flux_4_operadores;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -12,6 +13,7 @@ import com.curso.modelo.entidad.Premio;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import reactor.core.scheduler.Schedulers;
 
 @SpringBootApplication
 public class Aplicacion implements CommandLineRunner{
@@ -48,7 +50,6 @@ public class Aplicacion implements CommandLineRunner{
 		Thread.sleep(20_000);
 		*/
 		
-		
 		/*
 		System.out.println("======================================");
 		//Tambien podemos concatenar varios monos para obtener un flujo
@@ -59,18 +60,22 @@ public class Aplicacion implements CommandLineRunner{
 			)
 			.subscribe(p -> System.out.println(p));
 		
+		Thread.sleep(20_000);
+		*/
+		
+		/*
 		System.out.println("======================================");
 		peliculaRepo
 			.findAllById(Arrays.asList(1,2,3))
 			.subscribe( p -> System.out.println( "peliculaRepo.findAllById:"+p));
+		
+		Thread.sleep(20_000);		
 		*/
-		
-		//Thread.sleep(20_000);		
-		
 		
 		///////////
 		// MERGE //
 		///////////
+
 		/*
 		System.out.println("======================================");
 		Flux.merge(
@@ -90,9 +95,11 @@ public class Aplicacion implements CommandLineRunner{
 		/*
 		System.out.println("======================================");		
 		Flux.zip(
+				//Esto han de ser monos
 				flujos.numerosPares().subscribeOn(Schedulers.boundedElastic()).collect(Collectors.toList()), 
 				flujos.numerosImpares().subscribeOn(Schedulers.boundedElastic()).collect(Collectors.toList())
 			)
+			//El consumidor recibe un único elemento que contiene lo que hayan entregado los monos anteriores
 			.subscribe( tupla -> {
 				System.out.println(tupla.getT1());
 				System.out.println(tupla.getT2());
@@ -100,11 +107,12 @@ public class Aplicacion implements CommandLineRunner{
 
 		Thread.sleep(15_000);
 		System.exit(0);
-		*/
+		*/		
 		
 		////////////
 		// FILTER //
 		////////////
+
 
 		/*
 		System.out.println("======================================");		
@@ -114,8 +122,6 @@ public class Aplicacion implements CommandLineRunner{
 			//Se pueden concatenar más filtros
 			.filter(p -> p.getTitulo().length()>4)
 			.subscribe(p -> System.out.println(p));	
-		
-	
 		System.exit(0);
 		*/
 		
@@ -128,6 +134,7 @@ public class Aplicacion implements CommandLineRunner{
 			.flujoPalabras()
 			.subscribe( palabra -> System.out.println(palabra));
 		
+		
 		System.out.println("======================================");
 		flujos
 			.flujoPalabras()
@@ -135,13 +142,16 @@ public class Aplicacion implements CommandLineRunner{
 			.map( p -> p.toUpperCase() )
 			.subscribe(palabra -> System.out.println(palabra));
 
+
 		System.out.println("======================================");
 		flujos
 			.flujoPalabras()
 			//Llega la palabra, sale su longitud...
 			.map( p -> p.length() )
-			.subscribe(palabra -> System.out.println(palabra));
+			.subscribe(longitud -> System.out.println(longitud));
+		
 		*/
+
 		/*
 		System.out.println("======================================");
 		flujos
@@ -156,7 +166,7 @@ public class Aplicacion implements CommandLineRunner{
 			.flujoPalabras()
 			.subscribe( palabra -> System.out.println(palabra.length()+":"+palabra.toUpperCase()));		
 		*/
-
+		
 		//////////////
 		// FLAT MAP //
 		//////////////
@@ -166,13 +176,19 @@ public class Aplicacion implements CommandLineRunner{
 		//transformar el contendio en otro formato
 		//crear un nuevo fichero con la imagen resultante
 		
+		//Imperativo: 3 líneas
+		//String contenido = leerFichero(nombreFichero);
+		//String nuevoFormato = convertirImagen(contenido);
+		//escribirFichero(nuevoFichero, nuevoFormato);
+		
 		//Con callback hell el código es un infierno
 		//Además, como nos subscribimos a los flujos/monos no podemos devolvelos
 		//Y tampoco podemos devolver el resultado si el código está en un método
 		//Y para más INRI no podremos avisar de que ha habido un fallo
+
 		/*
 		flujos
-			.leerFichero("imagen.jpg")
+			.leerFichero("imagen.jpg") 
 			.subscribeOn(Schedulers.boundedElastic())
 			.subscribe( contenido -> {
 				System.out.println("Contenido:"+contenido);
@@ -181,30 +197,35 @@ public class Aplicacion implements CommandLineRunner{
 					.subscribeOn(Schedulers.boundedElastic())
 					.subscribe(nuevoFormato -> {
 						System.out.println("Nuevo formato:"+nuevoFormato);
-						flujos.escribirFichero(nuevoFormato, contenido)
+						flujos.escribirFichero("imagenConvertida.jpg", nuevoFormato)
 							.subscribeOn(Schedulers.boundedElastic())
 							.subscribe( c -> {
+								//Este consumer nunca recibirá una llamada por que nos estamos subscribiendo a un Mono<Void>
 								System.out.println("Nueva imagen creada.");
 							});
-					});
+					});					
 			});	
 		Thread.sleep(10_000);
-		 */
+		*/
 		
+		//System.exit(0);
+		 
 		/*
 		flujos
 			.leerFichero("imagen.jgp") //De aqui sale un mono<string>
 			.flatMap( contenido -> {
 				System.out.println("Contenido:"+contenido);
-				return flujos.convertirImagen(contenido); //Esto devuelve un Mono<String> 
+				return flujos.convertirImagen(contenido); //Esto devuelve  Mono<String> 
 			})
 			.flatMap( nuevoFormato -> {
 				System.out.println("Nuevo formato:"+nuevoFormato);
-				return flujos.escribirFichero("imagenConvertida.jpg", nuevoFormato); //De aqui sale otro Mono!
+				return flujos.escribirFichero("imagenConvertida.jpg", nuevoFormato); //De aqui sale un Mono<Void>
 			})
 			.doOnSuccess( x -> System.out.println("IMAGEN CONVERTIDA") ) //Como el ultimo mono es Mono<Void> 'x' es null
 			.subscribe();	
 		*/
+		
+		
 
 		//Lo mismo pero con un hilo para cada tarea que implique I/O 
 		/*
@@ -220,20 +241,36 @@ public class Aplicacion implements CommandLineRunner{
 			.flatMap( nuevoFormato -> {
 				System.out.println(Thread.currentThread().getName()+"-Nuevo formato:"+nuevoFormato);
 				return flujos
-					.escribirFichero("", "")
+					.escribirFichero("imagenConvertida.jpg", nuevoFormato)
 					.subscribeOn(Schedulers.boundedElastic());
 			})
 			.doOnSuccess( x-> System.out.println(Thread.currentThread().getName()+"-IMAGEN CONVERTIDA") )
 			.subscribe();
 		
 		Thread.sleep(10_000);
-		*/
+		 */
 		
-		///////////////////
-		// FLAT MAP MANY //
-		///////////////////			
-		System.out.println("======================================");		
+		System.out.println("======================================");	
 		
+		//Podemos hacer esta ñapa un tanto espantosa:
+		Pelicula peliculaConPremios = new Pelicula();
+		
+		peliculaRepo
+			.findById(3) //De aqui sale un mono de pelicula sin los premios
+			.flatMap(pelicula -> {
+				peliculaConPremios.setId(pelicula.getId());
+				peliculaConPremios.setTitulo(pelicula.getTitulo());
+				peliculaConPremios.setDirector(pelicula.getDirector());
+				peliculaConPremios.setGenero(pelicula.getGenero());
+				peliculaConPremios.setYear(pelicula.getYear());
+				return premioRepo.findAllByIdPelicula(3).collect(Collectors.toList()); //De aqui sale un flujo de premios
+			})
+			.subscribe(premios -> {
+				peliculaConPremios.setPremios(premios);
+				System.out.println(peliculaConPremios);
+			});
+
+		//O con zip, que no es ñapa pero tampoco es que sea muy bonito
 		Integer idPelicula = 3;
 		peliculaRepo
 			.findById(idPelicula) //De aqui sale un Mono en patines
@@ -250,6 +287,11 @@ public class Aplicacion implements CommandLineRunner{
 			})
 			.subscribe(pelicula -> System.out.println(pelicula));			
 
+		///////////////////
+		// FLAT MAP MANY //
+		///////////////////			
+		//...		
+		
 		/////////////
 		// COLLECT //
 		/////////////
@@ -257,7 +299,8 @@ public class Aplicacion implements CommandLineRunner{
 		System.out.println("======================================");		
 		flujos
 			.flujoPalabras()
-			.collect(Collectors.toList())
+			//.collect(Collectors.toList())
+			.collectList() //Lo mismo
 			.subscribe(lista -> System.out.println(lista));
 		*/
 		/*

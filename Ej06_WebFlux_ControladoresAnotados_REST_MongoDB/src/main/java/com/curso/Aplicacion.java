@@ -2,6 +2,8 @@ package com.curso;
 
 import java.util.function.Function;
 
+import javax.validation.constraints.NotBlank;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -17,9 +19,6 @@ import reactor.core.publisher.Mono;
 
 //@SpringBootApplication
 
-//Excluimos la configuración automática de spring boot relativa a la conexión con mongoDB
-//puesto que estamos utilizando un MongoDB empotrado con la aplicación y queremos
-//configurarlo expresamente para que mantenga las colecciones entre reinicios de la aplicación
 @SpringBootApplication(exclude = EmbeddedMongoAutoConfiguration.class)
 public class Aplicacion implements CommandLineRunner{
 
@@ -35,11 +34,19 @@ public class Aplicacion implements CommandLineRunner{
 		
 		System.out.println("===========================================");
 		
-		Cliente c1 = new Cliente(null,"Bart","C/Evergreen Terrace","555", "ayer",new DatosBancarios("Banco1",1234));
+		Cliente c1 = new Cliente("1","Bart","C/Evergreen Terrace","555", "ayer",new DatosBancarios("Banco1",1234));
 		Cliente c2 = new Cliente(null,"Harry Callahan","S.F.","555","hoy",new DatosBancarios("Banco2",2345));
 		Cliente c3 = new Cliente(null,"John McClane","N.Y.","555","mañana",new DatosBancarios("Banco3",3456));
 		Cliente c4 = new Cliente(null,"Lisa","C/Evergreen Terrace","555","pasado",new DatosBancarios("Banco4",4567));
 
+		clienteRepo
+			.deleteAll() //Mono<Void>
+			.then(clienteRepo.save(c1)) //Mono<ClienteInsertado>
+			.flatMap(ci1 -> clienteRepo.save(c2))
+			.flatMap(ci2 -> clienteRepo.save(c3))
+			.flatMap(ci3 -> clienteRepo.save(c4))
+			.subscribe(ci4 -> System.out.println("OK"));
+		
 		//No te subscribes, no se inserta
 		//clienteRepo.save(c1);
 		//clienteRepo.save(c2);
@@ -48,7 +55,7 @@ public class Aplicacion implements CommandLineRunner{
 
 		//Nos da igual el resultado, pero se insertan	
 		//Además se insertan el un orden aleatorio porque estos cuatro 'save'
-		//se ejecutarán en paralelo!		
+		//se ejecutarán en paralelo por el publishOn!		
 		
 		//clienteRepo.save(c1).subscribe();
 		//clienteRepo.save(c2).subscribe();

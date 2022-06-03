@@ -2,6 +2,7 @@ package com.curso.endpoint;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -50,15 +51,23 @@ public class PeliculasREST {
 	
 	@GetMapping(path = "/peliculas",
 			    produces = MediaType.APPLICATION_JSON_VALUE)
-	public Flux<Pelicula> listarPeliculas() {	
-		
-		//Esto es aberrante
-		//Muerte y destrucción
-		//List<Pelicula> pelis = new ArrayList<>();
-		//peliculaRepo.findAll().subscribe( p -> pelis.add(p) );
-		//return pelis;
-		
+	public Flux<Pelicula> listarPeliculas_CLientes_No_Reactivos() {	
 		return peliculaRepo.findAll();
+	}
+
+	@GetMapping(path = "/peliculas_stream",
+			produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+			//produces = MediaType.APPLICATION_NDJSON_VALUE)
+	public Flux<Pelicula> listarPeliculas_Clientes_Reactivos() {	
+		return peliculaRepo.findAll();
+	}
+	
+	@GetMapping(path="/peliculas/titulos",
+			    produces = MediaType.APPLICATION_JSON_VALUE)
+	public Mono<List<String>> listarTitulos(){
+		return peliculaRepo.findAll() //de aqui sale Flux<Pelicula>
+			.map(pelicula -> pelicula.getTitulo())
+			.collectList(); //de aqui sale Mono<List<Pelicula>>;
 	}
 		
 	@GetMapping(path = "/peliculas/{idPelicula}")	
@@ -101,7 +110,9 @@ public class PeliculasREST {
 
 	public Mono<Double> sumar_reactivo(@RequestParam("sumando1") Double sumando1, @RequestParam("sumando2") Double sumando2) {
 		//Aqui quizas estemos matando moscas a cañonazos
-		return Mono.create(subscriptores -> subscriptores.success(sumando1 + sumando2));	
+		return Mono.create(subscriptores -> subscriptores.success(sumando1 + sumando2));
+		//Mono.fromCallable(null)
+		//Mono.fromRunnable(null)
 	}	
 	
 	public Byte[] convertirImagen_Bloqueante(Byte[] imagen) {

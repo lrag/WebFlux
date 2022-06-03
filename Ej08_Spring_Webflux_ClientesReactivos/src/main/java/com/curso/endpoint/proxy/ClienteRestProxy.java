@@ -1,6 +1,9 @@
 package com.curso.endpoint.proxy;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -19,13 +22,20 @@ public class ClienteRestProxy {
 	private WebClient webClientClientes;
 	
 	
-	public Flux<Cliente> listar() {		
+	public Mono<List<Cliente>> listar() {		
 		return webClientClientes
 				.get()
 				.uri("/clientes")
 				.retrieve()
-				.bodyToFlux(Cliente.class);
-		
+				.bodyToMono(new ParameterizedTypeReference<List<Cliente>>(){});		
+	}
+	
+	public Flux<Cliente> listarStream() {		
+		return webClientClientes
+				.get()
+				.uri("/clientes/stream")
+				.retrieve()
+				.bodyToFlux(Cliente.class);		
 	}
 
 	public Mono<Cliente> buscar(String idCliente) {		

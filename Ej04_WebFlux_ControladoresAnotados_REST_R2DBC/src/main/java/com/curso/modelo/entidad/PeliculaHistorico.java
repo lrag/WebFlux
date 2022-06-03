@@ -1,11 +1,7 @@
 package com.curso.modelo.entidad;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
-
-//import org.springframework.data.annotation.Id;
-//import org.springframework.data.relational.core.mapping.Table;
 
 //Table es opcional. Si no se usa dan por sentado que la tabla en la bb.dd. se llama como la clase
 //En este caso concreto la tabla será 'PELICULA_HISTORICO'

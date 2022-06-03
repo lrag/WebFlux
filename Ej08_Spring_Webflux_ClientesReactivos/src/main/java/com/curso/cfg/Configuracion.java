@@ -10,6 +10,6 @@ public class Configuracion {
 	@Bean
 	public WebClient webClientClientes(WebClient.Builder webClientBuilder) {
 		return webClientBuilder.baseUrl("http://localhost:8080").build();
-	}	
+	}
 	
 }

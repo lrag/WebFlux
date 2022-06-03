@@ -22,27 +22,34 @@ public class Aplicacion implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 
-		System.out.println("=====================================");
 		
+		System.out.println("=====================================");
 		clienteRestProxy
 			.listar()
 			.subscribe(c-> System.out.println(c));
 		
 		//Todos los métodos de WebClient tienen el publishOn en otro hilo!!!!
 		Thread.sleep(5000);
+
+		System.out.println("=====================================");
+		clienteRestProxy
+			.listarStream()
+			.subscribe(listado-> System.out.println(listado));
 		
+		Thread.sleep(5000);
 		
 		System.out.println("=====================================");
-
 		clienteRestProxy
-			.buscar("609d64784af9651a96070981")
-			//.subscribe(c-> System.out.println(c));
-		
+			.buscar("1")
+			.subscribe(
+				c -> System.out.println(c),
+				e -> System.out.println(e.getMessage())
+			);
+			
 		Thread.sleep(5000);		
 		 
 
 		System.out.println("=====================================");
-
 		Cliente cliente = new Cliente(null,"Bud Spencer","C/Falsa,123","111222333","1/1/2009", new DatosBancarios("HTb",9999));
 		clienteRestProxy
 			.insertar(cliente)

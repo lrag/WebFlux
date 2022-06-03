@@ -35,8 +35,8 @@ public class Aplicacion implements CommandLineRunner{
 		palabras.forEach( p -> System.out.println(p));
 		
 		System.out.println("=====================================");
-		
-		//Flujo y Mono heredan de Publisher
+
+		//Flujo y Mono heredan de Publisher de Java 9
 		
 		//Un flujo no se 'recorre' como si fuera una colección
 		//Nos subscribimos a un flujo para recibir los elementos
@@ -57,11 +57,13 @@ public class Aplicacion implements CommandLineRunner{
 				}
 			});
 		System.out.println(Thread.currentThread().getName()+"-Despues de subscribirse");
-			
+		
+		
 		System.out.println("=====================================");
 		//Ídem con expresión lambda
 		//Vemos que podemos volver a subscribirnos a un flujo
-		flujoPalabras.subscribe( s -> System.out.println(Thread.currentThread().getName()+"-Lambda-"+s));
+		flujoPalabras
+			.subscribe( s -> System.out.println(Thread.currentThread().getName()+"-Lambda-"+s));
 		//AQUI NO TENEMOS LAS PALABRAS
 		
 		System.out.println("=====================================");		

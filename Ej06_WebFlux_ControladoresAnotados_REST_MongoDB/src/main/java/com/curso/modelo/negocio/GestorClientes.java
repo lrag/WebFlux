@@ -25,21 +25,19 @@ public class GestorClientes {
 		return clienteRepo.save(cliente);
 	}
 
-	//si lo dejamos así se borrará cuando el Dispatcher Hendler se suscriba al Mono que devolvemos,
+	//si lo dejamos así se borrará cuando el Dispatcher Handler se suscriba al Mono que devolvemos,
 	//pero no nos enteraremos de si el cliente existía o no
 	//public Mono<Void> borrar_(Cliente cliente){
 	//	return clienteRepo.delete(cliente);
 	//}	
 	
 	public Mono<Boolean> borrar(Cliente cliente) {
-		//LN...
 		return clienteRepo
 			.findById(cliente.getId()) //De aqui sale Mono<Cliente> o Mono<Void>
-			.subscribeOn(Schedulers.boundedElastic())
+			//.subscribeOn(Schedulers.boundedElastic())
 			.flatMap(clienteABorrar -> {
 				return clienteRepo
-						.delete(clienteABorrar)
-						.subscribeOn(Schedulers.boundedElastic())
+						.delete(clienteABorrar) //Mono<Void>
 						.thenReturn(true); //De delete sale un Mono<Void> que sustituimos por un Mono<Boolean> (true)
 			})
 			.defaultIfEmpty(false);

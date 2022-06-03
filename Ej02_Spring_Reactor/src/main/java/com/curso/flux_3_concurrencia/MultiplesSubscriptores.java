@@ -8,28 +8,26 @@ import reactor.core.Disposable;
 import reactor.core.publisher.Flux;
 import reactor.core.scheduler.Schedulers;
 
-//@SpringBootApplication
+@SpringBootApplication
 public class MultiplesSubscriptores implements CommandLineRunner{
 
 	public Flux<String> flujoConEstado(String nombre){
-		return Flux.generate(
-			//State supplier
-			() -> 1,
-			//Generator
-			(state, consumidores) -> {
-				consumidores.next(Thread.currentThread().getName()+"-"+nombre+"-Mensaje:"+state);
-				state++;				
-				try {
-					Thread.sleep(1000);
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
+		return Flux.create(
+			//Emitter
+			consumidores -> {
+				int contador = 0;
+				while(contador <= 10) {
+					System.out.println(Thread.currentThread().getName()+"-GENERANDO-"+nombre+"-Mensaje:"+contador);
+					consumidores.next(Thread.currentThread().getName()+"-"+nombre+"-Mensaje:"+contador);
+					contador++;
 				
-				if(state == 11) {
-					consumidores.complete();
+					try {
+						Thread.sleep(1000);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
 				}
-				
-				return state;
+				consumidores.complete();
 			}
 		);		
 	}	
@@ -41,10 +39,11 @@ public class MultiplesSubscriptores implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 	
-		/*
+		
 		//
 		//Dos flujos distintos, con una subscripción cada uno
 		//
+		/*
 		System.out.println("=========================================================");
 		Flux<String> flujo1 = flujoConEstado("A");
 		Disposable d1 = flujo1
@@ -62,7 +61,7 @@ public class MultiplesSubscriptores implements CommandLineRunner{
 		*/
 		
 		//
-		//Uno flujo, dos subscripciones
+		//Un flujo, dos subscripciones
 		//
 		/*
 		System.out.println("=========================================================");
@@ -77,10 +76,10 @@ public class MultiplesSubscriptores implements CommandLineRunner{
 		Thread.sleep(20_000);	
 		d3.dispose();
 		d4.dispose();
-		*/
-		
+		*/		
+
 		//
-		//Uno flujo, dos subscripciones
+		//Un flujo, dos subscripciones
 		//
 		System.out.println("=========================================================");
 		Flux<String> flujo4 = flujoConEstado("D");
@@ -94,15 +93,16 @@ public class MultiplesSubscriptores implements CommandLineRunner{
 				.subscribe( elemento -> {
 					System.out.println(Thread.currentThread().getName()+"-Consumidor6:"+elemento);
 					try {
-						Thread.sleep(2000);
+						Thread.sleep(3000);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
 				});
+				
 
-		Thread.sleep(40_000);	
-		d5.dispose(); //Esto ya da igual
-		d6.dispose();		
+		Thread.sleep(60_000);	
+		//d5.dispose(); //Esto ya da igual
+		//d6.dispose();		
 	}
 
 }

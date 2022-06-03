@@ -1,4 +1,4 @@
-package com.curso.flux_4_operadores;
+package com.curso.flux_2_generadores;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,32 +10,55 @@ import java.util.List;
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import com.curso.modelo.entidad.Pelicula;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-@Component
-public class PeliculaRepository {
+@Repository
+public class PeliculaRepositorio {
 
 	@Autowired
 	private DataSource dataSource;
 	
-	public Flux<Pelicula> findAll(){
-		
-		Flux<Pelicula> flux = Flux.generate(
+	public List<Pelicula> findAll(){	
+		List<Pelicula> peliculas = new ArrayList<>();
+		try (Connection cx = dataSource.getConnection()) {
+			PreparedStatement pst = cx.prepareStatement("select * from pelicula");
+			ResultSet rs = pst.executeQuery();
+			while(rs.next()) {
+				Pelicula p = new Pelicula(
+						rs.getInt("ID"),
+						rs.getString("TITULO"),
+						rs.getString("DIRECTOR"),
+						rs.getString("GENERO"),
+						rs.getInt("YEAR")
+					);
+				peliculas.add(p);	
+				Thread.sleep(500);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		} 
+		return peliculas;
+	}
+	
+	public Flux<Pelicula> findAll_Reactivo(){		
+		return Flux.generate(
 				//State supplier
 				() -> {
 					Connection cx = dataSource.getConnection();
 					PreparedStatement pst = cx.prepareStatement("select * from pelicula");
-					pst.setFetchSize(1);
+					pst.setFetchSize(20);
 					ResultSet rs = pst.executeQuery();
-					return rs;
+					return rs;					
 				},
 				//Generator
-				(rs, sink) -> {	
+				(rs, consumidores) -> {
 					try {
 						if(rs.next()) {
 							Pelicula p = new Pelicula(
@@ -45,30 +68,57 @@ public class PeliculaRepository {
 									rs.getString("GENERO"),
 									rs.getInt("YEAR")
 								);
-							sink.next(p);
 							Thread.sleep(500);
+							consumidores.next(p);
 						} else {
-							sink.complete();
+							consumidores.complete();
 						}
-					} catch (SQLException e) {
+					} catch (Exception e) {
 						e.printStackTrace();
-					} catch (InterruptedException e) {
-						e.printStackTrace();
-					}					
-					return rs;
+						consumidores.error(e);
+					}
+					return rs; 
 				},
 				//State consumer
-				(rs) -> {
+				//Se invoca a modo de 'finaly', después de que el generator haya invocado 'complete'
+				rs -> {
 					System.out.println("Cerrando la conexión");
 					try {
 						rs.getStatement().getConnection().close();
 					} catch (SQLException e) {
 						e.printStackTrace();
 					}
-				}				
+				}			
 			);		
-		return flux;
 	}
+	
+	//La manera correcta de utilizar un api sincrono/bloqueante en una app reactiva es esta:
+	public Mono<List<Pelicula>> findAll_Reactivo_Sin_Historias(){		
+		return Mono.create(
+				//Generator
+				(consumidores) -> {
+					List<Pelicula> peliculas = new ArrayList<>();
+					try (Connection cx = dataSource.getConnection()) {
+						PreparedStatement pst = cx.prepareStatement("select * from pelicula");
+						ResultSet rs = pst.executeQuery();
+						while(rs.next()) {
+							Pelicula p = new Pelicula(
+									rs.getInt("ID"),
+									rs.getString("TITULO"),
+									rs.getString("DIRECTOR"),
+									rs.getString("GENERO"),
+									rs.getInt("YEAR")
+								);
+							peliculas.add(p);	
+						}
+						consumidores.success(peliculas);
+					} catch (SQLException e) {
+						e.printStackTrace();
+						consumidores.error(e);
+					} 					
+				});		
+	}
+	
 	
 	public Mono<Pelicula> findById(Integer idPelicula) {
 		
@@ -102,14 +152,6 @@ public class PeliculaRepository {
 				consumidores.error(e);
 			}	
 		});	
-	}
-	
-	public Flux<Pelicula> findAllById(Iterable<Integer> ids) {
-		List<Mono<Pelicula>> monos = new ArrayList<>();
-		for(Integer id: ids) {
-			monos.add(findById(id));
-		}	
-		return Flux.concat(monos);
-	}
+	}	
 	
 }

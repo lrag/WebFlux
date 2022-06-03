@@ -69,6 +69,10 @@ public class Flujos {
 	}	
 	
 	public Mono<String> leerFichero(String fichero){
+		
+		//return Mono.fromRunnable(() -> {});
+		//return Mono.fromCallable(() -> null);
+		
 		return Mono.create( 
 				consumidores -> {
 					try {

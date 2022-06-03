@@ -1,7 +1,6 @@
 package com.curso.rest;
 
 import java.util.List;
-import java.util.concurrent.Callable;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.curso.modelo.entidad.Cliente;
+import com.curso.modelo.entidad.ClienteJPA;
 import com.curso.modelo.negocio.GestorClientes;
 import com.curso.modelo.persistencia.ClienteRepoJPA;
 import com.curso.modelo.persistencia.ClienteRepository;
@@ -34,11 +34,11 @@ public class ClientesRest {
 	@Autowired private ClienteRepository clienteRepo;
 	@Autowired private ClienteRepoJPA clienteRepoJPA;
 	
-	/////////////////////////////////////////////////////////////////////////
-	// Cómo utilizar un api/código imperativa en una aplicación con WebFlux//
-	/////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////
+	// Cómo utilizar un api imperativa en una aplicación con WebFlux //
+	///////////////////////////////////////////////////////////////////
 	@GetMapping("/path")
-	public Mono<List<ClienteDTO>> listarNoReactivo(){
+	public Mono<List<ClienteJPA>> listarNoReactivo(){
 		/*Esto funciona, pero es una chapucilla...
 		return Mono
 				.just("for men")
@@ -50,25 +50,24 @@ public class ClientesRest {
 
 		//...porque existe esto:
 		return Mono.fromCallable(() -> {
-				return clienteRepoJPA.findAll().stream().map(cliente -> new ClienteDTO(cliente)).collect(Collectors.toList());
+				return clienteRepoJPA.findAll().stream().collect(Collectors.toList());
 			}
 		);
-
-		/*Lo mismo con clase interna anónima:
-		return Mono.fromCallable(new Callable<List<ClienteDTO>>() {
-			public List<ClienteDTO> call() {
-				return clienteRepoJPA.findAll().stream().map(cliente -> new ClienteDTO(cliente)).collect(Collectors.toList());
-			}
-		});*/		
-		
 	}	
-	
 
 	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-	public Flux<ClienteDTO> listar(){
+	public Mono<List<ClienteDTO>> listar(){
 		return clienteRepo
 			.findAll() //Devuelve Flux<Cliente>
-			.map( cliente -> new ClienteDTO(cliente) );
+			.map( cliente -> new ClienteDTO(cliente))
+			.collectList();
+	}	
+
+	@GetMapping(path="/stream", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
+	public Flux<ClienteDTO> listarClientesReactivos(){
+		return clienteRepo
+				.findAll() //Devuelve Flux<Cliente>
+				.map( cliente -> new ClienteDTO(cliente) );
 	}	
 	
 	@GetMapping(path="/{id}", 
@@ -106,9 +105,11 @@ public class ClientesRest {
 	
 	@DeleteMapping(path="/{id}")
 	public Mono<ResponseEntity<Object>> borrar(@PathVariable("id") String idCliente){
+		
 		/*
 		Cliente c = new Cliente();
 		c.setId(idCliente);
+		
 		return gestorClientes
 			.borrar(c) //De aqui sale Mono<Boolean>
 			.map( borrado -> {
@@ -118,7 +119,6 @@ public class ClientesRest {
 				return new ResponseEntity<Object>(HttpStatus.NOT_FOUND);
 			});
 		*/
-
 		return Mono.just(idCliente) //De aqui nos sacamos de la manga un Mono<String>
 			.flatMap( id -> {
 				Cliente c = new Cliente();

@@ -10,8 +10,36 @@ import reactor.core.publisher.Flux;
 @Component
 public class Flujos {
 
+	/////////////
+	// EMITTER //
+	/////////////
+	public Flux<Long> fluxNumerosAleatoriosFinito_Emitter(){
+		Flux<Long> flujo = Flux.create( 
+				//el emiter recibe una única llamada
+				consumidores -> {					
+					int contador = 0;
+					
+					while(contador<10) {
+						System.out.println(Thread.currentThread().getName()+"-Generando número aleatorio...");
+						try {
+							Thread.sleep(500);
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}	
+					
+						consumidores.next(Math.round(Math.random()*10_000));
+					}
+					consumidores.complete();
+				});
+		return flujo;
+	}
+	
+	///////////////
+	// GENERATOR //
+	///////////////
 	public Flux<Long> fluxNumerosAleatoriosFinito(){
 		AtomicInteger contador = new AtomicInteger(0);
+		
 		Flux<Long> flujo = Flux.generate( 
 				//Generator
 				consumidores -> {
