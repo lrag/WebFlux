@@ -91,9 +91,7 @@ public class Aplicacion implements CommandLineRunner{
 					error -> System.out.println("2-"+error.getMessage())
 				);
 		
-		System.exit(0);		
-		
-		
+		System.exit(0);				
 		
 		System.out.println("FIN del hilo main");
 	}
