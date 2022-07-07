@@ -28,14 +28,12 @@ public class Aplicacion implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 
-
 		/*
 		System.out.println("=====================================");
 		Flux<Long> flujoFinito = flujos.fluxNumerosAleatoriosFinito();
 		flujoFinito.subscribe(numero -> {
 			System.out.println(Thread.currentThread().getName()+"-Consumidor:"+numero);
 		});
-		*/
 		
 		//System.out.println("=====================================");
 		//Flux<String> flujoEstado = flujos.flujoConEstado();
@@ -61,8 +59,9 @@ public class Aplicacion implements CommandLineRunner{
 		System.out.println("FIN");
 
 		System.out.println("=============================================");
-		peliculaRepo.findAll_Reactivo().subscribe( pelicula -> System.out.println(pelicula));	
-		
+		//peliculaRepo.findAll_Reactivo().subscribe( pelicula -> System.out.println(pelicula));	
+		//peliculaRepo.findAll_Reactivo_Emitter().subscribe( pelicula -> System.out.println(pelicula));	
+
 		System.out.println("=============================================");
 		peliculaRepo
 			.findAll_Reactivo_Sin_Historias() //De aqui sale un Mono<List<Pelicula>>

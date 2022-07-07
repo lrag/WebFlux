@@ -67,7 +67,7 @@ public class ClientesRest {
 	public Flux<ClienteDTO> listarClientesReactivos(){
 		return clienteRepo
 				.findAll() //Devuelve Flux<Cliente>
-				.map( cliente -> new ClienteDTO(cliente) );
+				.map( cliente -> new ClienteDTO(cliente) ); //De aqui salen DTOs...
 	}	
 	
 	@GetMapping(path="/{id}", 

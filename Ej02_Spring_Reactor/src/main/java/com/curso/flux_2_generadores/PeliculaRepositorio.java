@@ -91,11 +91,38 @@ public class PeliculaRepositorio {
 				}			
 			);		
 	}
+
+	//Igual que el anterior, pero con un emitter
+	public Flux<Pelicula> findAll_Reactivo_Emitter(){		
+		return Flux.create(
+				//Emitter
+				(consumidores) -> {
+					try (Connection cx = dataSource.getConnection()) {
+						PreparedStatement pst = cx.prepareStatement("select * from pelicula");
+						ResultSet rs = pst.executeQuery();
+						while(rs.next()) {
+							Pelicula p = new Pelicula(
+									rs.getInt("ID"),
+									rs.getString("TITULO"),
+									rs.getString("DIRECTOR"),
+									rs.getString("GENERO"),
+									rs.getInt("YEAR")
+								);
+							consumidores.next(p);
+						}
+						consumidores.complete();
+					} catch (SQLException e) {
+						e.printStackTrace();
+						consumidores.error(e);
+					} 					
+				});		
+	}		
+	
 	
 	//La manera correcta de utilizar un api sincrono/bloqueante en una app reactiva es esta:
 	public Mono<List<Pelicula>> findAll_Reactivo_Sin_Historias(){		
 		return Mono.create(
-				//Generator
+				//Emitter
 				(consumidores) -> {
 					List<Pelicula> peliculas = new ArrayList<>();
 					try (Connection cx = dataSource.getConnection()) {
@@ -117,8 +144,7 @@ public class PeliculaRepositorio {
 						consumidores.error(e);
 					} 					
 				});		
-	}
-	
+	}	
 	
 	public Mono<Pelicula> findById(Integer idPelicula) {
 		

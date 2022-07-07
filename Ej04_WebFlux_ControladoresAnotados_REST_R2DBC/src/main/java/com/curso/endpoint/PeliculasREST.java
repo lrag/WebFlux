@@ -49,11 +49,22 @@ public class PeliculasREST {
 		return pelis;
 	}
 	
+	
+	
 	@GetMapping(path = "/peliculas",
 			    produces = MediaType.APPLICATION_JSON_VALUE)
-	public Flux<Pelicula> listarPeliculas_CLientes_No_Reactivos() {	
+	public Flux<Pelicula> listarPeliculas_Clientes_No_Reactivos() {	
 		return peliculaRepo.findAll();
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	@GetMapping(path = "/peliculas_stream",
 			produces = MediaType.TEXT_EVENT_STREAM_VALUE)

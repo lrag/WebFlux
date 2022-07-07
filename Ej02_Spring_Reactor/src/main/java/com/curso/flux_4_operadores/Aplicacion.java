@@ -75,7 +75,6 @@ public class Aplicacion implements CommandLineRunner{
 		///////////
 		// MERGE //
 		///////////
-
 		/*
 		System.out.println("======================================");
 		Flux.merge(
@@ -114,8 +113,8 @@ public class Aplicacion implements CommandLineRunner{
 		////////////
 
 
-		/*
 		System.out.println("======================================");		
+		/*
 		peliculaRepo
 			.findAll()
 			.filter(p -> p.getGenero().equals("Ci-fi"))
@@ -124,6 +123,7 @@ public class Aplicacion implements CommandLineRunner{
 			.subscribe(p -> System.out.println(p));	
 		System.exit(0);
 		*/
+
 		
 		/////////
 		// MAP //
@@ -133,7 +133,6 @@ public class Aplicacion implements CommandLineRunner{
 		flujos
 			.flujoPalabras()
 			.subscribe( palabra -> System.out.println(palabra));
-		
 		
 		System.out.println("======================================");
 		flujos
@@ -149,8 +148,8 @@ public class Aplicacion implements CommandLineRunner{
 			//Llega la palabra, sale su longitud...
 			.map( p -> p.length() )
 			.subscribe(longitud -> System.out.println(longitud));
-		
 		*/
+		
 
 		/*
 		System.out.println("======================================");

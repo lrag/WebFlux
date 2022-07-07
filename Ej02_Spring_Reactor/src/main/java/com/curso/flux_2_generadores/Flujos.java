@@ -17,16 +17,14 @@ public class Flujos {
 		Flux<Long> flujo = Flux.create( 
 				//el emiter recibe una única llamada
 				consumidores -> {					
-					int contador = 0;
-					
+					int contador = 0;					
 					while(contador<10) {
 						System.out.println(Thread.currentThread().getName()+"-Generando número aleatorio...");
 						try {
 							Thread.sleep(500);
 						} catch (InterruptedException e) {
 							e.printStackTrace();
-						}	
-					
+						}
 						consumidores.next(Math.round(Math.random()*10_000));
 					}
 					consumidores.complete();

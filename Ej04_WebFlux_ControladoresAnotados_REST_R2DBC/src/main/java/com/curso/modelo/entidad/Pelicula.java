@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
+
+//No son anotaciones de JPA
 @Table
 public class Pelicula {
 

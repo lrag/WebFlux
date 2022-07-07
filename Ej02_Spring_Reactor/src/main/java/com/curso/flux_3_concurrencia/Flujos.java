@@ -30,10 +30,10 @@ public class Flujos {
 	public Flux<Long> fluxNumerosAleatoriosInfinito(){
 		return Flux.generate(
 			//Generator
-			sink -> {
+			subscriptores -> {
 				System.out.println(Thread.currentThread().getName()+"-Creando numero aleatorio");
 				Long numero = Math.round(Math.random()*10_000);
-				sink.next(numero);
+				subscriptores.next(numero);
 				
 				try {
 					Thread.sleep(1000);

@@ -12,7 +12,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.scheduler.Scheduler;
 import reactor.core.scheduler.Schedulers;
 
-//@SpringBootApplication
+@SpringBootApplication
 public class Aplicacion implements CommandLineRunner{
 
 	@Autowired
@@ -36,9 +36,11 @@ public class Aplicacion implements CommandLineRunner{
 		//los elementos del flujo para siempre
 		//
 		//System.out.println("=====================================");
-		//System.out.println(Thread.currentThread().getName()+"-Antes de subscribirse");
-		//flujoInfinito.subscribe(numero -> System.out.println(Thread.currentThread().getName()+"-"+numero));
-		//System.out.println("Aqui ya no llega :( ");
+		/*
+		System.out.println(Thread.currentThread().getName()+"-Antes de subscribirse");
+		flujoInfinito.subscribe(numero -> System.out.println(Thread.currentThread().getName()+"-"+numero));
+		System.out.println("Aqui ya no llega :( ");
+		*/
 		
 		/*
 		System.out.println("=====================================");
@@ -47,11 +49,10 @@ public class Aplicacion implements CommandLineRunner{
 			.subscribeOn(Schedulers.boundedElastic())
 			.subscribe( numero -> System.out.println(Thread.currentThread().getName()+"-"+numero));
 		System.out.println(Thread.currentThread().getName()+"-Despues de subscribirse");
-		*/
+		 */
 		
 		//Sin este thread.sleep la aplicación finaliza. El hilo que se queda procesando los elementos del flujo
 		//no tiene peso suficiente para mantenerla viva
-		//Thread.sleep(10_000);
 		
 		////////////////
 		// DISPOSABLE //
