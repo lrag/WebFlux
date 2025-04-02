@@ -52,8 +52,8 @@ public class Flujos {
 				//State supplier
 				() -> 0,
 				//Generator
-				(state,sink) -> {					
-					sink.next(palabras[state]);					
+				(state, subscriptores) -> {					
+					subscriptores.next(palabras[state]);					
 					try {
 						Thread.sleep(palabras[state].length()*30);
 					} catch (InterruptedException e) {
@@ -61,7 +61,7 @@ public class Flujos {
 					}					
 					state++;
 					if(state == palabras.length) {
-						sink.complete();
+						subscriptores.complete();
 					}					
 					return state;
 				}				

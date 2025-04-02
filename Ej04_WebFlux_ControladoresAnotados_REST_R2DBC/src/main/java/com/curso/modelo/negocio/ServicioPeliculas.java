@@ -15,7 +15,7 @@ import reactor.core.publisher.Mono;
 import reactor.core.scheduler.Schedulers;
 
 @Service
-public class GestorPeliculas {
+public class ServicioPeliculas {
 
 	@Autowired private PeliculaRepositorio peliculaRepo;
 	@Autowired private PremioRepositorio premioRepo;
@@ -24,17 +24,14 @@ public class GestorPeliculas {
 	public Mono<Pelicula> insertar(Pelicula pelicula) {
 
 		//Aqui no pondremos código que esté fuera del stream que hemos de construir
-		
 		return peliculaRepo.save(pelicula).map(p -> {
 			//Cualquier LN
-			//va el eslabones de la cadena
+			//va en eslabones de la cadena
 			return p;
 		});
 				
-		
-				
 		/*
-		Si aqui nos subscribimos estmoa forzando al hilo del event loop a ejecutar I/O bloqu
+		Si aqui nos subscribimos estamos forzando al hilo del event loop a ejecutar I/O bloqu
 		y nos acabamos de cargar el rendimiento de toda la aplicación
 		
 		Mono<Pelicula> macaco = peliculaRepo.save(pelicula);
@@ -168,7 +165,35 @@ public class GestorPeliculas {
 			});
 			*/
 
+		return peliculaRepo
+			.findById(idPelicula) //De aqui sale un Mono<Pelicula>
+			.flatMap(pelicula -> {
+				return premioRepo
+					.findAllByIdPelicula(idPelicula)
+					.map( premio -> premio.getNombre())
+					.collect(Collectors.joining(", ","","."))
+					.map( premios -> {
+						PeliculaHistorico ph = new PeliculaHistorico(pelicula);
+						ph.setPremios(premios);
+						return ph;
+					}); //De aqui sale un Mono<PeliculaHistorico>
+			})
+			.map( ph -> { 
+				System.out.println("Pelicula historico:"+ph);
+				return peliculaHistoricoRepo.save(ph); //De aqui sale un Mono<PeliculaHistorico>
+			})
+			.flatMap( peliculaHistoricoInsertada -> {
+				System.out.println("Pelicula historico insertada");
+				//return premioRepo.deleteByIdPelicula(idPelicula); //De aqui sale mono<Void> asi que el siguiente operador no se ejecuta!!!
+				return premioRepo.deleteByIdPelicula(idPelicula).thenReturn(true); //De aqui sale un Mono<Boolean> y podemos seguir
+			})
+			.flatMap( bool ->{						
+				System.out.println("Premios borrados");
+				return peliculaRepo.deleteById(idPelicula); //De aqui sale un Mono<Void>
+			});		
 		
+		
+		/*
 		return peliculaRepo
 				.findById(idPelicula) //De aqui sale un Mono<Pelicula>
 				.flatMap(pelicula -> {
@@ -196,6 +221,7 @@ public class GestorPeliculas {
 					System.out.println("Premios borrados");
 					return peliculaRepo.deleteById(idPelicula); //De aqui sale un Mono<Void>
 				});
+		*/
 	}	
 	
 }

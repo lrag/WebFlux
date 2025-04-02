@@ -58,7 +58,7 @@ public class PeliculaRepositorio {
 					return rs;					
 				},
 				//Generator
-				(rs, consumidores) -> {
+				(rs, subscriptores) -> {
 					try {
 						if(rs.next()) {
 							Pelicula p = new Pelicula(
@@ -69,13 +69,13 @@ public class PeliculaRepositorio {
 									rs.getInt("YEAR")
 								);
 							Thread.sleep(500);
-							consumidores.next(p);
+							subscriptores.next(p);
 						} else {
-							consumidores.complete();
+							subscriptores.complete();
 						}
 					} catch (Exception e) {
 						e.printStackTrace();
-						consumidores.error(e);
+						subscriptores.error(e);
 					}
 					return rs; 
 				},
@@ -96,7 +96,7 @@ public class PeliculaRepositorio {
 	public Flux<Pelicula> findAll_Reactivo_Emitter(){		
 		return Flux.create(
 				//Emitter
-				(consumidores) -> {
+				(subscriptores) -> {
 					try (Connection cx = dataSource.getConnection()) {
 						PreparedStatement pst = cx.prepareStatement("select * from pelicula");
 						ResultSet rs = pst.executeQuery();
@@ -108,12 +108,12 @@ public class PeliculaRepositorio {
 									rs.getString("GENERO"),
 									rs.getInt("YEAR")
 								);
-							consumidores.next(p);
+							subscriptores.next(p);
 						}
-						consumidores.complete();
+						subscriptores.complete();
 					} catch (SQLException e) {
 						e.printStackTrace();
-						consumidores.error(e);
+						subscriptores.error(e);
 					} 					
 				});		
 	}		
@@ -123,7 +123,7 @@ public class PeliculaRepositorio {
 	public Mono<List<Pelicula>> findAll_Reactivo_Sin_Historias(){		
 		return Mono.create(
 				//Emitter
-				(consumidores) -> {
+				(subscriptores) -> {
 					List<Pelicula> peliculas = new ArrayList<>();
 					try (Connection cx = dataSource.getConnection()) {
 						PreparedStatement pst = cx.prepareStatement("select * from pelicula");
@@ -138,10 +138,10 @@ public class PeliculaRepositorio {
 								);
 							peliculas.add(p);	
 						}
-						consumidores.success(peliculas);
+						subscriptores.success(peliculas);
 					} catch (SQLException e) {
 						e.printStackTrace();
-						consumidores.error(e);
+						subscriptores.error(e);
 					} 					
 				});		
 	}	
@@ -155,7 +155,7 @@ public class PeliculaRepositorio {
 		});
 		*/
 		
-		return Mono.create(consumidores -> {			
+		return Mono.create(subscriptores -> {			
 			try(Connection cx = dataSource.getConnection()) {
 				PreparedStatement pst = cx.prepareStatement("select * from pelicula where id=?");
 				pst.setInt(1, idPelicula);
@@ -169,13 +169,13 @@ public class PeliculaRepositorio {
 							rs.getString("GENERO"),
 							rs.getInt("YEAR")
 						);						
-					consumidores.success(p);	
+					subscriptores.success(p);	
 				} else {
 					Exception e = new Exception("No existe una pelicula con ese id");
-					consumidores.error(e);
+					subscriptores.error(e);
 				}
 			} catch (SQLException e) {				
-				consumidores.error(e);
+				subscriptores.error(e);
 			}	
 		});	
 	}	

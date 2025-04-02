@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.curso.modelo.entidad.Pelicula;
-import com.curso.modelo.negocio.GestorPeliculas;
+import com.curso.modelo.negocio.ServicioPeliculas;
 import com.curso.modelo.persistencia.PeliculaRepositorio;
 import com.curso.modelo.persistencia.PremioRepositorio;
 
@@ -28,7 +28,7 @@ public class PeliculasREST {
 
 	@Autowired private PeliculaRepositorio peliculaRepo;
 	@Autowired private PremioRepositorio premioRepo;
-	@Autowired private GestorPeliculas gestorPeliculas;
+	@Autowired private ServicioPeliculas servicioPeliculas;
 	
 	//GET    /peliculas   
 	//GET    /peliculas/{id}
@@ -40,7 +40,7 @@ public class PeliculasREST {
 	//Puede ser imperativo mientras no estemos bloqueando el hilo del event loop
 	@GetMapping(path = "/peliculas_destructor_de_la_reactividad",
 		    produces = MediaType.APPLICATION_JSON_VALUE)
-	public List<Pelicula> listarPeliculas_el_horror_el_horror() {	
+	public List<Pelicula> listarPeliculas_destructor_de_la_reactividad() {	
 		//Esto es aberrante
 		//Muerte y destrucción
 		List<Pelicula> pelis = new ArrayList<>();
@@ -49,22 +49,11 @@ public class PeliculasREST {
 		return pelis;
 	}
 	
-	
-	
 	@GetMapping(path = "/peliculas",
 			    produces = MediaType.APPLICATION_JSON_VALUE)
 	public Flux<Pelicula> listarPeliculas_Clientes_No_Reactivos() {	
 		return peliculaRepo.findAll();
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 	@GetMapping(path = "/peliculas_stream",
 			produces = MediaType.TEXT_EVENT_STREAM_VALUE)
@@ -80,35 +69,54 @@ public class PeliculasREST {
 			.map(pelicula -> pelicula.getTitulo())
 			.collectList(); //de aqui sale Mono<List<Pelicula>>;
 	}
+	
+	@GetMapping(path="/peliculas/titulos_stream",
+			produces = MediaType.APPLICATION_JSON_VALUE)
+	public Flux<String> listarTitulosStream(){
+		return peliculaRepo.findAll() //de aqui sale Flux<Pelicula>
+			.map(pelicula -> pelicula.getTitulo()); //de aqui sale Flux<String>
+	}
 		
-	@GetMapping(path = "/peliculas/{idPelicula}")	
+	@GetMapping(
+		path = "/peliculas/{idPelicula}",
+		produces = MediaType.APPLICATION_JSON_VALUE
+	)	
 	public Mono<Pelicula> buscarPelicula(@PathVariable("idPelicula") Integer idPelicula) {
+		return peliculaRepo.findById(idPelicula);	
+	}
+	
+	@GetMapping(
+		path = "/peliculas/{idPelicula}/premios",
+		produces = MediaType.APPLICATION_JSON_VALUE
+	)	
+	public Mono<Pelicula> buscarPeliculaConPremios(@PathVariable("idPelicula") Integer idPelicula) {
 		return peliculaRepo
-			.findById(idPelicula) //De aqui sale un Mono en patines
-			.flatMap( p -> { //Aqui llega la pelicula
-				return Mono.just(p).zipWith(premioRepo.findAllByIdPelicula(p.getId()).collectList()); 
-			})
-			.map( tupla -> {
-				Pelicula p = tupla.getT1();
-				p.setPremios(tupla.getT2());
-				return p;
-			});	
+			.findById(idPelicula)
+			.flatMap( p -> {
+				return premioRepo.findAllByIdPelicula(p.getId()).collectList().map( lista -> {
+					p.setPremios(lista);
+					return p;
+				});
+			});
 	}
 	
 	@PostMapping(path = "/peliculas",
 			     consumes = MediaType.APPLICATION_JSON_VALUE)
 	public Mono<Pelicula> insertarPelicula(@RequestBody Pelicula pelicula) {
-		return gestorPeliculas.insertar(pelicula);
+		return servicioPeliculas.insertar(pelicula);
 	}
 	
 	@PutMapping(path = "/peliculas/{id}")
 	public Mono<Pelicula> modificarPelicula(@RequestBody Pelicula pelicula, @PathVariable("id") Integer id) {
-		return gestorPeliculas.modificar(pelicula);
+		
+		System.out.println(pelicula);
+		
+		return servicioPeliculas.modificar(pelicula);
 	}
 	
 	@DeleteMapping(path = "/peliculas/{id}")
 	public Mono<Void> borrarPelicula(@PathVariable("id") Integer id) {
-		return gestorPeliculas.borrar(id);
+		return servicioPeliculas.borrar(id);
 	}
 	
 	/////////////////////////////////////////

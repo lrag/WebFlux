@@ -19,10 +19,12 @@ public class Aplicacion {
 		
 		PeliculaRepositorio pr = appCtx.getBean(PeliculaRepositorio.class);
 	
+		Pelicula DH = new Pelicula(null,"Die Hard","John McTiernan","Acción",2000);
+		
 		pr.deleteAll();
 		pr.save(new Pelicula(null,"2001","Stanley Kubrik","Ci-fi",2000));
 		pr.save(new Pelicula(null,"Alien","Ridley Scott","Ci-fi",2000));
-		pr.save(new Pelicula(null,"Die Hard","John McTiernan","Acción",2000));
+		pr.save(DH);
 		pr.save(new Pelicula(null,"Young Frankenstein","Mel Brooks","Comedia",2000));
 		pr.save(new Pelicula(null,"Los violentos de Kelly","Brian G. Hutton","Bélica",2000));
 		pr.save(new Pelicula(null,"La diligencia","John Ford","Western",2000));
@@ -35,14 +37,14 @@ public class Aplicacion {
 		pr.save(new Pelicula(null,"Terminator","James Cameron","Ci-Fi",1984));
 		pr.save(new Pelicula(null,"Akira","Katsuhiro Ōtomo","Ci-Fi",1988));
 		pr.save(new Pelicula(null,"El último grán héroe","John McTiernan","Acción",1993));
-		pr.save(new Pelicula(null,"El resplandor","Stanley Kubrik","TITULOerror",1980));		
+		pr.save(new Pelicula(null,"El resplandor","Stanley Kubrik","Terror",1980));		
 		
 		PremioRepositorio premioRepo = appCtx.getBean(PremioRepositorio.class);
 		premioRepo.deleteAll();
 		
-		premioRepo.save(new Premio(null, "Mejor pelicula de accion de todos los tiempos", "1234", 3));
-		premioRepo.save(new Premio(null, "Yippee ki yay", "4321", 3));
-		premioRepo.save(new Premio(null, "Mejor pelicula en la que sale Carl Winslow", "5678", 3));
+		premioRepo.save(new Premio(null, "Mejor pelicula de accion de todos los tiempos", "1234", DH.getId()));
+		premioRepo.save(new Premio(null, "Yippee ki-yay", "4321", DH.getId()));
+		premioRepo.save(new Premio(null, "Mejor pelicula en la que sale Carl Winslow", "5678", DH.getId()));
 		
 		PeliculaHistoricoRepositorio peliculaHistoricoRepo = appCtx.getBean(PeliculaHistoricoRepositorio.class);
 		peliculaHistoricoRepo.deleteAll();

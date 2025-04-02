@@ -58,7 +58,6 @@ public class Aplicacion implements CommandLineRunner{
 			});
 		System.out.println(Thread.currentThread().getName()+"-Despues de subscribirse");
 		
-		
 		System.out.println("=====================================");
 		//Ídem con expresión lambda
 		//Vemos que podemos volver a subscribirnos a un flujo

@@ -1,8 +1,10 @@
 package com.curso.modelo.entidad;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.relational.core.mapping.Table;
 
 
@@ -16,7 +18,8 @@ public class Pelicula {
 	private String director;
 	private String genero;
 	private Integer year;
-	private List<Premio> premios;
+	@Transient
+	private List<Premio> premios = new ArrayList<>();
 
 	public Pelicula() {
 		super();
@@ -82,7 +85,7 @@ public class Pelicula {
 	@Override
 	public String toString() {
 		return "Pelicula [id=" + id + ", titulo=" + titulo + ", director=" + director + ", genero=" + genero + ", year="
-				+ year + "]";
+				+ year + ", premios=" + premios + "]";
 	}
 	
 }

@@ -63,6 +63,7 @@ public class Aplicacion implements CommandLineRunner{
 		Thread.sleep(20_000);
 		*/
 		
+		
 		/*
 		System.out.println("======================================");
 		peliculaRepo
@@ -75,6 +76,7 @@ public class Aplicacion implements CommandLineRunner{
 		///////////
 		// MERGE //
 		///////////
+		
 		/*
 		System.out.println("======================================");
 		Flux.merge(
@@ -87,6 +89,7 @@ public class Aplicacion implements CommandLineRunner{
 
 		System.exit(0);
 		*/
+		
 		
 		/////////
 		// ZIP //
@@ -104,17 +107,28 @@ public class Aplicacion implements CommandLineRunner{
 				System.out.println(tupla.getT2());
 			});		
 
+		
+		Flux.zip(
+				peliculaRepo.findById(1), 
+				peliculaRepo.findById(2)
+			)
+			.subscribe( tupla -> {
+				System.out.println(tupla.getT1());
+				System.out.println(tupla.getT2());
+			});		
+		
+		
 		Thread.sleep(15_000);
 		System.exit(0);
-		*/		
+		*/
 		
 		////////////
 		// FILTER //
 		////////////
 
-
-		System.out.println("======================================");		
 		/*
+		System.out.println("======================================");		
+		
 		peliculaRepo
 			.findAll()
 			.filter(p -> p.getGenero().equals("Ci-fi"))
@@ -141,7 +155,6 @@ public class Aplicacion implements CommandLineRunner{
 			.map( p -> p.toUpperCase() )
 			.subscribe(palabra -> System.out.println(palabra));
 
-
 		System.out.println("======================================");
 		flujos
 			.flujoPalabras()
@@ -150,7 +163,6 @@ public class Aplicacion implements CommandLineRunner{
 			.subscribe(longitud -> System.out.println(longitud));
 		*/
 		
-
 		/*
 		System.out.println("======================================");
 		flujos
@@ -175,7 +187,7 @@ public class Aplicacion implements CommandLineRunner{
 		//transformar el contendio en otro formato
 		//crear un nuevo fichero con la imagen resultante
 		
-		//Imperativo: 3 líneas
+		//Síncrono: 3 líneas
 		//String contenido = leerFichero(nombreFichero);
 		//String nuevoFormato = convertirImagen(contenido);
 		//escribirFichero(nuevoFichero, nuevoFormato);
@@ -184,8 +196,8 @@ public class Aplicacion implements CommandLineRunner{
 		//Además, como nos subscribimos a los flujos/monos no podemos devolvelos
 		//Y tampoco podemos devolver el resultado si el código está en un método
 		//Y para más INRI no podremos avisar de que ha habido un fallo
-
-		/*
+		
+		/*		
 		flujos
 			.leerFichero("imagen.jpg") 
 			.subscribeOn(Schedulers.boundedElastic())
@@ -209,7 +221,7 @@ public class Aplicacion implements CommandLineRunner{
 		
 		//System.exit(0);
 		 
-		/*
+		
 		flujos
 			.leerFichero("imagen.jgp") //De aqui sale un mono<string>
 			.flatMap( contenido -> {
@@ -222,7 +234,7 @@ public class Aplicacion implements CommandLineRunner{
 			})
 			.doOnSuccess( x -> System.out.println("IMAGEN CONVERTIDA") ) //Como el ultimo mono es Mono<Void> 'x' es null
 			.subscribe();	
-		*/
+		
 		
 		
 
@@ -249,6 +261,7 @@ public class Aplicacion implements CommandLineRunner{
 		Thread.sleep(10_000);
 		 */
 		
+		/*
 		System.out.println("======================================");	
 		
 		//Podemos hacer esta ñapa un tanto espantosa:

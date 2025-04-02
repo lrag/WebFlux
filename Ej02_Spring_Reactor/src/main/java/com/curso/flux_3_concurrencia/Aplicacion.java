@@ -32,15 +32,13 @@ public class Aplicacion implements CommandLineRunner{
 		Flux<Long> flujoInfinito = flujos.fluxNumerosAleatoriosInfinito();
 		
 		//Si nos subscribimos a un flujo infinito y no tenemos cuidado con cuál hilo
-		//se va a ejecutar el código del consumer y el generador nos quedaremos bloqueados procesando
+		//va a ejecutar el código del consumer y el generador nos quedaremos bloqueados procesando
 		//los elementos del flujo para siempre
 		//
 		//System.out.println("=====================================");
-		/*
-		System.out.println(Thread.currentThread().getName()+"-Antes de subscribirse");
-		flujoInfinito.subscribe(numero -> System.out.println(Thread.currentThread().getName()+"-"+numero));
-		System.out.println("Aqui ya no llega :( ");
-		*/
+		//System.out.println(Thread.currentThread().getName()+"-Antes de subscribirse");
+		//flujoInfinito.subscribe(numero -> System.out.println(Thread.currentThread().getName()+"-"+numero));
+		//System.out.println("Aqui ya no llega :( ");
 		
 		/*
 		System.out.println("=====================================");
@@ -49,10 +47,12 @@ public class Aplicacion implements CommandLineRunner{
 			.subscribeOn(Schedulers.boundedElastic())
 			.subscribe( numero -> System.out.println(Thread.currentThread().getName()+"-"+numero));
 		System.out.println(Thread.currentThread().getName()+"-Despues de subscribirse");
-		 */
-		
+		*/
+
 		//Sin este thread.sleep la aplicación finaliza. El hilo que se queda procesando los elementos del flujo
 		//no tiene peso suficiente para mantenerla viva
+		//Thread.sleep(30_000);
+		
 		
 		////////////////
 		// DISPOSABLE //
@@ -136,7 +136,7 @@ public class Aplicacion implements CommandLineRunner{
 		// PUBLISH ON //
 		////////////////
 		
-		/*		
+			
 		System.out.println("=====================================");
 		//En este ejemplo es el flujo el que indica que el consumidor debe ser ejecutado por otro hilo distinto al que se subscribe
 		System.out.println("Antes de subscribirse a flujoPublishOn");
@@ -146,8 +146,9 @@ public class Aplicacion implements CommandLineRunner{
 
 		Thread.sleep(5000);	
 		
-		System.out.println("FIN del hilo main");	
+		System.out.println("FIN del hilo main");
 		*/	
+		
 		
 	}
 

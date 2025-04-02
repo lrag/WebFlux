@@ -40,7 +40,7 @@ public class Flujos {
 		
 		Flux<Long> flujo = Flux.generate( 
 				//Generator
-				consumidores -> {
+				subscriptores -> {
 					System.out.println(Thread.currentThread().getName()+"-Generando número aleatorio...");
 					try {
 						Thread.sleep(500);
@@ -48,10 +48,10 @@ public class Flujos {
 						e.printStackTrace();
 					}	
 					
-					consumidores.next(Math.round(Math.random()*10_000));
+					subscriptores.next(Math.round(Math.random()*10_000));
 					if(contador.incrementAndGet() == 10) {
 						//Indicamos al subscriptor que hemos terminado
-						consumidores.complete();
+						subscriptores.complete();
 					}
 				});
 		return flujo;
@@ -62,9 +62,9 @@ public class Flujos {
 			//State supplier
 			() -> 1,
 			//Generator
-			(state, consumidores) -> {
+			(state, subscriptores) -> {
 
-				consumidores.next("Mensaje nº:"+state);
+				subscriptores.next("Mensaje nº:"+state);
 				state++;
 				
 				try {
@@ -74,7 +74,7 @@ public class Flujos {
 				}
 				
 				if(state == 11) {
-					consumidores.complete();
+					subscriptores.complete();
 				}
 				
 				return state;

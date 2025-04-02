@@ -20,7 +20,7 @@ public class Configuracion {
     public H2ConnectionFactory connectionFactory() {
         return new H2ConnectionFactory(
             H2ConnectionConfiguration.builder()
-              .file("c:/h2/bbdd_webflux")
+              .file("c:/h2/bbdd_webflux_TOCOTO")
               .username("sa")
               .password("")
               .build()
