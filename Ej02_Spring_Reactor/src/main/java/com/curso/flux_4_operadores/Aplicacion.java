@@ -197,7 +197,7 @@ public class Aplicacion implements CommandLineRunner{
 		//Y tampoco podemos devolver el resultado si el código está en un método
 		//Y para más INRI no podremos avisar de que ha habido un fallo
 		
-		/*		
+		/*	
 		flujos
 			.leerFichero("imagen.jpg") 
 			.subscribeOn(Schedulers.boundedElastic())
@@ -214,10 +214,11 @@ public class Aplicacion implements CommandLineRunner{
 								//Este consumer nunca recibirá una llamada por que nos estamos subscribiendo a un Mono<Void>
 								System.out.println("Nueva imagen creada.");
 							});
-					});					
+					});	
 			});	
 		Thread.sleep(10_000);
 		*/
+		
 		
 		//System.exit(0);
 		 
@@ -331,4 +332,7 @@ public class Aplicacion implements CommandLineRunner{
 	}
 	
 }
+
+
+
 

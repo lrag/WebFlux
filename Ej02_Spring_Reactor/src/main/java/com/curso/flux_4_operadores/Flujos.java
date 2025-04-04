@@ -74,20 +74,20 @@ public class Flujos {
 		//return Mono.fromCallable(() -> null);
 		
 		return Mono.create( 
-				consumidores -> {
+				subscriptores -> {
 					try {
 						Thread.sleep(2000);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
-					consumidores.success("contenido del fichero");
+					subscriptores.success("contenido del fichero");
 				}
 			);
 	}
 	
 	public Mono<Void> escribirFichero(String fichero, String contenido){
 		return Mono.create( 
-				consumidores -> {
+				subscriptores -> {
 					System.out.println("Escribiendo el fichero...");
 					try {
 						Thread.sleep(2000);
@@ -95,20 +95,20 @@ public class Flujos {
 						e.printStackTrace();
 					}
 					System.out.println("Escribiendo... Contenido:"+contenido+", fichero:"+fichero);
-					consumidores.success();
+					subscriptores.success();
 				}
 			);
 	}	
 	
 	public Mono<String> convertirImagen(String imagen){
 		return Mono.create( 
-				consumidores -> {
+				subscriptores -> {
 					try {
 						Thread.sleep(2000);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
-					consumidores.success(imagen.toUpperCase());
+					subscriptores.success(imagen.toUpperCase());
 				}
 			);
 	}

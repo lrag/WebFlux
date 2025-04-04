@@ -52,6 +52,7 @@ public class Aplicacion implements CommandLineRunner{
 		//Sin este thread.sleep la aplicación finaliza. El hilo que se queda procesando los elementos del flujo
 		//no tiene peso suficiente para mantenerla viva
 		//Thread.sleep(30_000);
+		//System.exit(0);
 		
 		
 		////////////////

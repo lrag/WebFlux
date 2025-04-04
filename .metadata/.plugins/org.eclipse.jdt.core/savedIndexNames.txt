@@ -171,7 +171,6 @@ INDEX VERSION 1.134+D:\JAVA\workspaces\SPRING\ws_webflux_2022\.metadata\.plugins
 3809132439.index
 1904739655.index
 2151718164.index
-700668880.index
 1639361777.index
 1385575302.index
 4064872875.index

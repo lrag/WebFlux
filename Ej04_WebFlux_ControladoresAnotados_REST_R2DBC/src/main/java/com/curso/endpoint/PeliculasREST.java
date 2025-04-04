@@ -22,6 +22,7 @@ import com.curso.modelo.persistencia.PremioRepositorio;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import reactor.core.scheduler.Schedulers;
 
 @RestController
 public class PeliculasREST {
@@ -46,15 +47,20 @@ public class PeliculasREST {
 		List<Pelicula> pelis = new ArrayList<>();
 		//Aqui estamos forzando al hijo del event loop a ejecutar una consulta a la bb.dd
 		peliculaRepo.findAll().subscribe( p -> pelis.add(p) );
+		//Aqui estamos usando otro hilo, pero entonces el del event loop se vuelve con una lista vacía
+		//peliculaRepo.findAll().subscribeOn(Schedulers.boundedElastic()).subscribe( p -> pelis.add(p) );
+		//Lo mismo, pero con blocl:
+		//return peliculaRepo.findAll().collect(Collectors.toList()).block();
+
 		return pelis;
 	}
-	
+		
 	@GetMapping(path = "/peliculas",
 			    produces = MediaType.APPLICATION_JSON_VALUE)
 	public Flux<Pelicula> listarPeliculas_Clientes_No_Reactivos() {	
 		return peliculaRepo.findAll();
 	}
-
+	
 	@GetMapping(path = "/peliculas_stream",
 			produces = MediaType.TEXT_EVENT_STREAM_VALUE)
 			//produces = MediaType.APPLICATION_NDJSON_VALUE)
@@ -76,7 +82,7 @@ public class PeliculasREST {
 		return peliculaRepo.findAll() //de aqui sale Flux<Pelicula>
 			.map(pelicula -> pelicula.getTitulo()); //de aqui sale Flux<String>
 	}
-		
+	
 	@GetMapping(
 		path = "/peliculas/{idPelicula}",
 		produces = MediaType.APPLICATION_JSON_VALUE
@@ -90,8 +96,14 @@ public class PeliculasREST {
 		produces = MediaType.APPLICATION_JSON_VALUE
 	)	
 	public Mono<Pelicula> buscarPeliculaConPremios(@PathVariable("idPelicula") Integer idPelicula) {
+		/*
+		Pelicula p = repoPeliculas.buscar(idPelicula);
+		List<Premio> premios = repoPremios.buscarPorPelicula(idPelicula);
+		p.setPremios(premios);
+		return p;
+		*/		
 		return peliculaRepo
-			.findById(idPelicula)
+			.findById(idPelicula) //Mono<Pelicula>
 			.flatMap( p -> {
 				return premioRepo.findAllByIdPelicula(p.getId()).collectList().map( lista -> {
 					p.setPremios(lista);
@@ -108,9 +120,6 @@ public class PeliculasREST {
 	
 	@PutMapping(path = "/peliculas/{id}")
 	public Mono<Pelicula> modificarPelicula(@RequestBody Pelicula pelicula, @PathVariable("id") Integer id) {
-		
-		System.out.println(pelicula);
-		
 		return servicioPeliculas.modificar(pelicula);
 	}
 	

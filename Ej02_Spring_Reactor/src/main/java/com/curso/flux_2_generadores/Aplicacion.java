@@ -32,7 +32,7 @@ public class Aplicacion implements CommandLineRunner{
 		Flux<Long> flujoFinito = flujos.fluxNumerosAleatoriosFinito();
 		flujoFinito.subscribe(numero -> {
 			System.out.println(Thread.currentThread().getName()+"-Consumidor:"+numero);
-		});	
+		});
 		*/	
 		
 		/*
@@ -40,12 +40,14 @@ public class Aplicacion implements CommandLineRunner{
 		Flux<String> flujoEstado = flujos.flujoConEstado();
 		flujoEstado.subscribe(mensaje -> System.out.println(mensaje));
 		*/
-		
+
+		/*
 		System.out.println("=====================================");
 		Flux<String> flujoEstado2 = flujos.flujoConEstadoYStateConsumer();
 		flujoEstado2.subscribe(mensaje -> System.out.println(mensaje));
 				
 		System.out.println("FIN");
+		*/
 		
 		System.out.println("=============================================");
 		List<Pelicula> peliculas = peliculaRepo.findAll();

@@ -65,10 +65,14 @@ public class Flujos {
 		);		
 		return flux;
 	}	
+	
+	
+	
+	
 
 	public Flux<List<String>> monitorizarDirectorio() throws IOException{				
 		return Flux.generate(
-			consumidores -> {				
+			subscriptores -> {				
 				try {
 					WatchKey key = null;
 					final Path path = Paths.get("directorio_monitorizado");
@@ -87,7 +91,7 @@ public class Flujos {
 					for (WatchEvent<?> event : key.pollEvents()) {
 						mensaje.add(event.kind()+":"+event.context());
 					}
-					consumidores.next(mensaje);
+					subscriptores.next(mensaje);
 				} catch (InterruptedException e) {
 					System.out.println(e.getMessage());
 				} catch (IOException e) {
@@ -97,6 +101,11 @@ public class Flujos {
 		);
 	}
 
+	
+	
+	
+	
+	
 	public Flux<String> flujoPalabras() {		
 		String[] palabras = {"UNO","DOS","TRES","CUATRO","CINCO","SEIS","SIETE","OCHO","NUEVE","DIEZ","ONCE","DOCE","TRECE","CATORCE"};		
 		return Flux.generate(

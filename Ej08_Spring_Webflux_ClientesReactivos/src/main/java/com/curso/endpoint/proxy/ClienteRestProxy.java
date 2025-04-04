@@ -20,6 +20,15 @@ public class ClienteRestProxy {
 
 	@Autowired
 	private WebClient webClientClientes;
+
+	//Si nuestra aplicación cliente no es reactiva...:
+	public List<Cliente> listarSincrono() {		
+		return webClientClientes
+				.get()
+				.uri("/clientes")
+				.retrieve()
+				.bodyToMono(new ParameterizedTypeReference<List<Cliente>>(){}).block();		
+	}	
 	
 	
 	public Mono<List<Cliente>> listar() {		

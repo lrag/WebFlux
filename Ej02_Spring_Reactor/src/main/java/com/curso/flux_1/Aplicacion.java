@@ -65,6 +65,10 @@ public class Aplicacion implements CommandLineRunner{
 			.subscribe( s -> System.out.println(Thread.currentThread().getName()+"-Lambda-"+s));
 		//AQUI NO TENEMOS LAS PALABRAS
 		
+		
+		System.exit(0);
+		
+		
 		System.out.println("=====================================");		
 		//Utilizando un consumidor definido como una bean de spring
 		flujoPalabras.subscribe(consumidor);
